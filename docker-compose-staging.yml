@@ -1,0 +1,20 @@
+web:
+  build: .
+  container_name: idp-dev-sre
+  dockerfile: Dockerfile-staging
+  restart: on-failure
+  # links:
+  #   - db
+  ports:
+    - "80:8000"
+  volumes:
+    - .:/usr/src/app/
+    - /usr/src/app/node_modules
+    - /tmp:/tmp
+  environment:
+    NODE_ENV: production
+    # MONGO_URL: mongodb://db:27017/mern-starter
+# db:
+#   image: mongo:latest
+#   ports:
+#     - "27017:27017"

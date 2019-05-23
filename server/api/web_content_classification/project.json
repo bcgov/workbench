@@ -1,0 +1,30 @@
+{
+  "id": "web_content_classification",
+  "name": "Web Content Classification",
+  "datasets": [
+    {
+      "id": "27ddad58",
+      "description": "Lists url of each webpage and the corresponding hash of the url",
+      "hyperlink_reference": null,
+      "load_date": null,
+      "name": "REDUCED_URL_HASH_PAIRS.csv",
+      "title": "Reduced URL Hash Pairs"
+    },
+    {
+      "id": "d359a819",
+      "description": "A collection of concepts that could be related to a webpage",
+      "hyperlink_reference": null,
+      "load_date": null,
+      "name": "ALPHA.xml",
+      "title": "Webpage concept thesaurus"
+    },
+    {
+      "id": "a2a64ca4",
+      "description": "A collection of webpages that have each been saved under a hash of the webpage's url",
+      "hyperlink_reference": null,
+      "load_date": null,
+      "name": "WEBPAGE.zip",
+      "title": "Webpages to be categorized"
+    }
+  ]
+}

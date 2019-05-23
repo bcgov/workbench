@@ -1,0 +1,530 @@
+{
+  "id": "5082246b",
+  "meta": {
+    "fields": [
+      {
+        "description": "A unique identifier assigned to an individual for this data science challenge project",
+        "format": "default",
+        "name": "project_entity_id",
+        "type": "integer"
+      },
+      {
+        "description": "Name of the course taken by the individual",
+        "format": "default",
+        "name": "curriculum_label",
+        "type": "string"
+      },
+      {
+        "description": "Grade obtained by the individual in the corresponding course (scale 0-100)",
+        "format": "default",
+        "name": "course_percent",
+        "type": "number"
+      }
+    ],
+    "missingValues": [
+      ""
+    ]
+  },
+  "samples": [
+    {
+      "course_percent": "36.000",
+      "curriculum_label": "Economy",
+      "project_entity_id": "105600"
+    },
+    {
+      "course_percent": "68.000",
+      "curriculum_label": "English",
+      "project_entity_id": "105600"
+    },
+    {
+      "course_percent": "64.000",
+      "curriculum_label": "French",
+      "project_entity_id": "105600"
+    },
+    {
+      "course_percent": "9.000",
+      "curriculum_label": "English",
+      "project_entity_id": "105601"
+    },
+    {
+      "course_percent": "45.000",
+      "curriculum_label": "Economy",
+      "project_entity_id": "105602"
+    },
+    {
+      "course_percent": "52.000",
+      "curriculum_label": "English",
+      "project_entity_id": "105602"
+    },
+    {
+      "course_percent": "66.000",
+      "curriculum_label": "English",
+      "project_entity_id": "105604"
+    },
+    {
+      "course_percent": "96.000",
+      "curriculum_label": "Advanced Trades Opportunities",
+      "project_entity_id": "105605"
+    },
+    {
+      "course_percent": "58.000",
+      "curriculum_label": "English",
+      "project_entity_id": "105605"
+    },
+    {
+      "course_percent": "10.000",
+      "curriculum_label": "Mathematics",
+      "project_entity_id": "105605"
+    },
+    {
+      "course_percent": "7.000",
+      "curriculum_label": "Mathematics",
+      "project_entity_id": "105606"
+    },
+    {
+      "course_percent": "41.000",
+      "curriculum_label": "Social Science",
+      "project_entity_id": "105606"
+    },
+    {
+      "course_percent": "83.000",
+      "curriculum_label": "Mathematics",
+      "project_entity_id": "105607"
+    },
+    {
+      "course_percent": "66.000",
+      "curriculum_label": "Economy",
+      "project_entity_id": "105608"
+    },
+    {
+      "course_percent": "45.000",
+      "curriculum_label": "English",
+      "project_entity_id": "105608"
+    },
+    {
+      "course_percent": "9.000",
+      "curriculum_label": "Mathematics",
+      "project_entity_id": "105608"
+    },
+    {
+      "course_percent": "80.000",
+      "curriculum_label": "Economy",
+      "project_entity_id": "105609"
+    },
+    {
+      "course_percent": "32.000",
+      "curriculum_label": "English",
+      "project_entity_id": "105609"
+    },
+    {
+      "course_percent": "89.000",
+      "curriculum_label": "First Nation Knowledge",
+      "project_entity_id": "105609"
+    },
+    {
+      "course_percent": "17.000",
+      "curriculum_label": "French",
+      "project_entity_id": "105609"
+    },
+    {
+      "course_percent": "51.000",
+      "curriculum_label": "Mathematics",
+      "project_entity_id": "105609"
+    },
+    {
+      "course_percent": "89.000",
+      "curriculum_label": "Social Science",
+      "project_entity_id": "105609"
+    },
+    {
+      "course_percent": "54.000",
+      "curriculum_label": "Advanced Trades Opportunities",
+      "project_entity_id": "105610"
+    },
+    {
+      "course_percent": "75.000",
+      "curriculum_label": "Mathematics",
+      "project_entity_id": "105610"
+    },
+    {
+      "course_percent": "87.000",
+      "curriculum_label": "First Nation Knowledge",
+      "project_entity_id": "105611"
+    },
+    {
+      "course_percent": "70.000",
+      "curriculum_label": "Mathematics",
+      "project_entity_id": "105611"
+    },
+    {
+      "course_percent": "58.000",
+      "curriculum_label": "Advanced Trades Opportunities",
+      "project_entity_id": "105612"
+    },
+    {
+      "course_percent": "69.000",
+      "curriculum_label": "Mathematics",
+      "project_entity_id": "105612"
+    },
+    {
+      "course_percent": "60.000",
+      "curriculum_label": "Advanced Trades Opportunities",
+      "project_entity_id": "105613"
+    },
+    {
+      "course_percent": "22.000",
+      "curriculum_label": "Economy",
+      "project_entity_id": "105613"
+    },
+    {
+      "course_percent": "6.000",
+      "curriculum_label": "French",
+      "project_entity_id": "105613"
+    },
+    {
+      "course_percent": "64.000",
+      "curriculum_label": "Social Science",
+      "project_entity_id": "105613"
+    },
+    {
+      "course_percent": "75.250",
+      "curriculum_label": "Advanced Trades Opportunities",
+      "project_entity_id": "105615"
+    },
+    {
+      "course_percent": "67.000",
+      "curriculum_label": "English",
+      "project_entity_id": "105615"
+    },
+    {
+      "course_percent": "99.000",
+      "curriculum_label": "French",
+      "project_entity_id": "105615"
+    },
+    {
+      "course_percent": "62.000",
+      "curriculum_label": "Social Science",
+      "project_entity_id": "105615"
+    },
+    {
+      "course_percent": "21.000",
+      "curriculum_label": "Advanced Trades Opportunities",
+      "project_entity_id": "105616"
+    },
+    {
+      "course_percent": "56.000",
+      "curriculum_label": "Mathematics",
+      "project_entity_id": "105616"
+    },
+    {
+      "course_percent": "64.000",
+      "curriculum_label": "English",
+      "project_entity_id": "105617"
+    },
+    {
+      "course_percent": "10.000",
+      "curriculum_label": "Advanced Trades Opportunities",
+      "project_entity_id": "105618"
+    },
+    {
+      "course_percent": "98.000",
+      "curriculum_label": "English",
+      "project_entity_id": "105619"
+    },
+    {
+      "course_percent": "58.000",
+      "curriculum_label": "Social Science",
+      "project_entity_id": "105619"
+    },
+    {
+      "course_percent": "74.000",
+      "curriculum_label": "Advanced Trades Opportunities",
+      "project_entity_id": "105620"
+    },
+    {
+      "course_percent": "59.500",
+      "curriculum_label": "Mathematics",
+      "project_entity_id": "105620"
+    },
+    {
+      "course_percent": "54.000",
+      "curriculum_label": "Economy",
+      "project_entity_id": "105621"
+    },
+    {
+      "course_percent": "99.000",
+      "curriculum_label": "Economy",
+      "project_entity_id": "105623"
+    },
+    {
+      "course_percent": "26.000",
+      "curriculum_label": "Mathematics",
+      "project_entity_id": "105623"
+    },
+    {
+      "course_percent": "11.000",
+      "curriculum_label": "Social Science",
+      "project_entity_id": "105623"
+    },
+    {
+      "course_percent": "87.000",
+      "curriculum_label": "Mathematics",
+      "project_entity_id": "105625"
+    },
+    {
+      "course_percent": "17.500",
+      "curriculum_label": "Advanced Trades Opportunities",
+      "project_entity_id": "105626"
+    },
+    {
+      "course_percent": "54.000",
+      "curriculum_label": "English",
+      "project_entity_id": "105626"
+    },
+    {
+      "course_percent": "70.000",
+      "curriculum_label": "Economy",
+      "project_entity_id": "105627"
+    },
+    {
+      "course_percent": "10.000",
+      "curriculum_label": "English",
+      "project_entity_id": "105627"
+    },
+    {
+      "course_percent": "51.000",
+      "curriculum_label": "Mathematics",
+      "project_entity_id": "105627"
+    },
+    {
+      "course_percent": "72.000",
+      "curriculum_label": "Social Science",
+      "project_entity_id": "105628"
+    },
+    {
+      "course_percent": "36.000",
+      "curriculum_label": "English",
+      "project_entity_id": "105629"
+    },
+    {
+      "course_percent": "46.000",
+      "curriculum_label": "French",
+      "project_entity_id": "105629"
+    },
+    {
+      "course_percent": "28.000",
+      "curriculum_label": "Mathematics",
+      "project_entity_id": "105629"
+    },
+    {
+      "course_percent": "15.000",
+      "curriculum_label": "Economy",
+      "project_entity_id": "105630"
+    },
+    {
+      "course_percent": "97.000",
+      "curriculum_label": "English",
+      "project_entity_id": "105630"
+    },
+    {
+      "course_percent": "13.000",
+      "curriculum_label": "Mathematics",
+      "project_entity_id": "105630"
+    },
+    {
+      "course_percent": "96.000",
+      "curriculum_label": "English",
+      "project_entity_id": "105631"
+    },
+    {
+      "course_percent": "90.000",
+      "curriculum_label": "Mathematics",
+      "project_entity_id": "105631"
+    },
+    {
+      "course_percent": "62.000",
+      "curriculum_label": "Advanced Trades Opportunities",
+      "project_entity_id": "105633"
+    },
+    {
+      "course_percent": "28.000",
+      "curriculum_label": "Mathematics",
+      "project_entity_id": "105633"
+    },
+    {
+      "course_percent": "8.000",
+      "curriculum_label": "Mathematics",
+      "project_entity_id": "105635"
+    },
+    {
+      "course_percent": "59.000",
+      "curriculum_label": "English",
+      "project_entity_id": "105637"
+    },
+    {
+      "course_percent": "51.000",
+      "curriculum_label": "English",
+      "project_entity_id": "105638"
+    },
+    {
+      "course_percent": "93.000",
+      "curriculum_label": "Mathematics",
+      "project_entity_id": "105638"
+    },
+    {
+      "course_percent": "54.000",
+      "curriculum_label": "French",
+      "project_entity_id": "105639"
+    },
+    {
+      "course_percent": "8.000",
+      "curriculum_label": "Social Science",
+      "project_entity_id": "105639"
+    },
+    {
+      "course_percent": "9.000",
+      "curriculum_label": "Advanced Trades Opportunities",
+      "project_entity_id": "105640"
+    },
+    {
+      "course_percent": "42.000",
+      "curriculum_label": "Economy",
+      "project_entity_id": "105640"
+    },
+    {
+      "course_percent": "24.000",
+      "curriculum_label": "Social Science",
+      "project_entity_id": "105640"
+    },
+    {
+      "course_percent": "18.000",
+      "curriculum_label": "Economy",
+      "project_entity_id": "105641"
+    },
+    {
+      "course_percent": "10.000",
+      "curriculum_label": "Mathematics",
+      "project_entity_id": "105642"
+    },
+    {
+      "course_percent": "23.000",
+      "curriculum_label": "Mathematics",
+      "project_entity_id": "105643"
+    },
+    {
+      "course_percent": "32.000",
+      "curriculum_label": "First Nation Knowledge",
+      "project_entity_id": "105644"
+    },
+    {
+      "course_percent": "65.000",
+      "curriculum_label": "Advanced Trades Opportunities",
+      "project_entity_id": "105645"
+    },
+    {
+      "course_percent": "98.000",
+      "curriculum_label": "English",
+      "project_entity_id": "105646"
+    },
+    {
+      "course_percent": "40.000",
+      "curriculum_label": "French",
+      "project_entity_id": "105646"
+    },
+    {
+      "course_percent": "73.000",
+      "curriculum_label": "Economy",
+      "project_entity_id": "105647"
+    },
+    {
+      "course_percent": "9.000",
+      "curriculum_label": "French",
+      "project_entity_id": "105647"
+    },
+    {
+      "course_percent": "54.000",
+      "curriculum_label": "Mathematics",
+      "project_entity_id": "105647"
+    },
+    {
+      "course_percent": "40.000",
+      "curriculum_label": "Mathematics",
+      "project_entity_id": "105648"
+    },
+    {
+      "course_percent": "6.000",
+      "curriculum_label": "Economy",
+      "project_entity_id": "105650"
+    },
+    {
+      "course_percent": "43.000",
+      "curriculum_label": "Mathematics",
+      "project_entity_id": "105650"
+    },
+    {
+      "course_percent": "59.000",
+      "curriculum_label": "Social Science",
+      "project_entity_id": "105650"
+    },
+    {
+      "course_percent": "55.000",
+      "curriculum_label": "English",
+      "project_entity_id": "105651"
+    },
+    {
+      "course_percent": "39.000",
+      "curriculum_label": "Social Science",
+      "project_entity_id": "105651"
+    },
+    {
+      "course_percent": "41.000",
+      "curriculum_label": "English",
+      "project_entity_id": "105652"
+    },
+    {
+      "course_percent": "84.667",
+      "curriculum_label": "Economy",
+      "project_entity_id": "105653"
+    },
+    {
+      "course_percent": "68.000",
+      "curriculum_label": "French",
+      "project_entity_id": "105654"
+    },
+    {
+      "course_percent": "58.000",
+      "curriculum_label": "Economy",
+      "project_entity_id": "105655"
+    },
+    {
+      "course_percent": "71.000",
+      "curriculum_label": "English",
+      "project_entity_id": "105655"
+    },
+    {
+      "course_percent": "65.500",
+      "curriculum_label": "Mathematics",
+      "project_entity_id": "105655"
+    },
+    {
+      "course_percent": "72.000",
+      "curriculum_label": "Economy",
+      "project_entity_id": "105656"
+    },
+    {
+      "course_percent": "63.000",
+      "curriculum_label": "English",
+      "project_entity_id": "105656"
+    },
+    {
+      "course_percent": "96.000",
+      "curriculum_label": "Mathematics",
+      "project_entity_id": "105656"
+    },
+    {
+      "course_percent": "72.000",
+      "curriculum_label": "Economy",
+      "project_entity_id": "105658"
+    }
+  ]
+}

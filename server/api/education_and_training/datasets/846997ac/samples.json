@@ -1,0 +1,424 @@
+{
+  "id": "846997ac",
+  "meta": {
+    "fields": [
+      {
+        "description": "A unique identifier assigned to an individual for this data science challenge project ",
+        "format": "default",
+        "name": "project_entity_id",
+        "type": "integer"
+      },
+      {
+        "description": "If a student has taken a special course (e.g., ‘Career preparation in Training Programs’, ’Secondary School Apprenticeship’, ‘Introduction to Training’, etc.) then field would have a code; otherwise the value reported is ‘UNKNOWN’",
+        "format": "default",
+        "name": "program_type_code",
+        "type": "string"
+      }
+    ],
+    "missingValues": [
+      ""
+    ]
+  },
+  "samples": [
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105601"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105603"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105604"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105606"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105608"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105609"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105610"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105612"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105613"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105614"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105615"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105618"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105619"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105620"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105622"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105623"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105624"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105625"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105627"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105628"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105629"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105631"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105633"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105634"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105635"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105636"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105637"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105638"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105640"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105642"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105643"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105644"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105645"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105646"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105647"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105648"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105650"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105651"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105653"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105654"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105655"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105656"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105658"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105659"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105660"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105661"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105663"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105664"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105667"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105670"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105671"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105672"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105673"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105674"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105675"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105676"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105677"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105678"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105679"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105680"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105681"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105683"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105684"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105685"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105686"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105687"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105689"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105691"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105692"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105693"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105695"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105696"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105697"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105698"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105699"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105701"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105702"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105703"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105704"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105705"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105706"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105707"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105709"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105710"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105711"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105712"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105713"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105715"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105717"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105721"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105722"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105724"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105726"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105731"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105732"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105733"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105734"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105735"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105737"
+    },
+    {
+      "program_type_code": "UNKNOWN",
+      "project_entity_id": "105739"
+    }
+  ]
+}

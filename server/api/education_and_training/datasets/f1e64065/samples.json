@@ -1,0 +1,530 @@
+{
+  "id": "f1e64065",
+  "meta": {
+    "fields": [
+      {
+        "description": "A unique identifier assigned to an individual for this data science challenge project",
+        "format": "default",
+        "name": "project_entity_id",
+        "type": "integer"
+      },
+      {
+        "description": "This is the last known forward sortation area (first 3 digits of Canadian postal code) of a student (from Education data records).",
+        "format": "default",
+        "name": "forward_sortation_area",
+        "type": "string"
+      },
+      {
+        "description": "From Education data records",
+        "format": "default",
+        "name": "birthdate",
+        "type": "string"
+      }
+    ],
+    "missingValues": [
+      ""
+    ]
+  },
+  "samples": [
+    {
+      "birthdate": "1999-03",
+      "forward_sortation_area": "V3S",
+      "project_entity_id": "105600"
+    },
+    {
+      "birthdate": "1999-03",
+      "forward_sortation_area": "",
+      "project_entity_id": "105601"
+    },
+    {
+      "birthdate": "2000-08",
+      "forward_sortation_area": "",
+      "project_entity_id": "105602"
+    },
+    {
+      "birthdate": "1999-09",
+      "forward_sortation_area": "V0N",
+      "project_entity_id": "105603"
+    },
+    {
+      "birthdate": "1999-10",
+      "forward_sortation_area": "",
+      "project_entity_id": "105604"
+    },
+    {
+      "birthdate": "1998-10",
+      "forward_sortation_area": "",
+      "project_entity_id": "105605"
+    },
+    {
+      "birthdate": "1969-12",
+      "forward_sortation_area": "V0J",
+      "project_entity_id": "105606"
+    },
+    {
+      "birthdate": "1999-08",
+      "forward_sortation_area": "",
+      "project_entity_id": "105607"
+    },
+    {
+      "birthdate": "1999-08",
+      "forward_sortation_area": "",
+      "project_entity_id": "105608"
+    },
+    {
+      "birthdate": "1998-07",
+      "forward_sortation_area": "",
+      "project_entity_id": "105609"
+    },
+    {
+      "birthdate": "1998-09",
+      "forward_sortation_area": "",
+      "project_entity_id": "105610"
+    },
+    {
+      "birthdate": "2000-04",
+      "forward_sortation_area": "",
+      "project_entity_id": "105611"
+    },
+    {
+      "birthdate": "1998-08",
+      "forward_sortation_area": "",
+      "project_entity_id": "105612"
+    },
+    {
+      "birthdate": "1999-02",
+      "forward_sortation_area": "",
+      "project_entity_id": "105613"
+    },
+    {
+      "birthdate": "1997-08",
+      "forward_sortation_area": "V0J",
+      "project_entity_id": "105614"
+    },
+    {
+      "birthdate": "2000-01",
+      "forward_sortation_area": "",
+      "project_entity_id": "105615"
+    },
+    {
+      "birthdate": "1999-02",
+      "forward_sortation_area": "",
+      "project_entity_id": "105616"
+    },
+    {
+      "birthdate": "1976-10",
+      "forward_sortation_area": "V0J",
+      "project_entity_id": "105617"
+    },
+    {
+      "birthdate": "1999-03",
+      "forward_sortation_area": "",
+      "project_entity_id": "105618"
+    },
+    {
+      "birthdate": "1999-10",
+      "forward_sortation_area": "",
+      "project_entity_id": "105619"
+    },
+    {
+      "birthdate": "1999-03",
+      "forward_sortation_area": "",
+      "project_entity_id": "105620"
+    },
+    {
+      "birthdate": "1999-01",
+      "forward_sortation_area": "",
+      "project_entity_id": "105621"
+    },
+    {
+      "birthdate": "1999-08",
+      "forward_sortation_area": "V0E",
+      "project_entity_id": "105622"
+    },
+    {
+      "birthdate": "2000-06",
+      "forward_sortation_area": "",
+      "project_entity_id": "105623"
+    },
+    {
+      "birthdate": "1999-08",
+      "forward_sortation_area": "",
+      "project_entity_id": "105624"
+    },
+    {
+      "birthdate": "1998-10",
+      "forward_sortation_area": "",
+      "project_entity_id": "105625"
+    },
+    {
+      "birthdate": "1998-04",
+      "forward_sortation_area": "",
+      "project_entity_id": "105626"
+    },
+    {
+      "birthdate": "1999-02",
+      "forward_sortation_area": "",
+      "project_entity_id": "105627"
+    },
+    {
+      "birthdate": "1999-01",
+      "forward_sortation_area": "",
+      "project_entity_id": "105628"
+    },
+    {
+      "birthdate": "1970-12",
+      "forward_sortation_area": "V0N",
+      "project_entity_id": "105629"
+    },
+    {
+      "birthdate": "2000-04",
+      "forward_sortation_area": "V0J",
+      "project_entity_id": "105630"
+    },
+    {
+      "birthdate": "1998-06",
+      "forward_sortation_area": "",
+      "project_entity_id": "105631"
+    },
+    {
+      "birthdate": "1998-09",
+      "forward_sortation_area": "",
+      "project_entity_id": "105632"
+    },
+    {
+      "birthdate": "1999-09",
+      "forward_sortation_area": "",
+      "project_entity_id": "105633"
+    },
+    {
+      "birthdate": "1999-01",
+      "forward_sortation_area": "",
+      "project_entity_id": "105634"
+    },
+    {
+      "birthdate": "1982-02",
+      "forward_sortation_area": "",
+      "project_entity_id": "105635"
+    },
+    {
+      "birthdate": "1999-02",
+      "forward_sortation_area": "",
+      "project_entity_id": "105636"
+    },
+    {
+      "birthdate": "1998-03",
+      "forward_sortation_area": "V0J",
+      "project_entity_id": "105637"
+    },
+    {
+      "birthdate": "2000-02",
+      "forward_sortation_area": "",
+      "project_entity_id": "105638"
+    },
+    {
+      "birthdate": "1999-06",
+      "forward_sortation_area": "",
+      "project_entity_id": "105639"
+    },
+    {
+      "birthdate": "1974-10",
+      "forward_sortation_area": "",
+      "project_entity_id": "105640"
+    },
+    {
+      "birthdate": "1997-12",
+      "forward_sortation_area": "",
+      "project_entity_id": "105641"
+    },
+    {
+      "birthdate": "1998-07",
+      "forward_sortation_area": "",
+      "project_entity_id": "105642"
+    },
+    {
+      "birthdate": "1970-05",
+      "forward_sortation_area": "V0N",
+      "project_entity_id": "105643"
+    },
+    {
+      "birthdate": "1983-10",
+      "forward_sortation_area": "",
+      "project_entity_id": "105644"
+    },
+    {
+      "birthdate": "1997-12",
+      "forward_sortation_area": "",
+      "project_entity_id": "105645"
+    },
+    {
+      "birthdate": "2000-09",
+      "forward_sortation_area": "",
+      "project_entity_id": "105646"
+    },
+    {
+      "birthdate": "1999-09",
+      "forward_sortation_area": "V3S",
+      "project_entity_id": "105647"
+    },
+    {
+      "birthdate": "1999-02",
+      "forward_sortation_area": "",
+      "project_entity_id": "105648"
+    },
+    {
+      "birthdate": "1999-02",
+      "forward_sortation_area": "",
+      "project_entity_id": "105649"
+    },
+    {
+      "birthdate": "1999-04",
+      "forward_sortation_area": "V0E",
+      "project_entity_id": "105650"
+    },
+    {
+      "birthdate": "2000-08",
+      "forward_sortation_area": "",
+      "project_entity_id": "105651"
+    },
+    {
+      "birthdate": "2000-02",
+      "forward_sortation_area": "",
+      "project_entity_id": "105652"
+    },
+    {
+      "birthdate": "1974-06",
+      "forward_sortation_area": "",
+      "project_entity_id": "105653"
+    },
+    {
+      "birthdate": "1999-12",
+      "forward_sortation_area": "V2X",
+      "project_entity_id": "105654"
+    },
+    {
+      "birthdate": "1999-12",
+      "forward_sortation_area": "V3S",
+      "project_entity_id": "105655"
+    },
+    {
+      "birthdate": "1999-08",
+      "forward_sortation_area": "V3S",
+      "project_entity_id": "105656"
+    },
+    {
+      "birthdate": "1976-06",
+      "forward_sortation_area": "V0E",
+      "project_entity_id": "105657"
+    },
+    {
+      "birthdate": "1986-01",
+      "forward_sortation_area": "",
+      "project_entity_id": "105658"
+    },
+    {
+      "birthdate": "2000-05",
+      "forward_sortation_area": "",
+      "project_entity_id": "105659"
+    },
+    {
+      "birthdate": "1998-02",
+      "forward_sortation_area": "",
+      "project_entity_id": "105660"
+    },
+    {
+      "birthdate": "1998-03",
+      "forward_sortation_area": "",
+      "project_entity_id": "105661"
+    },
+    {
+      "birthdate": "2000-01",
+      "forward_sortation_area": "V2X",
+      "project_entity_id": "105662"
+    },
+    {
+      "birthdate": "2000-04",
+      "forward_sortation_area": "",
+      "project_entity_id": "105663"
+    },
+    {
+      "birthdate": "1997-12",
+      "forward_sortation_area": "",
+      "project_entity_id": "105664"
+    },
+    {
+      "birthdate": "2000-04",
+      "forward_sortation_area": "",
+      "project_entity_id": "105665"
+    },
+    {
+      "birthdate": "2000-09",
+      "forward_sortation_area": "",
+      "project_entity_id": "105666"
+    },
+    {
+      "birthdate": "2000-01",
+      "forward_sortation_area": "",
+      "project_entity_id": "105667"
+    },
+    {
+      "birthdate": "1998-02",
+      "forward_sortation_area": "",
+      "project_entity_id": "105668"
+    },
+    {
+      "birthdate": "1968-12",
+      "forward_sortation_area": "",
+      "project_entity_id": "105669"
+    },
+    {
+      "birthdate": "1973-10",
+      "forward_sortation_area": "",
+      "project_entity_id": "105670"
+    },
+    {
+      "birthdate": "1999-08",
+      "forward_sortation_area": "",
+      "project_entity_id": "105671"
+    },
+    {
+      "birthdate": "1999-05",
+      "forward_sortation_area": "",
+      "project_entity_id": "105672"
+    },
+    {
+      "birthdate": "1998-01",
+      "forward_sortation_area": "",
+      "project_entity_id": "105673"
+    },
+    {
+      "birthdate": "1999-06",
+      "forward_sortation_area": "",
+      "project_entity_id": "105674"
+    },
+    {
+      "birthdate": "1999-03",
+      "forward_sortation_area": "",
+      "project_entity_id": "105675"
+    },
+    {
+      "birthdate": "1971-06",
+      "forward_sortation_area": "",
+      "project_entity_id": "105676"
+    },
+    {
+      "birthdate": "1998-09",
+      "forward_sortation_area": "V2X",
+      "project_entity_id": "105677"
+    },
+    {
+      "birthdate": "2000-05",
+      "forward_sortation_area": "V0E",
+      "project_entity_id": "105678"
+    },
+    {
+      "birthdate": "2000-05",
+      "forward_sortation_area": "",
+      "project_entity_id": "105679"
+    },
+    {
+      "birthdate": "2000-09",
+      "forward_sortation_area": "",
+      "project_entity_id": "105680"
+    },
+    {
+      "birthdate": "2000-04",
+      "forward_sortation_area": "",
+      "project_entity_id": "105681"
+    },
+    {
+      "birthdate": "1999-04",
+      "forward_sortation_area": "",
+      "project_entity_id": "105682"
+    },
+    {
+      "birthdate": "1991-01",
+      "forward_sortation_area": "",
+      "project_entity_id": "105683"
+    },
+    {
+      "birthdate": "2000-06",
+      "forward_sortation_area": "",
+      "project_entity_id": "105684"
+    },
+    {
+      "birthdate": "2000-01",
+      "forward_sortation_area": "",
+      "project_entity_id": "105685"
+    },
+    {
+      "birthdate": "1986-10",
+      "forward_sortation_area": "",
+      "project_entity_id": "105686"
+    },
+    {
+      "birthdate": "1999-04",
+      "forward_sortation_area": "",
+      "project_entity_id": "105687"
+    },
+    {
+      "birthdate": "1999-05",
+      "forward_sortation_area": "",
+      "project_entity_id": "105688"
+    },
+    {
+      "birthdate": "1988-10",
+      "forward_sortation_area": "",
+      "project_entity_id": "105689"
+    },
+    {
+      "birthdate": "1999-05",
+      "forward_sortation_area": "",
+      "project_entity_id": "105690"
+    },
+    {
+      "birthdate": "1976-07",
+      "forward_sortation_area": "",
+      "project_entity_id": "105691"
+    },
+    {
+      "birthdate": "2000-10",
+      "forward_sortation_area": "",
+      "project_entity_id": "105692"
+    },
+    {
+      "birthdate": "1999-07",
+      "forward_sortation_area": "",
+      "project_entity_id": "105693"
+    },
+    {
+      "birthdate": "1999-07",
+      "forward_sortation_area": "",
+      "project_entity_id": "105694"
+    },
+    {
+      "birthdate": "2000-10",
+      "forward_sortation_area": "V0E",
+      "project_entity_id": "105695"
+    },
+    {
+      "birthdate": "1997-12",
+      "forward_sortation_area": "V0J",
+      "project_entity_id": "105696"
+    },
+    {
+      "birthdate": "1999-10",
+      "forward_sortation_area": "",
+      "project_entity_id": "105697"
+    },
+    {
+      "birthdate": "1999-08",
+      "forward_sortation_area": "",
+      "project_entity_id": "105698"
+    },
+    {
+      "birthdate": "1957-02",
+      "forward_sortation_area": "",
+      "project_entity_id": "105699"
+    }
+  ]
+}

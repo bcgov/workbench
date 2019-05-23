@@ -1,0 +1,49 @@
+{
+
+  "logEnvironment": "",
+
+  "serverPort": 8000,
+
+  "sessionSecret": "",
+  "sessionCookieSecure": "",
+
+  "azure":{
+    "clientID": "",
+    "clientSecret": "",
+    "authorizationEndpoint": "",
+    "tokenEndpoint": "",
+    "issuer": "",
+    "userInfoURL": "",
+    "callbackURL": "",
+    "scope": ""
+  },
+
+  "azureGraph":{
+    "clientID": "",
+    "clientSecret": "",
+    "AADLoginHost": "",
+    "GraphApiHost": ""
+  },
+
+  "azureGroups":{
+    "scientist": "",
+    "user": ""
+  },
+
+  "echo":{
+    "subscriptionKey": "",
+    "uri": "localhost",
+    "port": 8082,
+    "proto": "http",
+    "path": "/"
+  },
+
+  "who":{
+    "subscriptionKey": "",
+    "uri": "",
+    "port": ,
+    "proto": "",
+    "path": ""
+  }
+
+}

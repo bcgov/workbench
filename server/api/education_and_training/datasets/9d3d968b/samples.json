@@ -1,0 +1,636 @@
+{
+  "id": "9d3d968b",
+  "meta": {
+    "fields": [
+      {
+        "description": "A unique identifier assigned to an individual for this data science challenge project",
+        "format": "default",
+        "name": "project_entity_id",
+        "type": "integer"
+      },
+      {
+        "description": "Name of the training program taken by the participant",
+        "format": "default",
+        "name": "programname",
+        "type": "string"
+      },
+      {
+        "description": "Status of the program at the time of reporting (PRGCMP= Successfully completed the program) (DEREG=Unsuccessfully concluded the program)",
+        "format": "default",
+        "name": "status",
+        "type": "string"
+      },
+      {
+        "description": "Date participant was issued a credential for this program",
+        "format": "default",
+        "name": "credentialissueddate",
+        "type": "string"
+      }
+    ],
+    "missingValues": [
+      ""
+    ]
+  },
+  "samples": [
+    {
+      "credentialissueddate": "",
+      "programname": "Programming Basics",
+      "project_entity_id": "105600",
+      "status": "DEREG"
+    },
+    {
+      "credentialissueddate": "2014-08",
+      "programname": "Flooring Installation",
+      "project_entity_id": "105601",
+      "status": "PRGCMP"
+    },
+    {
+      "credentialissueddate": "",
+      "programname": "Hairstyling",
+      "project_entity_id": "105602",
+      "status": "DEREG"
+    },
+    {
+      "credentialissueddate": "2015-01",
+      "programname": "Welding A",
+      "project_entity_id": "105603",
+      "status": "PRGCMP"
+    },
+    {
+      "credentialissueddate": "",
+      "programname": "Hairdressing",
+      "project_entity_id": "105604",
+      "status": "DEREG"
+    },
+    {
+      "credentialissueddate": "",
+      "programname": "Construction 1",
+      "project_entity_id": "105605",
+      "status": "DEREG"
+    },
+    {
+      "credentialissueddate": "2015-01",
+      "programname": "Flooring Laboratory",
+      "project_entity_id": "105607",
+      "status": "PRGCMP"
+    },
+    {
+      "credentialissueddate": "",
+      "programname": "Cooking",
+      "project_entity_id": "105607",
+      "status": "DEREG"
+    },
+    {
+      "credentialissueddate": "2015-01",
+      "programname": "Programming Basics",
+      "project_entity_id": "105607",
+      "status": "PRGCMP"
+    },
+    {
+      "credentialissueddate": "",
+      "programname": "Automobile Basics",
+      "project_entity_id": "105607",
+      "status": "DEREG"
+    },
+    {
+      "credentialissueddate": "",
+      "programname": "Construction 2",
+      "project_entity_id": "105608",
+      "status": "DEREG"
+    },
+    {
+      "credentialissueddate": "",
+      "programname": "Construction 2",
+      "project_entity_id": "105609",
+      "status": "DEREG"
+    },
+    {
+      "credentialissueddate": "",
+      "programname": "Flooring Materials",
+      "project_entity_id": "105610",
+      "status": "DEREG"
+    },
+    {
+      "credentialissueddate": "2015-09",
+      "programname": "Hairdressing",
+      "project_entity_id": "105611",
+      "status": "PRGCMP"
+    },
+    {
+      "credentialissueddate": "2013-12",
+      "programname": "Welding A",
+      "project_entity_id": "105612",
+      "status": "PRGCMP"
+    },
+    {
+      "credentialissueddate": "",
+      "programname": "Construction 1",
+      "project_entity_id": "105613",
+      "status": "DEREG"
+    },
+    {
+      "credentialissueddate": "2014-07",
+      "programname": "Construction 2",
+      "project_entity_id": "105613",
+      "status": "PRGCMP"
+    },
+    {
+      "credentialissueddate": "2014-07",
+      "programname": "Welding A",
+      "project_entity_id": "105613",
+      "status": "PRGCMP"
+    },
+    {
+      "credentialissueddate": "2012-12",
+      "programname": "Hairstyling",
+      "project_entity_id": "105614",
+      "status": "PRGCMP"
+    },
+    {
+      "credentialissueddate": "2015-06",
+      "programname": "Flooring Laboratory",
+      "project_entity_id": "105615",
+      "status": "PRGCMP"
+    },
+    {
+      "credentialissueddate": "2015-06",
+      "programname": "Construction 2",
+      "project_entity_id": "105615",
+      "status": "PRGCMP"
+    },
+    {
+      "credentialissueddate": "",
+      "programname": "Flooring Installation",
+      "project_entity_id": "105615",
+      "status": "DEREG"
+    },
+    {
+      "credentialissueddate": "2015-06",
+      "programname": "Cooking",
+      "project_entity_id": "105615",
+      "status": "PRGCMP"
+    },
+    {
+      "credentialissueddate": "2015-06",
+      "programname": "Welding A",
+      "project_entity_id": "105615",
+      "status": "PRGCMP"
+    },
+    {
+      "credentialissueddate": "",
+      "programname": "Hairdressing",
+      "project_entity_id": "105615",
+      "status": "DEREG"
+    },
+    {
+      "credentialissueddate": "",
+      "programname": "Construction 1",
+      "project_entity_id": "105615",
+      "status": "DEREG"
+    },
+    {
+      "credentialissueddate": "2014-06",
+      "programname": "Automobile Basics",
+      "project_entity_id": "105616",
+      "status": "PRGCMP"
+    },
+    {
+      "credentialissueddate": "",
+      "programname": "Automobile Advanced",
+      "project_entity_id": "105616",
+      "status": "DEREG"
+    },
+    {
+      "credentialissueddate": "",
+      "programname": "Cooking",
+      "project_entity_id": "105618",
+      "status": "DEREG"
+    },
+    {
+      "credentialissueddate": "2015-03",
+      "programname": "Cooking",
+      "project_entity_id": "105619",
+      "status": "PRGCMP"
+    },
+    {
+      "credentialissueddate": "2014-08",
+      "programname": "Automobile Basics",
+      "project_entity_id": "105620",
+      "status": "PRGCMP"
+    },
+    {
+      "credentialissueddate": "",
+      "programname": "Automobile Advanced",
+      "project_entity_id": "105620",
+      "status": "DEREG"
+    },
+    {
+      "credentialissueddate": "",
+      "programname": "Welding B",
+      "project_entity_id": "105620",
+      "status": "DEREG"
+    },
+    {
+      "credentialissueddate": "2014-05",
+      "programname": "Flooring Installation",
+      "project_entity_id": "105621",
+      "status": "PRGCMP"
+    },
+    {
+      "credentialissueddate": "",
+      "programname": "Flooring Laboratory",
+      "project_entity_id": "105621",
+      "status": "DEREG"
+    },
+    {
+      "credentialissueddate": "",
+      "programname": "Flooring Materials",
+      "project_entity_id": "105622",
+      "status": "DEREG"
+    },
+    {
+      "credentialissueddate": "",
+      "programname": "Flooring Installation",
+      "project_entity_id": "105622",
+      "status": "DEREG"
+    },
+    {
+      "credentialissueddate": "2015-10",
+      "programname": "Programming Basics",
+      "project_entity_id": "105623",
+      "status": "PRGCMP"
+    },
+    {
+      "credentialissueddate": "2014-12",
+      "programname": "Hairstyling",
+      "project_entity_id": "105624",
+      "status": "PRGCMP"
+    },
+    {
+      "credentialissueddate": "",
+      "programname": "Hairdressing",
+      "project_entity_id": "105625",
+      "status": "DEREG"
+    },
+    {
+      "credentialissueddate": "",
+      "programname": "Construction 1",
+      "project_entity_id": "105626",
+      "status": "DEREG"
+    },
+    {
+      "credentialissueddate": "",
+      "programname": "Flooring Materials",
+      "project_entity_id": "105626",
+      "status": "DEREG"
+    },
+    {
+      "credentialissueddate": "2013-08",
+      "programname": "Welding A",
+      "project_entity_id": "105626",
+      "status": "PRGCMP"
+    },
+    {
+      "credentialissueddate": "",
+      "programname": "Automobile Basics",
+      "project_entity_id": "105626",
+      "status": "DEREG"
+    },
+    {
+      "credentialissueddate": "2013-08",
+      "programname": "Cooking",
+      "project_entity_id": "105626",
+      "status": "PRGCMP"
+    },
+    {
+      "credentialissueddate": "",
+      "programname": "Construction 1",
+      "project_entity_id": "105627",
+      "status": "DEREG"
+    },
+    {
+      "credentialissueddate": "",
+      "programname": "Construction 1",
+      "project_entity_id": "105628",
+      "status": "DEREG"
+    },
+    {
+      "credentialissueddate": "2015-08",
+      "programname": "Welding A",
+      "project_entity_id": "105630",
+      "status": "PRGCMP"
+    },
+    {
+      "credentialissueddate": "2013-10",
+      "programname": "Automobile Advanced",
+      "project_entity_id": "105631",
+      "status": "PRGCMP"
+    },
+    {
+      "credentialissueddate": "2014-01",
+      "programname": "Welding B",
+      "project_entity_id": "105632",
+      "status": "PRGCMP"
+    },
+    {
+      "credentialissueddate": "2014-01",
+      "programname": "Welding A",
+      "project_entity_id": "105632",
+      "status": "PRGCMP"
+    },
+    {
+      "credentialissueddate": "",
+      "programname": "Construction 1",
+      "project_entity_id": "105633",
+      "status": "DEREG"
+    },
+    {
+      "credentialissueddate": "",
+      "programname": "Construction 2",
+      "project_entity_id": "105634",
+      "status": "DEREG"
+    },
+    {
+      "credentialissueddate": "2014-07",
+      "programname": "Welding A",
+      "project_entity_id": "105636",
+      "status": "PRGCMP"
+    },
+    {
+      "credentialissueddate": "2013-08",
+      "programname": "Welding B",
+      "project_entity_id": "105637",
+      "status": "PRGCMP"
+    },
+    {
+      "credentialissueddate": "2013-08",
+      "programname": "Welding A",
+      "project_entity_id": "105637",
+      "status": "PRGCMP"
+    },
+    {
+      "credentialissueddate": "2015-06",
+      "programname": "Flooring Laboratory",
+      "project_entity_id": "105638",
+      "status": "PRGCMP"
+    },
+    {
+      "credentialissueddate": "2014-11",
+      "programname": "Construction 2",
+      "project_entity_id": "105639",
+      "status": "PRGCMP"
+    },
+    {
+      "credentialissueddate": "",
+      "programname": "Programming Basics",
+      "project_entity_id": "105641",
+      "status": "DEREG"
+    },
+    {
+      "credentialissueddate": "2013-12",
+      "programname": "Flooring Installation",
+      "project_entity_id": "105642",
+      "status": "PRGCMP"
+    },
+    {
+      "credentialissueddate": "",
+      "programname": "Flooring Laboratory",
+      "project_entity_id": "105642",
+      "status": "DEREG"
+    },
+    {
+      "credentialissueddate": "",
+      "programname": "Hairstyling",
+      "project_entity_id": "105645",
+      "status": "DEREG"
+    },
+    {
+      "credentialissueddate": "",
+      "programname": "Welding B",
+      "project_entity_id": "105646",
+      "status": "DEREG"
+    },
+    {
+      "credentialissueddate": "",
+      "programname": "Flooring Materials",
+      "project_entity_id": "105647",
+      "status": "DEREG"
+    },
+    {
+      "credentialissueddate": "",
+      "programname": "Hairdressing",
+      "project_entity_id": "105648",
+      "status": "DEREG"
+    },
+    {
+      "credentialissueddate": "2014-06",
+      "programname": "Hairstyling",
+      "project_entity_id": "105648",
+      "status": "PRGCMP"
+    },
+    {
+      "credentialissueddate": "",
+      "programname": "Flooring Laboratory",
+      "project_entity_id": "105649",
+      "status": "DEREG"
+    },
+    {
+      "credentialissueddate": "",
+      "programname": "Flooring Laboratory",
+      "project_entity_id": "105650",
+      "status": "DEREG"
+    },
+    {
+      "credentialissueddate": "",
+      "programname": "Flooring Installation",
+      "project_entity_id": "105650",
+      "status": "DEREG"
+    },
+    {
+      "credentialissueddate": "",
+      "programname": "Hairdressing",
+      "project_entity_id": "105651",
+      "status": "DEREG"
+    },
+    {
+      "credentialissueddate": "",
+      "programname": "Construction 1",
+      "project_entity_id": "105652",
+      "status": "DEREG"
+    },
+    {
+      "credentialissueddate": "2015-06",
+      "programname": "Automobile Advanced",
+      "project_entity_id": "105652",
+      "status": "PRGCMP"
+    },
+    {
+      "credentialissueddate": "2015-04",
+      "programname": "Welding A",
+      "project_entity_id": "105654",
+      "status": "PRGCMP"
+    },
+    {
+      "credentialissueddate": "2015-04",
+      "programname": "Automobile Advanced",
+      "project_entity_id": "105655",
+      "status": "PRGCMP"
+    },
+    {
+      "credentialissueddate": "",
+      "programname": "Automobile Basics",
+      "project_entity_id": "105655",
+      "status": "DEREG"
+    },
+    {
+      "credentialissueddate": "",
+      "programname": "Cooking",
+      "project_entity_id": "105656",
+      "status": "DEREG"
+    },
+    {
+      "credentialissueddate": "",
+      "programname": "Hairstyling",
+      "project_entity_id": "105659",
+      "status": "DEREG"
+    },
+    {
+      "credentialissueddate": "2013-06",
+      "programname": "Automobile Basics",
+      "project_entity_id": "105660",
+      "status": "PRGCMP"
+    },
+    {
+      "credentialissueddate": "2013-07",
+      "programname": "Hairstyling",
+      "project_entity_id": "105661",
+      "status": "PRGCMP"
+    },
+    {
+      "credentialissueddate": "2013-07",
+      "programname": "Welding B",
+      "project_entity_id": "105661",
+      "status": "PRGCMP"
+    },
+    {
+      "credentialissueddate": "2013-07",
+      "programname": "Hairdressing",
+      "project_entity_id": "105661",
+      "status": "PRGCMP"
+    },
+    {
+      "credentialissueddate": "2015-06",
+      "programname": "Construction 1",
+      "project_entity_id": "105662",
+      "status": "PRGCMP"
+    },
+    {
+      "credentialissueddate": "",
+      "programname": "Construction 1",
+      "project_entity_id": "105663",
+      "status": "DEREG"
+    },
+    {
+      "credentialissueddate": "",
+      "programname": "Cooking",
+      "project_entity_id": "105663",
+      "status": "DEREG"
+    },
+    {
+      "credentialissueddate": "2015-09",
+      "programname": "Construction 2",
+      "project_entity_id": "105663",
+      "status": "PRGCMP"
+    },
+    {
+      "credentialissueddate": "",
+      "programname": "Automobile Advanced",
+      "project_entity_id": "105663",
+      "status": "DEREG"
+    },
+    {
+      "credentialissueddate": "",
+      "programname": "Welding B",
+      "project_entity_id": "105663",
+      "status": "DEREG"
+    },
+    {
+      "credentialissueddate": "2013-04",
+      "programname": "Automobile Basics",
+      "project_entity_id": "105664",
+      "status": "PRGCMP"
+    },
+    {
+      "credentialissueddate": "",
+      "programname": "Automobile Advanced",
+      "project_entity_id": "105665",
+      "status": "DEREG"
+    },
+    {
+      "credentialissueddate": "2016-01",
+      "programname": "Flooring Installation",
+      "project_entity_id": "105666",
+      "status": "PRGCMP"
+    },
+    {
+      "credentialissueddate": "",
+      "programname": "Welding B",
+      "project_entity_id": "105667",
+      "status": "DEREG"
+    },
+    {
+      "credentialissueddate": "2013-06",
+      "programname": "Programming Basics",
+      "project_entity_id": "105668",
+      "status": "PRGCMP"
+    },
+    {
+      "credentialissueddate": "2014-12",
+      "programname": "Flooring Laboratory",
+      "project_entity_id": "105671",
+      "status": "PRGCMP"
+    },
+    {
+      "credentialissueddate": "2014-12",
+      "programname": "Flooring Installation",
+      "project_entity_id": "105671",
+      "status": "PRGCMP"
+    },
+    {
+      "credentialissueddate": "",
+      "programname": "Construction 1",
+      "project_entity_id": "105672",
+      "status": "DEREG"
+    },
+    {
+      "credentialissueddate": "",
+      "programname": "Hairstyling",
+      "project_entity_id": "105673",
+      "status": "DEREG"
+    },
+    {
+      "credentialissueddate": "",
+      "programname": "Hairdressing",
+      "project_entity_id": "105674",
+      "status": "DEREG"
+    },
+    {
+      "credentialissueddate": "2014-10",
+      "programname": "Hairstyling",
+      "project_entity_id": "105674",
+      "status": "PRGCMP"
+    },
+    {
+      "credentialissueddate": "",
+      "programname": "Construction 1",
+      "project_entity_id": "105674",
+      "status": "DEREG"
+    },
+    {
+      "credentialissueddate": "",
+      "programname": "Welding B",
+      "project_entity_id": "105674",
+      "status": "DEREG"
+    }
+  ]
+}

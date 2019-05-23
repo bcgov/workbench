@@ -1,0 +1,43 @@
+.container {
+  position: relative;
+}
+
+.input {
+  width: 380px !important;
+  padding-left: 35px !important;
+  transition: width 0.25s ease-in-out;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+.input::placeholder,
+.input::-moz-placeholder,
+.input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+.searchTermHighlight {
+  font-weight: 500;
+  font-style: italic;
+  background-color: #fcba19;
+  border-radius: 2px;
+}
+
+.searchIcon {
+  width: 35px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.closeIcon {
+  position: absolute;
+  right: 16px;
+  z-index: 9;
+  cursor: pointer;
+}

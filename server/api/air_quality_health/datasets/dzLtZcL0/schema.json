@@ -1,0 +1,56 @@
+{
+  "id": "dzLtZcL0",
+  "fields": [
+    {
+      "description": "Date time in PST when the air pollution reading was recorded",
+      "format": "default",
+      "name": "DATE_PST",
+      "type": "string"
+    },
+    {
+      "description": "Name of the pollution monitoring station",
+      "format": "default",
+      "name": "STATION_NAME",
+      "type": "string"
+    },
+    {
+      "description": "Unique identifiers for air quality monitoring stations/air pollution monitoring stations",
+      "format": "default",
+      "name": "EMS_ID",
+      "type": "string"
+    },
+    {
+      "description": "What type of reading it is (PM2.5, PM10 etc)",
+      "format": "default",
+      "name": "PARAMETER",
+      "type": "string"
+    },
+    {
+      "description": "What instrument was used in taking the reading",
+      "format": "default",
+      "name": "INSTRUMENT",
+      "type": "string"
+    },
+    {
+      "description": "Fractional air pllution reading as is",
+      "format": "default",
+      "name": "RAW_VALUE",
+      "type": "number"
+    },
+    {
+      "description": "unit of pollutional measurement",
+      "format": "default",
+      "name": "UNIT",
+      "type": "string"
+    },
+    {
+      "description": "air pollutional reading rounded to one decimal place",
+      "format": "default",
+      "name": "ROUNDED_VALUE",
+      "type": "number"
+    }
+  ],
+  "missingValues": [
+    ""
+  ]
+}

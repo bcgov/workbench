@@ -1,0 +1,9 @@
+.notificationsContainer {
+  position: relative;
+}
+
+.notificationsBadge {
+  position: absolute;
+  right: 0;
+  top: -5px;
+}

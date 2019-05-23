@@ -1,0 +1,636 @@
+{
+  "id": "13467f53",
+  "meta": {
+    "fields": [
+      {
+        "description": "A unique identifier assigned to an individual for this data science challenge project ",
+        "format": "default",
+        "name": "project_entity_id",
+        "type": "integer"
+      },
+      {
+        "description": "The grade level of the student at the time when the Foundation Skills Assessment test was taken",
+        "format": "default",
+        "name": "fsa_grade",
+        "type": "integer"
+      },
+      {
+        "description": "The code for the subject of the Foundation Skills Assessment test (RE - reading; NU - numeracy; WR - writing)",
+        "format": "default",
+        "name": "fsa_skills_code",
+        "type": "string"
+      },
+      {
+        "description": "A flag indicating if student met or exceeded expectation on corresponding FSA test",
+        "format": "default",
+        "name": "meet_exceed_cnt",
+        "type": "integer"
+      }
+    ],
+    "missingValues": [
+      ""
+    ]
+  },
+  "samples": [
+    {
+      "fsa_grade": "07",
+      "fsa_skills_code": "RE",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105600"
+    },
+    {
+      "fsa_grade": "07",
+      "fsa_skills_code": "NU",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105600"
+    },
+    {
+      "fsa_grade": "07",
+      "fsa_skills_code": "WR",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105600"
+    },
+    {
+      "fsa_grade": "04",
+      "fsa_skills_code": "NU",
+      "meet_exceed_cnt": "1",
+      "project_entity_id": "105607"
+    },
+    {
+      "fsa_grade": "04",
+      "fsa_skills_code": "WR",
+      "meet_exceed_cnt": "1",
+      "project_entity_id": "105607"
+    },
+    {
+      "fsa_grade": "04",
+      "fsa_skills_code": "RE",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105609"
+    },
+    {
+      "fsa_grade": "04",
+      "fsa_skills_code": "NU",
+      "meet_exceed_cnt": "1",
+      "project_entity_id": "105609"
+    },
+    {
+      "fsa_grade": "04",
+      "fsa_skills_code": "WR",
+      "meet_exceed_cnt": "1",
+      "project_entity_id": "105609"
+    },
+    {
+      "fsa_grade": "04",
+      "fsa_skills_code": "NU",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105613"
+    },
+    {
+      "fsa_grade": "04",
+      "fsa_skills_code": "WR",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105613"
+    },
+    {
+      "fsa_grade": "07",
+      "fsa_skills_code": "RE",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105614"
+    },
+    {
+      "fsa_grade": "07",
+      "fsa_skills_code": "WR",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105614"
+    },
+    {
+      "fsa_grade": "04",
+      "fsa_skills_code": "RE",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105617"
+    },
+    {
+      "fsa_grade": "04",
+      "fsa_skills_code": "NU",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105617"
+    },
+    {
+      "fsa_grade": "07",
+      "fsa_skills_code": "WR",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105617"
+    },
+    {
+      "fsa_grade": "04",
+      "fsa_skills_code": "NU",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105618"
+    },
+    {
+      "fsa_grade": "07",
+      "fsa_skills_code": "NU",
+      "meet_exceed_cnt": "1",
+      "project_entity_id": "105619"
+    },
+    {
+      "fsa_grade": "07",
+      "fsa_skills_code": "RE",
+      "meet_exceed_cnt": "1",
+      "project_entity_id": "105620"
+    },
+    {
+      "fsa_grade": "07",
+      "fsa_skills_code": "NU",
+      "meet_exceed_cnt": "1",
+      "project_entity_id": "105620"
+    },
+    {
+      "fsa_grade": "07",
+      "fsa_skills_code": "WR",
+      "meet_exceed_cnt": "1",
+      "project_entity_id": "105620"
+    },
+    {
+      "fsa_grade": "07",
+      "fsa_skills_code": "WR",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105621"
+    },
+    {
+      "fsa_grade": "04",
+      "fsa_skills_code": "NU",
+      "meet_exceed_cnt": "1",
+      "project_entity_id": "105622"
+    },
+    {
+      "fsa_grade": "04",
+      "fsa_skills_code": "WR",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105622"
+    },
+    {
+      "fsa_grade": "07",
+      "fsa_skills_code": "RE",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105622"
+    },
+    {
+      "fsa_grade": "07",
+      "fsa_skills_code": "NU",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105622"
+    },
+    {
+      "fsa_grade": "07",
+      "fsa_skills_code": "WR",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105622"
+    },
+    {
+      "fsa_grade": "04",
+      "fsa_skills_code": "RE",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105623"
+    },
+    {
+      "fsa_grade": "04",
+      "fsa_skills_code": "NU",
+      "meet_exceed_cnt": "1",
+      "project_entity_id": "105623"
+    },
+    {
+      "fsa_grade": "04",
+      "fsa_skills_code": "RE",
+      "meet_exceed_cnt": "1",
+      "project_entity_id": "105624"
+    },
+    {
+      "fsa_grade": "04",
+      "fsa_skills_code": "NU",
+      "meet_exceed_cnt": "1",
+      "project_entity_id": "105624"
+    },
+    {
+      "fsa_grade": "04",
+      "fsa_skills_code": "RE",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105625"
+    },
+    {
+      "fsa_grade": "04",
+      "fsa_skills_code": "NU",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105625"
+    },
+    {
+      "fsa_grade": "04",
+      "fsa_skills_code": "WR",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105625"
+    },
+    {
+      "fsa_grade": "07",
+      "fsa_skills_code": "RE",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105626"
+    },
+    {
+      "fsa_grade": "07",
+      "fsa_skills_code": "NU",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105626"
+    },
+    {
+      "fsa_grade": "07",
+      "fsa_skills_code": "WR",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105626"
+    },
+    {
+      "fsa_grade": "04",
+      "fsa_skills_code": "RE",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105628"
+    },
+    {
+      "fsa_grade": "04",
+      "fsa_skills_code": "NU",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105628"
+    },
+    {
+      "fsa_grade": "04",
+      "fsa_skills_code": "RE",
+      "meet_exceed_cnt": "1",
+      "project_entity_id": "105631"
+    },
+    {
+      "fsa_grade": "04",
+      "fsa_skills_code": "WR",
+      "meet_exceed_cnt": "1",
+      "project_entity_id": "105631"
+    },
+    {
+      "fsa_grade": "04",
+      "fsa_skills_code": "RE",
+      "meet_exceed_cnt": "1",
+      "project_entity_id": "105633"
+    },
+    {
+      "fsa_grade": "07",
+      "fsa_skills_code": "RE",
+      "meet_exceed_cnt": "1",
+      "project_entity_id": "105634"
+    },
+    {
+      "fsa_grade": "07",
+      "fsa_skills_code": "NU",
+      "meet_exceed_cnt": "1",
+      "project_entity_id": "105634"
+    },
+    {
+      "fsa_grade": "07",
+      "fsa_skills_code": "WR",
+      "meet_exceed_cnt": "1",
+      "project_entity_id": "105634"
+    },
+    {
+      "fsa_grade": "07",
+      "fsa_skills_code": "RE",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105637"
+    },
+    {
+      "fsa_grade": "07",
+      "fsa_skills_code": "WR",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105637"
+    },
+    {
+      "fsa_grade": "07",
+      "fsa_skills_code": "RE",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105639"
+    },
+    {
+      "fsa_grade": "07",
+      "fsa_skills_code": "NU",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105639"
+    },
+    {
+      "fsa_grade": "07",
+      "fsa_skills_code": "WR",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105639"
+    },
+    {
+      "fsa_grade": "04",
+      "fsa_skills_code": "RE",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105641"
+    },
+    {
+      "fsa_grade": "04",
+      "fsa_skills_code": "NU",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105641"
+    },
+    {
+      "fsa_grade": "04",
+      "fsa_skills_code": "WR",
+      "meet_exceed_cnt": "1",
+      "project_entity_id": "105641"
+    },
+    {
+      "fsa_grade": "04",
+      "fsa_skills_code": "NU",
+      "meet_exceed_cnt": "1",
+      "project_entity_id": "105644"
+    },
+    {
+      "fsa_grade": "04",
+      "fsa_skills_code": "WR",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105644"
+    },
+    {
+      "fsa_grade": "04",
+      "fsa_skills_code": "RE",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105645"
+    },
+    {
+      "fsa_grade": "04",
+      "fsa_skills_code": "WR",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105645"
+    },
+    {
+      "fsa_grade": "04",
+      "fsa_skills_code": "RE",
+      "meet_exceed_cnt": "1",
+      "project_entity_id": "105648"
+    },
+    {
+      "fsa_grade": "04",
+      "fsa_skills_code": "WR",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105648"
+    },
+    {
+      "fsa_grade": "07",
+      "fsa_skills_code": "NU",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105649"
+    },
+    {
+      "fsa_grade": "07",
+      "fsa_skills_code": "WR",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105649"
+    },
+    {
+      "fsa_grade": "07",
+      "fsa_skills_code": "RE",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105650"
+    },
+    {
+      "fsa_grade": "07",
+      "fsa_skills_code": "NU",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105650"
+    },
+    {
+      "fsa_grade": "07",
+      "fsa_skills_code": "WR",
+      "meet_exceed_cnt": "1",
+      "project_entity_id": "105650"
+    },
+    {
+      "fsa_grade": "04",
+      "fsa_skills_code": "RE",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105651"
+    },
+    {
+      "fsa_grade": "04",
+      "fsa_skills_code": "NU",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105651"
+    },
+    {
+      "fsa_grade": "04",
+      "fsa_skills_code": "RE",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105653"
+    },
+    {
+      "fsa_grade": "04",
+      "fsa_skills_code": "NU",
+      "meet_exceed_cnt": "1",
+      "project_entity_id": "105653"
+    },
+    {
+      "fsa_grade": "04",
+      "fsa_skills_code": "WR",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105653"
+    },
+    {
+      "fsa_grade": "04",
+      "fsa_skills_code": "NU",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105654"
+    },
+    {
+      "fsa_grade": "04",
+      "fsa_skills_code": "WR",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105654"
+    },
+    {
+      "fsa_grade": "07",
+      "fsa_skills_code": "NU",
+      "meet_exceed_cnt": "1",
+      "project_entity_id": "105655"
+    },
+    {
+      "fsa_grade": "07",
+      "fsa_skills_code": "WR",
+      "meet_exceed_cnt": "1",
+      "project_entity_id": "105655"
+    },
+    {
+      "fsa_grade": "07",
+      "fsa_skills_code": "RE",
+      "meet_exceed_cnt": "1",
+      "project_entity_id": "105657"
+    },
+    {
+      "fsa_grade": "07",
+      "fsa_skills_code": "NU",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105657"
+    },
+    {
+      "fsa_grade": "07",
+      "fsa_skills_code": "WR",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105657"
+    },
+    {
+      "fsa_grade": "04",
+      "fsa_skills_code": "RE",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105658"
+    },
+    {
+      "fsa_grade": "04",
+      "fsa_skills_code": "NU",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105658"
+    },
+    {
+      "fsa_grade": "04",
+      "fsa_skills_code": "RE",
+      "meet_exceed_cnt": "1",
+      "project_entity_id": "105660"
+    },
+    {
+      "fsa_grade": "04",
+      "fsa_skills_code": "NU",
+      "meet_exceed_cnt": "1",
+      "project_entity_id": "105660"
+    },
+    {
+      "fsa_grade": "04",
+      "fsa_skills_code": "WR",
+      "meet_exceed_cnt": "1",
+      "project_entity_id": "105660"
+    },
+    {
+      "fsa_grade": "07",
+      "fsa_skills_code": "NU",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105661"
+    },
+    {
+      "fsa_grade": "07",
+      "fsa_skills_code": "WR",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105661"
+    },
+    {
+      "fsa_grade": "04",
+      "fsa_skills_code": "NU",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105662"
+    },
+    {
+      "fsa_grade": "04",
+      "fsa_skills_code": "WR",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105662"
+    },
+    {
+      "fsa_grade": "07",
+      "fsa_skills_code": "WR",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105662"
+    },
+    {
+      "fsa_grade": "04",
+      "fsa_skills_code": "NU",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105663"
+    },
+    {
+      "fsa_grade": "04",
+      "fsa_skills_code": "WR",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105663"
+    },
+    {
+      "fsa_grade": "04",
+      "fsa_skills_code": "NU",
+      "meet_exceed_cnt": "1",
+      "project_entity_id": "105664"
+    },
+    {
+      "fsa_grade": "04",
+      "fsa_skills_code": "WR",
+      "meet_exceed_cnt": "1",
+      "project_entity_id": "105664"
+    },
+    {
+      "fsa_grade": "04",
+      "fsa_skills_code": "RE",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105665"
+    },
+    {
+      "fsa_grade": "04",
+      "fsa_skills_code": "NU",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105665"
+    },
+    {
+      "fsa_grade": "04",
+      "fsa_skills_code": "WR",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105665"
+    },
+    {
+      "fsa_grade": "07",
+      "fsa_skills_code": "RE",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105671"
+    },
+    {
+      "fsa_grade": "07",
+      "fsa_skills_code": "NU",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105671"
+    },
+    {
+      "fsa_grade": "07",
+      "fsa_skills_code": "WR",
+      "meet_exceed_cnt": "1",
+      "project_entity_id": "105671"
+    },
+    {
+      "fsa_grade": "07",
+      "fsa_skills_code": "RE",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105674"
+    },
+    {
+      "fsa_grade": "07",
+      "fsa_skills_code": "NU",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105674"
+    },
+    {
+      "fsa_grade": "07",
+      "fsa_skills_code": "WR",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105674"
+    },
+    {
+      "fsa_grade": "04",
+      "fsa_skills_code": "RE",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105677"
+    },
+    {
+      "fsa_grade": "04",
+      "fsa_skills_code": "NU",
+      "meet_exceed_cnt": "0",
+      "project_entity_id": "105677"
+    }
+  ]
+}

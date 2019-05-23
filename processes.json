@@ -1,0 +1,10 @@
+{
+  "apps": [{
+    "merge_logs": true,
+    "name": "sre-app",
+    "out_file": "/tmp/sre-logs.log",
+    "log_date_format" : "MM/DD/YYYY HH:mm:ss",
+    "script": "npm",
+    "args": "run bs"
+  }]
+}

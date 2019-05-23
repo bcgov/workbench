@@ -1,0 +1,54 @@
+{
+  "id": "education_and_training",
+  "name": "Education & Training Relationships",
+  "datasets": [
+    {
+      "id": "f1e64065",
+      "description": "This data contains the birthdate and the last known forward sortation area code of a student.  The legal guardian of a student provided this information.",
+      "hyperlink_reference": null,
+      "load_date": null,
+      "name": "BIRTHDATE_FORWARD_SORTATION_AREA.csv",
+      "title": "Birthdate and Forward Sortation Area"
+    },
+    {
+      "id": "9d3d968b",
+      "description": "This data contains a list of training programs taken by a participant. The data indicates if a participant was successful in completing a program, and the date participant received a credential. Only participants who successfully complete a program receive a credential.",
+      "hyperlink_reference": null,
+      "load_date": null,
+      "name": "TRAINING_YOUTH.csv",
+      "title": "Performance in Training Programs"
+    },
+    {
+      "id": "5082246b",
+      "description": "This data contains a list of courses taken by students during their secondary education; and the grade obtained in corresponding course.",
+      "hyperlink_reference": null,
+      "load_date": null,
+      "name": "SECONDARY_EDUCATION_FINAL_MARKS.csv",
+      "title": "Final Marks from Secondary Education"
+    },
+    {
+      "id": "13467f53",
+      "description": "This data contains a list of FSAs tests taken by students during their secondary education, and whether the grade in corresponding test met or exceeded expectations.",
+      "hyperlink_reference": null,
+      "load_date": null,
+      "name": "FOUNDATION_SKILLS_ASSESSMENT_EXPECTATION.csv",
+      "title": "Foundation Skills Assessment Performance"
+    },
+    {
+      "id": "1a81e108",
+      "description": "This data contains a list of credentials received by students during their secondary education; and the year-month when corresponding credential was received; and the grade point average students obtained during their secondary education.",
+      "hyperlink_reference": null,
+      "load_date": null,
+      "name": "SECONDARY_EDUCATION_CREDENTIAL_INFORMATION.csv",
+      "title": "Credentials from Secondary Education"
+    },
+    {
+      "id": "846997ac",
+      "description": "This data contains a list of codes that indicate whether a student took special programs that might provide an advantage on a training program.",
+      "hyperlink_reference": null,
+      "load_date": null,
+      "name": "SECONDARY_EDUCATION_SPECIAL_PROGRAM_EDUCATION.csv",
+      "title": "Participation on special programs during Secondary Education"
+    }
+  ]
+}

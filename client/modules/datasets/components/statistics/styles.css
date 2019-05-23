@@ -1,0 +1,20 @@
+.cell {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.thead {
+  font-weight: 500;
+  border-bottom-width: 3px;
+}
+
+.rowStriped {
+  background-color: #f5f5f5;
+}
+
+.fixedColumn {
+  border-right: 3px solid #dee2e6;
+  font-weight: 500;
+}

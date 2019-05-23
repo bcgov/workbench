@@ -1,0 +1,29 @@
+{
+  "env": {
+    "production": {
+      "presets": [
+        ["env", {"modules": false}],
+        "react"
+      ],
+      "plugins": [
+        "transform-class-properties",
+        "transform-object-rest-spread"
+      ]
+    },
+    "test": {
+      "plugins": [
+        "transform-class-properties",
+        "transform-object-rest-spread"
+      ],
+      "presets": ["env", "react"]
+    },
+    "development": {
+      "plugins": [
+        "react-hot-loader/babel",
+        "transform-class-properties",
+        "transform-object-rest-spread"
+      ],
+      "presets": ["env", "react"]
+    }
+  }
+}

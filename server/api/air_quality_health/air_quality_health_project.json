@@ -1,0 +1,39 @@
+{
+  "datasets": [
+    {
+      "description": "This list of good AMS is from an Analyst working for Ministry of Environment ",
+      "hyperlink_reference": null,
+      "load_date": null,
+      "name": "list_of_good_air_quality_monitoring_stations.csv",
+      "title": "List of Air Quality Monitoring Stations (AMS/EMS) which are okay to be considered for this contest"
+    },
+    {
+      "description": "This file contains data about nearest AMS for each Pharamcy in BC. The nearest AMS is computed  from spatial join between Pharamacies and various AMSs and then picking nearest (based on join distance) neighbor AMS  for each Paharmacy. ",
+      "hyperlink_reference": null,
+      "load_date": null,
+      "name": "Pharamacy_Nearest_ACTIVE_EMS_Pairs.csv",
+      "title": "For every pharmacy we are listing pharmacy and corresponding nearest Air Quality Monitoring Station"
+    },
+    {
+      "description": "This file contains adjusted drug dispense data per pharamacy. This data is derived from respiratory drug prescription data from Ministry Health. ",
+      "hyperlink_reference": null,
+      "load_date": null,
+      "name": "pharmacy_adjusted_daily_dispense.csv",
+      "title": "Daily respiratory drug dispense from a Pharmacy adjuted with respect to population (so no population related adjustment is needed)"
+    },
+    {
+      "description": "Only PM 10 air pollution hourly reading from year 2013 to 2016 have been downloaded from Data BC web site",
+      "hyperlink_reference": "https://catalogue.data.gov.bc.ca/dataset/air-quality-monitoring-verified-hourly-data",
+      "load_date": null,
+      "name": "PM10_hourly_f2013_t2016.zip",
+      "title": "Contains four directories one each for years 2013, 2014, 2015, 2016. Each folder has air pollution data for that year in a file named as PM10.csv "
+    },
+    {
+      "description": "Contains ID, address, latitude, longitude, zone etc. of AMSs in BC",
+      "hyperlink_reference": "https://catalogue.data.gov.bc.ca/dataset/air-quality-monitoring-unverified-hourly-air-quality-and-meteorological-data/resource/7fd21841-b133-4f39-b9b2-6bfa34a7cf6c",
+      "load_date": null,
+      "name": "bc_air_monitoring_stations.csv",
+      "title": "Information regarding various air monitoring stations in BC "
+    }
+  ]
+}

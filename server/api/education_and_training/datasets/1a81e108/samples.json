@@ -1,0 +1,636 @@
+{
+  "id": "1a81e108",
+  "meta": {
+    "fields": [
+      {
+        "description": "A unique identifier assigned to an individual for this data science challenge project",
+        "format": "default",
+        "name": "project_entity_id",
+        "type": "integer"
+      },
+      {
+        "description": "The year and month the credential was issued",
+        "format": "default",
+        "name": "credential_issue_month",
+        "type": "string"
+      },
+      {
+        "description": "The name of the credential obtained (BC ADULT GRADUATION DIPLOMA (= 'Adult Dogwood'), BC SECONDARY SCHOOL GRADUATION (= British Columbia Certificate of Graduation, or 'Dogwood'), BC SCHOOL COMPLETION CERTIFICATE (= 'Evergreen'))",
+        "format": "default",
+        "name": "credential_name",
+        "type": "string"
+      },
+      {
+        "description": "The grade point average (GPA) of the student",
+        "format": "default",
+        "name": "credential_gpa",
+        "type": "number"
+      }
+    ],
+    "missingValues": [
+      ""
+    ]
+  },
+  "samples": [
+    {
+      "credential_gpa": "55.000",
+      "credential_issue_month": "2015-10",
+      "credential_name": "BC SCHOOL COMPLETION CERTIFICATE",
+      "project_entity_id": "105600"
+    },
+    {
+      "credential_gpa": "61.700",
+      "credential_issue_month": "2015-10",
+      "credential_name": "BC SCHOOL COMPLETION CERTIFICATE",
+      "project_entity_id": "105602"
+    },
+    {
+      "credential_gpa": "61.400",
+      "credential_issue_month": "2014-08",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105604"
+    },
+    {
+      "credential_gpa": "59.900",
+      "credential_issue_month": "2013-10",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105605"
+    },
+    {
+      "credential_gpa": "36.400",
+      "credential_issue_month": "1996-09",
+      "credential_name": "BC ADULT GRADUATION PROGRAM",
+      "project_entity_id": "105606"
+    },
+    {
+      "credential_gpa": "65.600",
+      "credential_issue_month": "2016-09",
+      "credential_name": "BC SCHOOL COMPLETION CERTIFICATE",
+      "project_entity_id": "105607"
+    },
+    {
+      "credential_gpa": "53.900",
+      "credential_issue_month": "2016-08",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105609"
+    },
+    {
+      "credential_gpa": "51.700",
+      "credential_issue_month": "2015-10",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105613"
+    },
+    {
+      "credential_gpa": "44.400",
+      "credential_issue_month": "2014-09",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105616"
+    },
+    {
+      "credential_gpa": "23.100",
+      "credential_issue_month": "2014-08",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105618"
+    },
+    {
+      "credential_gpa": "41.300",
+      "credential_issue_month": "2016-09",
+      "credential_name": "BC SCHOOL COMPLETION CERTIFICATE",
+      "project_entity_id": "105622"
+    },
+    {
+      "credential_gpa": "58.900",
+      "credential_issue_month": "2015-09",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105623"
+    },
+    {
+      "credential_gpa": "73.300",
+      "credential_issue_month": "2016-10",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105624"
+    },
+    {
+      "credential_gpa": "54.700",
+      "credential_issue_month": "2016-08",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105628"
+    },
+    {
+      "credential_gpa": "57.600",
+      "credential_issue_month": "2014-08",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105632"
+    },
+    {
+      "credential_gpa": "60.600",
+      "credential_issue_month": "2015-09",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105633"
+    },
+    {
+      "credential_gpa": "63.700",
+      "credential_issue_month": "2015-09",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105634"
+    },
+    {
+      "credential_gpa": "62.400",
+      "credential_issue_month": "1997-09",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105635"
+    },
+    {
+      "credential_gpa": "68.600",
+      "credential_issue_month": "2015-09",
+      "credential_name": "BC SCHOOL COMPLETION CERTIFICATE",
+      "project_entity_id": "105638"
+    },
+    {
+      "credential_gpa": "42.400",
+      "credential_issue_month": "1998-09",
+      "credential_name": "BC ADULT GRADUATION PROGRAM",
+      "project_entity_id": "105643"
+    },
+    {
+      "credential_gpa": "44.100",
+      "credential_issue_month": "2005-10",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105644"
+    },
+    {
+      "credential_gpa": "59.300",
+      "credential_issue_month": "2014-08",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105647"
+    },
+    {
+      "credential_gpa": "56.200",
+      "credential_issue_month": "2014-09",
+      "credential_name": "BC SCHOOL COMPLETION CERTIFICATE",
+      "project_entity_id": "105648"
+    },
+    {
+      "credential_gpa": "49.100",
+      "credential_issue_month": "2014-09",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105649"
+    },
+    {
+      "credential_gpa": "33.000",
+      "credential_issue_month": "2015-10",
+      "credential_name": "BC SCHOOL COMPLETION CERTIFICATE",
+      "project_entity_id": "105654"
+    },
+    {
+      "credential_gpa": "52.000",
+      "credential_issue_month": "2001-09",
+      "credential_name": "BC ADULT GRADUATION PROGRAM",
+      "project_entity_id": "105657"
+    },
+    {
+      "credential_gpa": "61.700",
+      "credential_issue_month": "2013-09",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105660"
+    },
+    {
+      "credential_gpa": "35.600",
+      "credential_issue_month": "2016-09",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105663"
+    },
+    {
+      "credential_gpa": "54.400",
+      "credential_issue_month": "2015-09",
+      "credential_name": "BC SCHOOL COMPLETION CERTIFICATE",
+      "project_entity_id": "105667"
+    },
+    {
+      "credential_gpa": "55.100",
+      "credential_issue_month": "2016-10",
+      "credential_name": "BC SCHOOL COMPLETION CERTIFICATE",
+      "project_entity_id": "105668"
+    },
+    {
+      "credential_gpa": "52.000",
+      "credential_issue_month": "1992-10",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105670"
+    },
+    {
+      "credential_gpa": "53.000",
+      "credential_issue_month": "2015-10",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105674"
+    },
+    {
+      "credential_gpa": "71.400",
+      "credential_issue_month": "2003-10",
+      "credential_name": "BC ADULT GRADUATION PROGRAM",
+      "project_entity_id": "105676"
+    },
+    {
+      "credential_gpa": "41.900",
+      "credential_issue_month": "2015-10",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105680"
+    },
+    {
+      "credential_gpa": "53.300",
+      "credential_issue_month": "2016-10",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105682"
+    },
+    {
+      "credential_gpa": "34.600",
+      "credential_issue_month": "2016-09",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105684"
+    },
+    {
+      "credential_gpa": "33.600",
+      "credential_issue_month": "2015-10",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105685"
+    },
+    {
+      "credential_gpa": "76.300",
+      "credential_issue_month": "2003-10",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105686"
+    },
+    {
+      "credential_gpa": "77.300",
+      "credential_issue_month": "2016-09",
+      "credential_name": "BC SCHOOL COMPLETION CERTIFICATE",
+      "project_entity_id": "105690"
+    },
+    {
+      "credential_gpa": "50.100",
+      "credential_issue_month": "2014-09",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105694"
+    },
+    {
+      "credential_gpa": "59.000",
+      "credential_issue_month": "2015-08",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105695"
+    },
+    {
+      "credential_gpa": "61.700",
+      "credential_issue_month": "2013-10",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105696"
+    },
+    {
+      "credential_gpa": "41.100",
+      "credential_issue_month": "2015-10",
+      "credential_name": "BC SCHOOL COMPLETION CERTIFICATE",
+      "project_entity_id": "105697"
+    },
+    {
+      "credential_gpa": "57.600",
+      "credential_issue_month": "2015-09",
+      "credential_name": "BC SCHOOL COMPLETION CERTIFICATE",
+      "project_entity_id": "105698"
+    },
+    {
+      "credential_gpa": "59.300",
+      "credential_issue_month": "2014-10",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105700"
+    },
+    {
+      "credential_gpa": "43.100",
+      "credential_issue_month": "1998-10",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105701"
+    },
+    {
+      "credential_gpa": "51.400",
+      "credential_issue_month": "2014-10",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105702"
+    },
+    {
+      "credential_gpa": "74.000",
+      "credential_issue_month": "2016-09",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105703"
+    },
+    {
+      "credential_gpa": "31.900",
+      "credential_issue_month": "2015-10",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105704"
+    },
+    {
+      "credential_gpa": "62.600",
+      "credential_issue_month": "2016-09",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105706"
+    },
+    {
+      "credential_gpa": "67.900",
+      "credential_issue_month": "2014-10",
+      "credential_name": "BC SCHOOL COMPLETION CERTIFICATE",
+      "project_entity_id": "105707"
+    },
+    {
+      "credential_gpa": "61.100",
+      "credential_issue_month": "2015-10",
+      "credential_name": "BC SCHOOL COMPLETION CERTIFICATE",
+      "project_entity_id": "105711"
+    },
+    {
+      "credential_gpa": "23.600",
+      "credential_issue_month": "2015-09",
+      "credential_name": "BC SCHOOL COMPLETION CERTIFICATE",
+      "project_entity_id": "105713"
+    },
+    {
+      "credential_gpa": "67.600",
+      "credential_issue_month": "2014-09",
+      "credential_name": "BC SCHOOL COMPLETION CERTIFICATE",
+      "project_entity_id": "105716"
+    },
+    {
+      "credential_gpa": "56.600",
+      "credential_issue_month": "2014-09",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105717"
+    },
+    {
+      "credential_gpa": "50.700",
+      "credential_issue_month": "2016-08",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105718"
+    },
+    {
+      "credential_gpa": "38.400",
+      "credential_issue_month": "2013-10",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105721"
+    },
+    {
+      "credential_gpa": "44.400",
+      "credential_issue_month": "1987-10",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105723"
+    },
+    {
+      "credential_gpa": "67.900",
+      "credential_issue_month": "2013-09",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105724"
+    },
+    {
+      "credential_gpa": "60.700",
+      "credential_issue_month": "2016-10",
+      "credential_name": "BC SCHOOL COMPLETION CERTIFICATE",
+      "project_entity_id": "105726"
+    },
+    {
+      "credential_gpa": "57.400",
+      "credential_issue_month": "2014-09",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105728"
+    },
+    {
+      "credential_gpa": "57.700",
+      "credential_issue_month": "2014-09",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105729"
+    },
+    {
+      "credential_gpa": "40.400",
+      "credential_issue_month": "2014-10",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105732"
+    },
+    {
+      "credential_gpa": "48.300",
+      "credential_issue_month": "2015-09",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105733"
+    },
+    {
+      "credential_gpa": "70.700",
+      "credential_issue_month": "2010-08",
+      "credential_name": "BC SCHOOL COMPLETION CERTIFICATE",
+      "project_entity_id": "105735"
+    },
+    {
+      "credential_gpa": "61.100",
+      "credential_issue_month": "2015-10",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105741"
+    },
+    {
+      "credential_gpa": "43.400",
+      "credential_issue_month": "2015-09",
+      "credential_name": "BC SCHOOL COMPLETION CERTIFICATE",
+      "project_entity_id": "105742"
+    },
+    {
+      "credential_gpa": "62.600",
+      "credential_issue_month": "2015-09",
+      "credential_name": "BC SCHOOL COMPLETION CERTIFICATE",
+      "project_entity_id": "105745"
+    },
+    {
+      "credential_gpa": "62.000",
+      "credential_issue_month": "2013-09",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105746"
+    },
+    {
+      "credential_gpa": "37.600",
+      "credential_issue_month": "2016-10",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105748"
+    },
+    {
+      "credential_gpa": "48.400",
+      "credential_issue_month": "2014-10",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105749"
+    },
+    {
+      "credential_gpa": "42.300",
+      "credential_issue_month": "2014-09",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105752"
+    },
+    {
+      "credential_gpa": "44.400",
+      "credential_issue_month": "2014-09",
+      "credential_name": "BC SCHOOL COMPLETION CERTIFICATE",
+      "project_entity_id": "105754"
+    },
+    {
+      "credential_gpa": "70.600",
+      "credential_issue_month": "2015-10",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105755"
+    },
+    {
+      "credential_gpa": "68.900",
+      "credential_issue_month": "2015-10",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105756"
+    },
+    {
+      "credential_gpa": "51.100",
+      "credential_issue_month": "1996-10",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105757"
+    },
+    {
+      "credential_gpa": "40.100",
+      "credential_issue_month": "1992-10",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105758"
+    },
+    {
+      "credential_gpa": "54.300",
+      "credential_issue_month": "2014-10",
+      "credential_name": "BC SCHOOL COMPLETION CERTIFICATE",
+      "project_entity_id": "105759"
+    },
+    {
+      "credential_gpa": "54.100",
+      "credential_issue_month": "2014-10",
+      "credential_name": "BC SCHOOL COMPLETION CERTIFICATE",
+      "project_entity_id": "105761"
+    },
+    {
+      "credential_gpa": "58.300",
+      "credential_issue_month": "2016-10",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105762"
+    },
+    {
+      "credential_gpa": "47.900",
+      "credential_issue_month": "2016-10",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105764"
+    },
+    {
+      "credential_gpa": "48.400",
+      "credential_issue_month": "2016-09",
+      "credential_name": "BC SCHOOL COMPLETION CERTIFICATE",
+      "project_entity_id": "105765"
+    },
+    {
+      "credential_gpa": "61.700",
+      "credential_issue_month": "2016-09",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105766"
+    },
+    {
+      "credential_gpa": "45.900",
+      "credential_issue_month": "2001-10",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105767"
+    },
+    {
+      "credential_gpa": "49.400",
+      "credential_issue_month": "2015-09",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105768"
+    },
+    {
+      "credential_gpa": "36.700",
+      "credential_issue_month": "2015-10",
+      "credential_name": "BC SCHOOL COMPLETION CERTIFICATE",
+      "project_entity_id": "105769"
+    },
+    {
+      "credential_gpa": "48.900",
+      "credential_issue_month": "2016-09",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105770"
+    },
+    {
+      "credential_gpa": "56.300",
+      "credential_issue_month": "2013-10",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105772"
+    },
+    {
+      "credential_gpa": "27.600",
+      "credential_issue_month": "2015-10",
+      "credential_name": "BC SCHOOL COMPLETION CERTIFICATE",
+      "project_entity_id": "105773"
+    },
+    {
+      "credential_gpa": "41.400",
+      "credential_issue_month": "2015-10",
+      "credential_name": "BC SCHOOL COMPLETION CERTIFICATE",
+      "project_entity_id": "105774"
+    },
+    {
+      "credential_gpa": "45.000",
+      "credential_issue_month": "2014-09",
+      "credential_name": "BC SCHOOL COMPLETION CERTIFICATE",
+      "project_entity_id": "105776"
+    },
+    {
+      "credential_gpa": "40.900",
+      "credential_issue_month": "2015-09",
+      "credential_name": "BC SCHOOL COMPLETION CERTIFICATE",
+      "project_entity_id": "105777"
+    },
+    {
+      "credential_gpa": "54.600",
+      "credential_issue_month": "2013-09",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105779"
+    },
+    {
+      "credential_gpa": "60.400",
+      "credential_issue_month": "2015-09",
+      "credential_name": "BC SCHOOL COMPLETION CERTIFICATE",
+      "project_entity_id": "105781"
+    },
+    {
+      "credential_gpa": "48.600",
+      "credential_issue_month": "1986-10",
+      "credential_name": "BC ADULT GRADUATION PROGRAM",
+      "project_entity_id": "105782"
+    },
+    {
+      "credential_gpa": "63.900",
+      "credential_issue_month": "2015-09",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105784"
+    },
+    {
+      "credential_gpa": "36.900",
+      "credential_issue_month": "2014-10",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105785"
+    },
+    {
+      "credential_gpa": "61.600",
+      "credential_issue_month": "2014-09",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105787"
+    },
+    {
+      "credential_gpa": "57.700",
+      "credential_issue_month": "2002-10",
+      "credential_name": "BC ADULT GRADUATION PROGRAM",
+      "project_entity_id": "105788"
+    },
+    {
+      "credential_gpa": "41.400",
+      "credential_issue_month": "2013-10",
+      "credential_name": "BC SECONDARY SCHOOL GRADUATION",
+      "project_entity_id": "105789"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+.container {
+  flex: 1;
+  display: flex;
+}
+
+.sidebarButton {
+  position: absolute;
+  left: 0;
+  top: 80px;
+}
+
+.sidebar {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.sidebarList {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.postContainer {
+  flex: 1;
+}

@@ -1,0 +1,12 @@
+.active {
+  position: relative;
+
+  &:before {
+    width: 100%;
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    border-bottom: 3px solid #F5A623;
+  }
+}

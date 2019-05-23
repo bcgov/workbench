@@ -1,0 +1,50 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "eslint-config-airbnb",
+    "prettier"
+  ],
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "plugins": [
+    "react"
+  ],
+  "globals": {
+    "document": true,
+    "window": true,
+    "location": true,
+    "setTimeout": true,
+    "ga": true,
+    "jest": true,
+    "afterEach": true,
+    "beforeEach": true,
+    "test": true,
+    "confirm": true,
+    "describe": true,
+    "expect": true,
+    "it": true,
+    "_kmq": true,
+    "UserVoice": true,
+    "API_ROOT": true,
+    "BASESPACE_URL": true,
+    "COMMUNITY_URL": true,
+    "RELEASE_NOTES_URL": true,
+    "__DEV__": true,
+    "__STAGING__": true,
+    "__PROD__": true,
+    "__MODE__": true
+  },
+  "rules": {
+    "import/extensions": [0],
+    "import/no-extraneous-dependencies": [0],
+    "import/no-unresolved": [0],
+    "jsx-a11y/anchor-is-valid": ["error", {
+      "components": ["Link"],
+      "specialLink": ["to"]
+    }],
+    "jsx-a11y/click-events-have-key-events": [0]
+  }
+}

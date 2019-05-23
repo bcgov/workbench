@@ -1,0 +1,66 @@
+{
+  "id": "air_quality_health",
+  "name": "Air Quality & Health",
+  "datasets": [
+    {
+      "id": "GQ9u3hYG",
+      "description": "Name, address, geographic location of pharmacies and their distance (km) to the  closest  air quality monitoring station.",
+      "hyperlink_reference": "https://catalogue.data.gov.bc.ca/dataset/f5b6bfad-d06a-4952-ae47-976fb5092bcc",
+      "load_date": "2018-02-01T19:15:14.935Z",
+      "name": "Pharmacy_Nearest_ACTIVE_EMS_Pairs.csv",
+      "title": "Pharmacy Locations",
+      "supplementary": [
+        {
+          "name": "Supplementary Information",
+          "type": "pdf",
+          "url": "/assets/downloads/Supplementary_information.pdf"
+        }
+      ]
+    },
+    {
+      "id": "A4ohotl0",
+      "description": "Estimates of the proportion of all drugs dispensed each day at each pharmacy that are prescribed for respiratory illnesses such as asthma.",
+      "hyperlink_reference": "https://catalogue.data.gov.bc.ca/dataset/f5b6bfad-d06a-4952-ae47-976fb5092bcc",
+      "load_date": "2018-02-01T19:15:14.935Z",
+      "name": "pharmacy_adjusted_daily_dispense.csv",
+      "title": "Daily Proportion of Drugs Dispensed by Pharmacy for Respiratory Illnesses",
+      "supplementary": [
+        {
+          "name": "Supplementary Information",
+          "type": "pdf",
+          "url": "/assets/downloads/Supplementary_information.pdf"
+        }
+      ]
+    },
+    {
+      "id": "dzLtZcL0",
+      "description": "Only PM 10 air pollution daily reading from year 2013 to 2016 have been downloaded from Data BC web site",
+      "hyperlink_reference": "https://catalogue.data.gov.bc.ca/dataset/77eeadf4-0c19-48bf-a47a-fa9eef01f409",
+      "load_date": "2018-02-01T19:15:14.935Z",
+      "name": "PM10_daily_f2013_t2016.zip",
+      "title": "Daily PM 10 Air Pollution Readings (2013-2016)",
+      "supplementary": [
+        {
+          "name": "Supplementary Information",
+          "type": "pdf",
+          "url": "/assets/downloads/Supplementary_information.pdf"
+        }
+      ]
+    },
+    {
+      "id": "AZjc6InA",
+      "description": "Contains ID, address, latitude, longitude, zone etc. of AMSs in BC",
+      "hyperlink_reference": "https://catalogue.data.gov.bc.ca/dataset/air-quality-monitoring-unverified-hourly-air-quality-and-meteorological-data/resource/7fd21841-b133-4f39-b9b2-6bfa34a7cf6c",
+      "load_date": "2018-02-01T19:15:14.935Z",
+      "name": "bc_air_monitoring_stations.csv",
+      "title": "BC Air Quality Monitoring Stations",
+      "supplementary": [
+        {
+          "name": "Supplementary Information",
+          "type": "pdf",
+          "url": "/assets/downloads/Supplementary_information.pdf"
+        }
+      ]
+    }
+  ]
+}

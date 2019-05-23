@@ -1,0 +1,22 @@
+{
+  "id": "image_analysis_vehicle_classification",
+  "name": "Image Analysis & Vehicle Classification",
+  "datasets": [
+    {
+      "id": "f2924c2f",
+      "description": "Contains training dataset for building an image classification model",
+      "hyperlink_reference": null,
+      "load_date": null,
+      "name": "MIO-TCD-CLASSIFICATION.tar",
+      "title": "MIO TCD image classification training dataset"
+    },
+    {
+      "id": "588c9ae4",
+      "description": "Contains images for evaluating the image classification model",
+      "hyperlink_reference": null,
+      "load_date": null,
+      "name": "TRAFFIC_IMAGES_LHA_SAMPLE.zip",
+      "title": "BCDrive traffic image samples"
+    }
+  ]
+}

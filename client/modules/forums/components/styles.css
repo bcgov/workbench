@@ -1,0 +1,44 @@
+.container {
+  height: calc(100vh - 58px); /* Minus the height of the app-bar */
+}
+
+.empty {
+  flex: 1;
+}
+
+.discussionsReadMoreBtn {
+  height: 50px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.unreadBadge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 20px;
+}
+
+.post {
+  &:hover {
+    background-color: #f2f2f2;
+  }
+}
+
+.postMenu {
+  visibility: hidden;
+}
+
+.post:hover .postMenu {
+  visibility: visible;
+}
+
+:global {
+  .emoji {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+  }
+}

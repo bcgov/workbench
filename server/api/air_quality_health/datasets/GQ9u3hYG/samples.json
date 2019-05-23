@@ -1,0 +1,954 @@
+{
+  "id": "GQ9u3hYG",
+  "meta": {
+    "fields": [
+      {
+        "description": "Address of a Pharmacy",
+        "format": "default",
+        "name": "ADDRESS",
+        "type": "string"
+      },
+      {
+        "description": "Name of a Pharmacy",
+        "format": "default",
+        "name": "PHARMACY",
+        "type": "string"
+      },
+      {
+        "description": "Longitude of a Pharmacy",
+        "format": "default",
+        "name": "PHARMACY_LONGITUDE",
+        "type": "number"
+      },
+      {
+        "description": "Latitude of a Pharmacy",
+        "format": "default",
+        "name": "PHARMACY_LATITUDE",
+        "type": "number"
+      },
+      {
+        "description": "Longitude and latitude pair for a Pharmacy for ease of geo-spatial processing",
+        "format": "default",
+        "name": "GEO_POINT",
+        "type": "geo_point"
+      },
+      {
+        "description": "Identifiers for air quality monitoring stations/air pollution monitoring stations",
+        "format": "default",
+        "name": "EMS_ID",
+        "type": "string"
+      },
+      {
+        "description": "Distance between a pharamacy and corresponding nearest AMS",
+        "format": "default",
+        "name": "JOIN_DISTANCE",
+        "type": "number"
+      }
+    ],
+    "missingValues": [
+      ""
+    ]
+  },
+  "samples": [
+    {
+      "ADDRESS": "32943 Marshall Rd Abbotsford, BC V2S 1J8",
+      "EMS_ID": "E238212",
+      "GEO_POINT": "POINT(-122.3115109 49.0382154)",
+      "JOIN_DISTANCE": "0.53",
+      "PHARMACY": "ABBEY REXALL LTC PHARMACY",
+      "PHARMACY_LATITUDE": "49.0382154",
+      "PHARMACY_LONGITUDE": "-122.3115109"
+    },
+    {
+      "ADDRESS": "27105 Fraser Hwy Aldergrove, BC V4W 3R2",
+      "EMS_ID": "E209178",
+      "GEO_POINT": "POINT(-122.4733977 49.0583375)",
+      "JOIN_DISTANCE": "7.97",
+      "PHARMACY": "ALDERGROVE COMMUNITY PHARMACY",
+      "PHARMACY_LATITUDE": "49.0583375",
+      "PHARMACY_LONGITUDE": "-122.4733977"
+    },
+    {
+      "ADDRESS": "3rd St W North Vancouver, BC V7M 1E7",
+      "EMS_ID": "E232246",
+      "GEO_POINT": "POINT(-123.0907642 49.3196268)",
+      "JOIN_DISTANCE": "15.47",
+      "PHARMACY": "ANDERSON'S PHARMACY NO. 1",
+      "PHARMACY_LATITUDE": "49.3196268",
+      "PHARMACY_LONGITUDE": "-123.0907642"
+    },
+    {
+      "ADDRESS": "4480 Barriere Town Road Barriere, BC V0E 1E0",
+      "EMS_ID": "0550502",
+      "GEO_POINT": "POINT(-120.1238585 51.1789895)",
+      "JOIN_DISTANCE": "176.23",
+      "PHARMACY": "BARRIERE I.D.A. PHARMACY",
+      "PHARMACY_LATITUDE": "51.1789895",
+      "PHARMACY_LONGITUDE": "-120.1238585"
+    },
+    {
+      "ADDRESS": "845 Broadway W Vancouver, BC V5Z 1J9",
+      "EMS_ID": "E232246",
+      "GEO_POINT": "POINT(-123.1229997 49.2634015)",
+      "JOIN_DISTANCE": "8.82",
+      "PHARMACY": "BIOPRO BIOLOGICS PHARMACY",
+      "PHARMACY_LATITUDE": "49.2634015",
+      "PHARMACY_LONGITUDE": "-123.1229997"
+    },
+    {
+      "ADDRESS": "6th Avenue Midway, BC V0H 1M0",
+      "EMS_ID": "E286369",
+      "GEO_POINT": "POINT(-118.7763555 49.006636)",
+      "JOIN_DISTANCE": "88.13",
+      "PHARMACY": "BOUNDARY PHARMACY",
+      "PHARMACY_LATITUDE": "49.006636",
+      "PHARMACY_LONGITUDE": "-118.7763555"
+    },
+    {
+      "ADDRESS": "6th St Burnaby, BC V3N 3N4",
+      "EMS_ID": "E222778",
+      "GEO_POINT": "POINT(-124.5281819 49.8407081)",
+      "JOIN_DISTANCE": "87.76",
+      "PHARMACY": "BURNABY SQUARE PRESCRIPTIONS",
+      "PHARMACY_LATITUDE": "49.8407081",
+      "PHARMACY_LONGITUDE": "-124.5281819"
+    },
+    {
+      "ADDRESS": "4655 Hastings St Burnaby, BC V5C 2K6",
+      "EMS_ID": "E207418",
+      "GEO_POINT": "POINT(-122.9982277 49.281049)",
+      "JOIN_DISTANCE": "7.37",
+      "PHARMACY": "CAPITOL HILL PHARMACY",
+      "PHARMACY_LATITUDE": "49.281049",
+      "PHARMACY_LONGITUDE": "-122.9982277"
+    },
+    {
+      "ADDRESS": "177 Bowen Island, BC V0N 1G0",
+      "EMS_ID": "E222778",
+      "GEO_POINT": "POINT(-123.314719 49.3835691)",
+      "JOIN_DISTANCE": "13.39",
+      "PHARMACY": "CATES MEDICINE CENTRE",
+      "PHARMACY_LATITUDE": "49.3835691",
+      "PHARMACY_LONGITUDE": "-123.314719"
+    },
+    {
+      "ADDRESS": "3963 Kingsway Burnaby, BC V5H 1Y7",
+      "EMS_ID": "E207418",
+      "GEO_POINT": "POINT(-123.016721 49.2328295)",
+      "JOIN_DISTANCE": "2.98",
+      "PHARMACY": "CENTRAL PARK PHARMACY",
+      "PHARMACY_LATITUDE": "49.2328295",
+      "PHARMACY_LONGITUDE": "-123.016721"
+    },
+    {
+      "ADDRESS": "399 Main St Penticton, BC V2A 5B7",
+      "EMS_ID": "E223756",
+      "GEO_POINT": "POINT(-119.5920773 49.4973351)",
+      "JOIN_DISTANCE": "138.65",
+      "PHARMACY": "CITY CENTRE REMEDY'SRX",
+      "PHARMACY_LATITUDE": "49.4973351",
+      "PHARMACY_LONGITUDE": "-119.5920773"
+    },
+    {
+      "ADDRESS": "317 Columbia St E New Westminster, BC V3L 3W8",
+      "EMS_ID": "0310162",
+      "GEO_POINT": "POINT(-122.8929115 49.2265916)",
+      "JOIN_DISTANCE": "6.81",
+      "PHARMACY": "COLUMBIA PRESCRIPTION X-PRESS",
+      "PHARMACY_LATITUDE": "49.2265916",
+      "PHARMACY_LONGITUDE": "-122.8929115"
+    },
+    {
+      "ADDRESS": "5316 Victoria Dr Vancouver, BC V5P 3V7",
+      "EMS_ID": "E207418",
+      "GEO_POINT": "POINT(-123.065025 49.2367033)",
+      "JOIN_DISTANCE": "6.24",
+      "PHARMACY": "CONTINENTAL PHARMACY #2",
+      "PHARMACY_LATITUDE": "49.2367033",
+      "PHARMACY_LONGITUDE": "-123.065025"
+    },
+    {
+      "ADDRESS": "2479 North Highway 97 Kelowna, BC V1X 4J2",
+      "EMS_ID": "E286369",
+      "GEO_POINT": "POINT(-119.4192589 49.8879293)",
+      "JOIN_DISTANCE": "141.65",
+      "PHARMACY": "COSTCO PHARMACY # 59",
+      "PHARMACY_LATITUDE": "49.8879293",
+      "PHARMACY_LONGITUDE": "-119.4192589"
+    },
+    {
+      "ADDRESS": "4500 Still Creek Dr Burnaby, BC V5C 0E5",
+      "EMS_ID": "E207418",
+      "GEO_POINT": "POINT(-122.999499 49.2603392)",
+      "JOIN_DISTANCE": "5.11",
+      "PHARMACY": "COSTCO PHARMACY # 548",
+      "PHARMACY_LATITUDE": "49.2603392",
+      "PHARMACY_LONGITUDE": "-122.999499"
+    },
+    {
+      "ADDRESS": "2061 Sumas Way Abbotsford, BC V2S 8H6",
+      "EMS_ID": "E238212",
+      "GEO_POINT": "POINT(-122.2706264 49.039151)",
+      "JOIN_DISTANCE": "2.88",
+      "PHARMACY": "CROSSROADS PHARMACY",
+      "PHARMACY_LATITUDE": "49.039151",
+      "PHARMACY_LONGITUDE": "-122.2706264"
+    },
+    {
+      "ADDRESS": "569 Powell Street Vancouver, BC V6A 1G8",
+      "EMS_ID": "E232246",
+      "GEO_POINT": "POINT(-123.0918041 49.2832953)",
+      "JOIN_DISTANCE": "11.63",
+      "PHARMACY": "DOWNTOWN CLINIC PHARMACY",
+      "PHARMACY_LATITUDE": "49.2832953",
+      "PHARMACY_LONGITUDE": "-123.0918041"
+    },
+    {
+      "ADDRESS": "623 Powell St Vancouver, BC V6A 1H2",
+      "EMS_ID": "E232246",
+      "GEO_POINT": "POINT(-123.090847 49.2830578)",
+      "JOIN_DISTANCE": "11.63",
+      "PHARMACY": "DTES CONNECTIONS PHARMACY",
+      "PHARMACY_LATITUDE": "49.2830578",
+      "PHARMACY_LONGITUDE": "-123.090847"
+    },
+    {
+      "ADDRESS": "398 Hastings St E Vancouver, BC V6A 1P4",
+      "EMS_ID": "E232246",
+      "GEO_POINT": "POINT(-123.095409 49.2812163)",
+      "JOIN_DISTANCE": "11.32",
+      "PHARMACY": "EASTSIDE PHARMACY LTD.",
+      "PHARMACY_LATITUDE": "49.2812163",
+      "PHARMACY_LONGITUDE": "-123.095409"
+    },
+    {
+      "ADDRESS": "2250 Boundary Rd Burnaby, BC V5M 3Z3",
+      "EMS_ID": "E207418",
+      "GEO_POINT": "POINT(-123.02262 49.2650423)",
+      "JOIN_DISTANCE": "6.15",
+      "PHARMACY": "EXPRESS SCRIPTS CANADA PHARMACY",
+      "PHARMACY_LATITUDE": "49.2650423",
+      "PHARMACY_LONGITUDE": "-123.02262"
+    },
+    {
+      "ADDRESS": "152 St Surrey, BC V3R 4E7",
+      "EMS_ID": "0310162",
+      "GEO_POINT": "POINT(-122.8011011 49.102269)",
+      "JOIN_DISTANCE": "20.16",
+      "PHARMACY": "FLEETWOOD PHARMACY REMEDY'SRX",
+      "PHARMACY_LATITUDE": "49.102269",
+      "PHARMACY_LONGITUDE": "-122.8011011"
+    },
+    {
+      "ADDRESS": "748 Queen Charlotte City, BC V0T 1S0",
+      "EMS_ID": "E209178",
+      "GEO_POINT": "POINT(-122.5782192 49.166786)",
+      "JOIN_DISTANCE": "7.96",
+      "PHARMACY": "FORBES PHARMACY - QUEEN CHARLOTTE",
+      "PHARMACY_LATITUDE": "49.166786",
+      "PHARMACY_LONGITUDE": "-122.5782192"
+    },
+    {
+      "ADDRESS": "111 Chowsunket St Fraser Lake, BC V0J 1S0",
+      "EMS_ID": "M107004",
+      "GEO_POINT": "POINT(-124.8524951 54.0554349)",
+      "JOIN_DISTANCE": "122.38",
+      "PHARMACY": "FRASER LAKE REXALL DRUG STORE #7107",
+      "PHARMACY_LATITUDE": "54.0554349",
+      "PHARMACY_LONGITUDE": "-124.8524951"
+    },
+    {
+      "ADDRESS": "45744 Gaetz St Chilliwack, BC V2R 3P1",
+      "EMS_ID": "E220891",
+      "GEO_POINT": "POINT(-121.9578967 49.1360224)",
+      "JOIN_DISTANCE": "2.56",
+      "PHARMACY": "GAETZ PHARMACY",
+      "PHARMACY_LATITUDE": "49.1360224",
+      "PHARMACY_LONGITUDE": "-121.9578967"
+    },
+    {
+      "ADDRESS": "10751 King George Blvd Surrey, BC V3T 2X6",
+      "EMS_ID": "0310162",
+      "GEO_POINT": "POINT(-122.8457959 49.1978627)",
+      "JOIN_DISTANCE": "9.23",
+      "PHARMACY": "GATEWAY PHARMACY",
+      "PHARMACY_LATITUDE": "49.1978627",
+      "PHARMACY_LONGITUDE": "-122.8457959"
+    },
+    {
+      "ADDRESS": "22722 Lougheed Hwy Maple Ridge, BC V2X 2V6",
+      "EMS_ID": "E209178",
+      "GEO_POINT": "POINT(-122.5928084 49.216191)",
+      "JOIN_DISTANCE": "13.54",
+      "PHARMACY": "GOLDEN EARS PHARMACY",
+      "PHARMACY_LATITUDE": "49.216191",
+      "PHARMACY_LONGITUDE": "-122.5928084"
+    },
+    {
+      "ADDRESS": "22195 Dewdney Trunk Road Maple Ridge, BC V2X 3H7",
+      "EMS_ID": "E209178",
+      "GEO_POINT": "POINT(-122.6073795 49.2208137)",
+      "JOIN_DISTANCE": "14.23",
+      "PHARMACY": "HANEY PHARMACY",
+      "PHARMACY_LATITUDE": "49.2208137",
+      "PHARMACY_LONGITUDE": "-122.6073795"
+    },
+    {
+      "ADDRESS": "8980 Richmond, BC V6Y 2E8",
+      "EMS_ID": "E232246",
+      "GEO_POINT": "POINT(-123.091763 49.1739703)",
+      "JOIN_DISTANCE": "4.61",
+      "PHARMACY": "HEALTHPLUS PHARMACY #2",
+      "PHARMACY_LATITUDE": "49.1739703",
+      "PHARMACY_LONGITUDE": "-123.091763"
+    },
+    {
+      "ADDRESS": "7188 Kingsway Burnaby, BC V5E 1G3",
+      "EMS_ID": "E207418",
+      "GEO_POINT": "POINT(-122.9552304 49.2179208)",
+      "JOIN_DISTANCE": "2.22",
+      "PHARMACY": "HIGH GATE PHARMACY LTD.",
+      "PHARMACY_LATITUDE": "49.2179208",
+      "PHARMACY_LONGITUDE": "-122.9552304"
+    },
+    {
+      "ADDRESS": "2nd Ave. PO Fernie, BC V0B 1M0",
+      "EMS_ID": "E258315",
+      "GEO_POINT": "POINT(-115.0627778 49.5041667)",
+      "JOIN_DISTANCE": "161.22",
+      "PHARMACY": "I.G.S. VALUE DRUG MART",
+      "PHARMACY_LATITUDE": "49.5041667",
+      "PHARMACY_LONGITUDE": "-115.0627778"
+    },
+    {
+      "ADDRESS": "62 Cowichan Lake Road Lake Cowichan, BC V0R 2G0",
+      "EMS_ID": "E222778",
+      "GEO_POINT": "POINT(-124.0507184 48.8265642)",
+      "JOIN_DISTANCE": "79.78",
+      "PHARMACY": "ISLAND PHARMACY # 2",
+      "PHARMACY_LATITUDE": "48.8265642",
+      "PHARMACY_LONGITUDE": "-124.0507184"
+    },
+    {
+      "ADDRESS": "2083 Alma St. Vancouver, BC V6R 4N6",
+      "EMS_ID": "E232246",
+      "GEO_POINT": "POINT(-123.1863811 49.2682111)",
+      "JOIN_DISTANCE": "9.43",
+      "PHARMACY": "JERICHO PHARMACY & HEALTH FOOD STORE",
+      "PHARMACY_LATITUDE": "49.2682111",
+      "PHARMACY_LONGITUDE": "-123.1863811"
+    },
+    {
+      "ADDRESS": "330 Main St. Penticton, BC V2A 5C3",
+      "EMS_ID": "E223756",
+      "GEO_POINT": "POINT(-119.5918402 49.4983419)",
+      "JOIN_DISTANCE": "138.68",
+      "PHARMACY": "KNIGHTS PHARMACY",
+      "PHARMACY_LATITUDE": "49.4983419",
+      "PHARMACY_LONGITUDE": "-119.5918402"
+    },
+    {
+      "ADDRESS": "2365 Gordon Drive Kelowna, BC V1W 3C2",
+      "EMS_ID": "E286369",
+      "GEO_POINT": "POINT(-119.4750723 49.8720521)",
+      "JOIN_DISTANCE": "144.51",
+      "PHARMACY": "LAKESIDE MEDICINE CENTRE",
+      "PHARMACY_LATITUDE": "49.8720521",
+      "PHARMACY_LONGITUDE": "-119.4750723"
+    },
+    {
+      "ADDRESS": "206 St Langley, BC V3A 7T1",
+      "EMS_ID": "E209178",
+      "GEO_POINT": "POINT(-122.651409 49.122537)",
+      "JOIN_DISTANCE": "6.84",
+      "PHARMACY": "LANGLEY PHARMACY",
+      "PHARMACY_LATITUDE": "49.122537",
+      "PHARMACY_LONGITUDE": "-122.651409"
+    },
+    {
+      "ADDRESS": "1530 Cliffe Ave Courtenay, BC V9N 2K4",
+      "EMS_ID": "E222778",
+      "GEO_POINT": "POINT(-124.9916789 49.6861534)",
+      "JOIN_DISTANCE": "112.5",
+      "PHARMACY": "LIVING ROOM PHARMACY LTD.",
+      "PHARMACY_LATITUDE": "49.6861534",
+      "PHARMACY_LONGITUDE": "-124.9916789"
+    },
+    {
+      "ADDRESS": "1424 Island Highway Campbell River, BC V9W 2E3",
+      "EMS_ID": "E222778",
+      "GEO_POINT": "POINT(-125.2587844 50.0333382)",
+      "JOIN_DISTANCE": "143.96",
+      "PHARMACY": "LOBLAW PHARMACY #1524",
+      "PHARMACY_LATITUDE": "50.0333382",
+      "PHARMACY_LONGITUDE": "-125.2587844"
+    },
+    {
+      "ADDRESS": "3020 Louie Dr Westbank, BC V4T 3E1",
+      "EMS_ID": "E223756",
+      "GEO_POINT": "POINT(-119.6203944 49.8359274)",
+      "JOIN_DISTANCE": "144.99",
+      "PHARMACY": "LOBLAW PHARMACY #1552",
+      "PHARMACY_LATITUDE": "49.8359274",
+      "PHARMACY_LONGITUDE": "-119.6203944"
+    },
+    {
+      "ADDRESS": "333 Seymour Blvd. North Vancouver, BC V7J 2J4",
+      "EMS_ID": "E207418",
+      "GEO_POINT": "POINT(-123.024775 49.3115536)",
+      "JOIN_DISTANCE": "11.07",
+      "PHARMACY": "LOBLAW PHARMACY #1560",
+      "PHARMACY_LATITUDE": "49.3115536",
+      "PHARMACY_LONGITUDE": "-123.024775"
+    },
+    {
+      "ADDRESS": "98A Ave Fort St. John, BC V1J 1S3",
+      "EMS_ID": "0450307",
+      "GEO_POINT": "POINT(-120.8388912 56.2446753)",
+      "JOIN_DISTANCE": "285.97",
+      "PHARMACY": "LOBLAW PHARMACY #4399",
+      "PHARMACY_LATITUDE": "56.2446753",
+      "PHARMACY_LONGITUDE": "-120.8388912"
+    },
+    {
+      "ADDRESS": "7190 Kerr Street Vancouver, BC V5S 4W2",
+      "EMS_ID": "E207418",
+      "GEO_POINT": "POINT(-123.0412884 49.2181704)",
+      "JOIN_DISTANCE": "4.06",
+      "PHARMACY": "LOBLAW PHARMACY #4617",
+      "PHARMACY_LATITUDE": "49.2181704",
+      "PHARMACY_LONGITUDE": "-123.0412884"
+    },
+    {
+      "ADDRESS": "2760 Forksdale Ave Merritt, BC V1K 1R9",
+      "EMS_ID": "E223756",
+      "GEO_POINT": "POINT(-120.7621633 50.1217459)",
+      "JOIN_DISTANCE": "98.99",
+      "PHARMACY": "LOBLAW PHARMACY #4984",
+      "PHARMACY_LATITUDE": "50.1217459",
+      "PHARMACY_LONGITUDE": "-120.7621633"
+    },
+    {
+      "ADDRESS": "4970 Kingsway Burnaby, BC V5H 2E2",
+      "EMS_ID": "E207418",
+      "GEO_POINT": "POINT(-122.9920629 49.2259488)",
+      "JOIN_DISTANCE": "1.27",
+      "PHARMACY": "LONDON DRUGS # 6 - BURNABY",
+      "PHARMACY_LATITUDE": "49.2259488",
+      "PHARMACY_LONGITUDE": "-122.9920629"
+    },
+    {
+      "ADDRESS": "1030 Coquitlam Centre 2929 Barnet Hwy. Coquitlam, BC V3B 5R5",
+      "EMS_ID": "0310162",
+      "GEO_POINT": "POINT(-122.7936111 49.2841667)",
+      "JOIN_DISTANCE": "4.05",
+      "PHARMACY": "LONDON DRUGS #15",
+      "PHARMACY_LATITUDE": "49.2841667",
+      "PHARMACY_LONGITUDE": "-122.7936111"
+    },
+    {
+      "ADDRESS": "450 Lansdowne St Kamloops, BC V2C 1Y3",
+      "EMS_ID": "E223756",
+      "GEO_POINT": "POINT(-120.3283702 50.676858)",
+      "JOIN_DISTANCE": "167.7",
+      "PHARMACY": "LONDON DRUGS #35",
+      "PHARMACY_LATITUDE": "50.676858",
+      "PHARMACY_LONGITUDE": "-120.3283702"
+    },
+    {
+      "ADDRESS": "22709 Lougheed Hwy Maple Ridge, BC V2X 2V5",
+      "EMS_ID": "E209178",
+      "GEO_POINT": "POINT(-122.5918654 49.21763)",
+      "JOIN_DISTANCE": "13.69",
+      "PHARMACY": "LONDON DRUGS #47 - MAPLE RIDGE",
+      "PHARMACY_LATITUDE": "49.21763",
+      "PHARMACY_LONGITUDE": "-122.5918654"
+    },
+    {
+      "ADDRESS": "900 Gibsons Way Gibsons, BC V0N 1V7",
+      "EMS_ID": "E222778",
+      "GEO_POINT": "POINT(-123.5192695 49.4081272)",
+      "JOIN_DISTANCE": "4.48",
+      "PHARMACY": "LONDON DRUGS #61 - GIBSONS",
+      "PHARMACY_LATITUDE": "49.4081272",
+      "PHARMACY_LONGITUDE": "-123.5192695"
+    },
+    {
+      "ADDRESS": "2151 Louie Dr Westbank, BC V4T 3E6",
+      "EMS_ID": "E223756",
+      "GEO_POINT": "POINT(-119.6122723 49.8396236)",
+      "JOIN_DISTANCE": "145.68",
+      "PHARMACY": "LONDON DRUGS #76",
+      "PHARMACY_LATITUDE": "49.8396236",
+      "PHARMACY_LONGITUDE": "-119.6122723"
+    },
+    {
+      "ADDRESS": "3rd St E North Vancouver, BC V7M 2G1",
+      "EMS_ID": "E207418",
+      "GEO_POINT": "POINT(-123.0584171 49.3084692)",
+      "JOIN_DISTANCE": "11.63",
+      "PHARMACY": "LONSDALE & 3RD PHARMACY",
+      "PHARMACY_LATITUDE": "49.3084692",
+      "PHARMACY_LONGITUDE": "-123.0584171"
+    },
+    {
+      "ADDRESS": "138 West 6th Ave Vancouver, BC V5Y 1K6",
+      "EMS_ID": "E232246",
+      "GEO_POINT": "POINT(-123.1080531 49.265384)",
+      "JOIN_DISTANCE": "9.35",
+      "PHARMACY": "MACDONALD'S PRESCRIPTIONS #5",
+      "PHARMACY_LATITUDE": "49.265384",
+      "PHARMACY_LONGITUDE": "-123.1080531"
+    },
+    {
+      "ADDRESS": "325 Jubilee St. Duncan, BC V9L 1W9",
+      "EMS_ID": "E232246",
+      "GEO_POINT": "POINT(-123.7105478 48.7794536)",
+      "JOIN_DISTANCE": "60.89",
+      "PHARMACY": "MANN'S PRESCRIPTION PHARMACY",
+      "PHARMACY_LATITUDE": "48.7794536",
+      "PHARMACY_LONGITUDE": "-123.7105478"
+    },
+    {
+      "ADDRESS": "1194 Lansdowne Dr Coquitlam, BC V3E 1J7",
+      "EMS_ID": "0310162",
+      "GEO_POINT": "POINT(-122.8100724 49.2834992)",
+      "JOIN_DISTANCE": "2.85",
+      "PHARMACY": "MARY'S PHARMACY",
+      "PHARMACY_LATITUDE": "49.2834992",
+      "PHARMACY_LONGITUDE": "-122.8100724"
+    },
+    {
+      "ADDRESS": "3700 North Fraser Way Burnaby, BC V5J 3Z7",
+      "EMS_ID": "E207418",
+      "GEO_POINT": "POINT(-123.0221191 49.201574)",
+      "JOIN_DISTANCE": "3.06",
+      "PHARMACY": "MEDICAL PHARMACY #48",
+      "PHARMACY_LATITUDE": "49.201574",
+      "PHARMACY_LONGITUDE": "-123.0221191"
+    },
+    {
+      "ADDRESS": "6495 Victoria Dr. Vancouver, BC V5P 3X5",
+      "EMS_ID": "E207418",
+      "GEO_POINT": "POINT(-123.0658485 49.2252545)",
+      "JOIN_DISTANCE": "5.93",
+      "PHARMACY": "MEDICINE SHOPPE #149",
+      "PHARMACY_LATITUDE": "49.2252545",
+      "PHARMACY_LONGITUDE": "-123.0658485"
+    },
+    {
+      "ADDRESS": "4833 Southgate Rd Port Alberni, BC V9Y 5K5",
+      "EMS_ID": "E222778",
+      "GEO_POINT": "POINT(-124.8092003 49.2578682)",
+      "JOIN_DISTANCE": "98.42",
+      "PHARMACY": "MEDICINE SHOPPE #253",
+      "PHARMACY_LATITUDE": "49.2578682",
+      "PHARMACY_LONGITUDE": "-124.8092003"
+    },
+    {
+      "ADDRESS": "3949 Maple Way Port Alberni, BC V9Y 0B2",
+      "EMS_ID": "E222778",
+      "GEO_POINT": "POINT(-124.7917599 49.2639573)",
+      "JOIN_DISTANCE": "97.04",
+      "PHARMACY": "MEDICINE SHOPPE #333",
+      "PHARMACY_LATITUDE": "49.2639573",
+      "PHARMACY_LONGITUDE": "-124.7917599"
+    },
+    {
+      "ADDRESS": "1782B Comox Ave Comox, BC V9M 3M8",
+      "EMS_ID": "E222778",
+      "GEO_POINT": "POINT(-124.9264439 49.673461)",
+      "JOIN_DISTANCE": "107.6",
+      "PHARMACY": "MEDICINE SHOPPE PHARMACY #169",
+      "PHARMACY_LATITUDE": "49.673461",
+      "PHARMACY_LONGITUDE": "-124.9264439"
+    },
+    {
+      "ADDRESS": "6329 King George Blvd Surrey, BC V3X 1G1",
+      "EMS_ID": "0310162",
+      "GEO_POINT": "POINT(-122.845864 49.1180423)",
+      "JOIN_DISTANCE": "18.1",
+      "PHARMACY": "MEDICURE PHARMACY #1",
+      "PHARMACY_LATITUDE": "49.1180423",
+      "PHARMACY_LONGITUDE": "-122.845864"
+    },
+    {
+      "ADDRESS": "570 Bay St Victoria, BC V8T 1P9",
+      "EMS_ID": "E232246",
+      "GEO_POINT": "POINT(-123.3697663 48.4361955)",
+      "JOIN_DISTANCE": "84.93",
+      "PHARMACY": "MEDISYSTEM VICTORIA",
+      "PHARMACY_LATITUDE": "48.4361955",
+      "PHARMACY_LONGITUDE": "-123.3697663"
+    },
+    {
+      "ADDRESS": "6255 Victoria Dr Vancouver, BC V5P 3X5",
+      "EMS_ID": "E207418",
+      "GEO_POINT": "POINT(-123.0660718 49.2273093)",
+      "JOIN_DISTANCE": "5.99",
+      "PHARMACY": "MJ'S NATURAL PHARMACY",
+      "PHARMACY_LATITUDE": "49.2273093",
+      "PHARMACY_LONGITUDE": "-123.0660718"
+    },
+    {
+      "ADDRESS": "1250 Trans Canada Highway Sorrento, BC V0E 2W0",
+      "EMS_ID": "E286369",
+      "GEO_POINT": "POINT(-119.4670537 50.8763768)",
+      "JOIN_DISTANCE": "215.91",
+      "PHARMACY": "MUNRO'S SORRENTO PRESCRIPTIONS",
+      "PHARMACY_LATITUDE": "50.8763768",
+      "PHARMACY_LONGITUDE": "-119.4670537"
+    },
+    {
+      "ADDRESS": "152 St Surrey, BC V3R 4E5",
+      "EMS_ID": "0310162",
+      "GEO_POINT": "POINT(-122.8011011 49.102269)",
+      "JOIN_DISTANCE": "20.16",
+      "PHARMACY": "NAZ'S PHARMACY NO. 6",
+      "PHARMACY_LATITUDE": "49.102269",
+      "PHARMACY_LONGITUDE": "-122.8011011"
+    },
+    {
+      "ADDRESS": "2nd Floor 3207 30 Ave Vernon, BC V1T 2C6",
+      "EMS_ID": "E286369",
+      "GEO_POINT": "POINT(-119.274674 50.2637965)",
+      "JOIN_DISTANCE": "156.44",
+      "PHARMACY": "NOLAN'S CLINIC PHARMACY",
+      "PHARMACY_LATITUDE": "50.2637965",
+      "PHARMACY_LONGITUDE": "-119.274674"
+    },
+    {
+      "ADDRESS": "113 West 16th St North Vancouver, BC V7M 1T3",
+      "EMS_ID": "E207418",
+      "GEO_POINT": "POINT(-123.073003 49.3230684)",
+      "JOIN_DISTANCE": "13.56",
+      "PHARMACY": "NORTHSHORE DRUGSTORE",
+      "PHARMACY_LATITUDE": "49.3230684",
+      "PHARMACY_LONGITUDE": "-123.073003"
+    },
+    {
+      "ADDRESS": "3515 Spectrum Crt Kelowna, BC V1V 2Z1",
+      "EMS_ID": "E286369",
+      "GEO_POINT": "POINT(-119.3875304 49.9476484)",
+      "JOIN_DISTANCE": "142.68",
+      "PHARMACY": "OKANAGAN RESIDENT PLUS PHARMACY",
+      "PHARMACY_LATITUDE": "49.9476484",
+      "PHARMACY_LONGITUDE": "-119.3875304"
+    },
+    {
+      "ADDRESS": "441 Central Ave Grand Forks, BC V0H 1H0",
+      "EMS_ID": "E286369",
+      "GEO_POINT": "POINT(-118.4410203 49.0335633)",
+      "JOIN_DISTANCE": "64.88",
+      "PHARMACY": "OVERWAITEA PHARMACY # 24 - GRAND FORKS",
+      "PHARMACY_LATITUDE": "49.0335633",
+      "PHARMACY_LONGITUDE": "-118.4410203"
+    },
+    {
+      "ADDRESS": "3001 Gordon Ave Coquitlam, BC V5E 2A5",
+      "EMS_ID": "0310162",
+      "GEO_POINT": "POINT(-122.7929014 49.271603)",
+      "JOIN_DISTANCE": "4.21",
+      "PHARMACY": "PACIFIC PRESCRIPTIONS & MEDICAL SUPPLIES NO. 2",
+      "PHARMACY_LATITUDE": "49.271603",
+      "PHARMACY_LONGITUDE": "-122.7929014"
+    },
+    {
+      "ADDRESS": "10th Ave Golden, BC V0A 1H0",
+      "EMS_ID": "0310162",
+      "GEO_POINT": "POINT(-122.8244015 49.2297802)",
+      "JOIN_DISTANCE": "5.95",
+      "PHARMACY": "PEOPLES DRUG MART # 77",
+      "PHARMACY_LATITUDE": "49.2297802",
+      "PHARMACY_LONGITUDE": "-122.8244015"
+    },
+    {
+      "ADDRESS": "204 St Langley, BC V3A 5N8",
+      "EMS_ID": "E209178",
+      "GEO_POINT": "POINT(-122.656786 49.1142164)",
+      "JOIN_DISTANCE": "6.86",
+      "PHARMACY": "PEOPLES DRUG MART #169",
+      "PHARMACY_LATITUDE": "49.1142164",
+      "PHARMACY_LONGITUDE": "-122.656786"
+    },
+    {
+      "ADDRESS": "88 Broadway St Nakusp, BC V0G 1R0",
+      "EMS_ID": "E258315",
+      "GEO_POINT": "POINT(-117.7979724 50.2383951)",
+      "JOIN_DISTANCE": "90.6",
+      "PHARMACY": "PEOPLES PHARMACY #321",
+      "PHARMACY_LATITUDE": "50.2383951",
+      "PHARMACY_LONGITUDE": "-117.7979724"
+    },
+    {
+      "ADDRESS": "405 Hendryx Street Nelson, BC V1L 2A6",
+      "EMS_ID": "E258315",
+      "GEO_POINT": "POINT(-117.290502 49.4943069)",
+      "JOIN_DISTANCE": "0.52",
+      "PHARMACY": "PEOPLES PHARMACY #379",
+      "PHARMACY_LATITUDE": "49.4943069",
+      "PHARMACY_LONGITUDE": "-117.290502"
+    },
+    {
+      "ADDRESS": "8th Ave Dawson Creek, BC V1G 3T8",
+      "EMS_ID": "0450307",
+      "GEO_POINT": "POINT(-121.0033122 55.1330591)",
+      "JOIN_DISTANCE": "175.89",
+      "PHARMACY": "PHARMACHOICE #9045",
+      "PHARMACY_LATITUDE": "55.1330591",
+      "PHARMACY_LONGITUDE": "-121.0033122"
+    },
+    {
+      "ADDRESS": "56 Ave Surrey, BC V3S 5K7",
+      "EMS_ID": "0310162",
+      "GEO_POINT": "POINT(-122.7740684 49.1044093)",
+      "JOIN_DISTANCE": "20.36",
+      "PHARMACY": "PHARMACITY DRUGSTORE #3",
+      "PHARMACY_LATITUDE": "49.1044093",
+      "PHARMACY_LONGITUDE": "-122.7740684"
+    },
+    {
+      "ADDRESS": "7th Ave Prince George, BC V2L 3P1",
+      "EMS_ID": "0450307",
+      "GEO_POINT": "POINT(-122.7569415 53.9162975)",
+      "JOIN_DISTANCE": "1.0",
+      "PHARMACY": "PHARMASAVE # 52",
+      "PHARMACY_LATITUDE": "53.9162975",
+      "PHARMACY_LONGITUDE": "-122.7569415"
+    },
+    {
+      "ADDRESS": "4280 Joyce Ave Powell River, BC V8A 3A2",
+      "EMS_ID": "E222778",
+      "GEO_POINT": "POINT(-124.5205183 49.8328494)",
+      "JOIN_DISTANCE": "86.85",
+      "PHARMACY": "PHARMASAVE #019",
+      "PHARMACY_LATITUDE": "49.8328494",
+      "PHARMACY_LONGITUDE": "-124.5205183"
+    },
+    {
+      "ADDRESS": "4628 Main St Vancouver, BC V5V 3R7",
+      "EMS_ID": "E232246",
+      "GEO_POINT": "POINT(-123.1009577 49.2430619)",
+      "JOIN_DISTANCE": "7.32",
+      "PHARMACY": "PHARMASAVE #082",
+      "PHARMACY_LATITUDE": "49.2430619",
+      "PHARMACY_LONGITUDE": "-123.1009577"
+    },
+    {
+      "ADDRESS": "330 Central Ave. PO Grand Forks, BC V0H 1H0",
+      "EMS_ID": "E286369",
+      "GEO_POINT": "POINT(-118.4391239 49.0332301)",
+      "JOIN_DISTANCE": "64.77",
+      "PHARMACY": "PHARMASAVE #106",
+      "PHARMACY_LATITUDE": "49.0332301",
+      "PHARMACY_LONGITUDE": "-118.4391239"
+    },
+    {
+      "ADDRESS": "10654 King George Blvd Surrey, BC V3T 2X3",
+      "EMS_ID": "0310162",
+      "GEO_POINT": "POINT(-122.8449254 49.1961344)",
+      "JOIN_DISTANCE": "9.42",
+      "PHARMACY": "PHARMASAVE #179",
+      "PHARMACY_LATITUDE": "49.1961344",
+      "PHARMACY_LONGITUDE": "-122.8449254"
+    },
+    {
+      "ADDRESS": "7th Street Sidney, BC V8L 4W6",
+      "EMS_ID": "E223756",
+      "GEO_POINT": "POINT(-119.6090442 49.5003031)",
+      "JOIN_DISTANCE": "137.46",
+      "PHARMACY": "PHARMASAVE #205",
+      "PHARMACY_LATITUDE": "49.5003031",
+      "PHARMACY_LONGITUDE": "-119.6090442"
+    },
+    {
+      "ADDRESS": "3155 Lakeshore Rd Kelowna, BC V1W 3S9",
+      "EMS_ID": "E286369",
+      "GEO_POINT": "POINT(-119.4911597 49.859858)",
+      "JOIN_DISTANCE": "145.01",
+      "PHARMACY": "PHARMASAVE #242",
+      "PHARMACY_LATITUDE": "49.859858",
+      "PHARMACY_LONGITUDE": "-119.4911597"
+    },
+    {
+      "ADDRESS": "5663 Cowrie St Sechelt, BC V0N 3A0",
+      "EMS_ID": "E222778",
+      "GEO_POINT": "POINT(-123.7560726 49.471914)",
+      "JOIN_DISTANCE": "20.35",
+      "PHARMACY": "PHARMASAVE #257",
+      "PHARMACY_LATITUDE": "49.471914",
+      "PHARMACY_LONGITUDE": "-123.7560726"
+    },
+    {
+      "ADDRESS": "4367 Hastings St Burnaby, BC V5C 2J7",
+      "EMS_ID": "E207418",
+      "GEO_POINT": "POINT(-123.006513 49.2812972)",
+      "JOIN_DISTANCE": "7.49",
+      "PHARMACY": "PHARMASAVE #278",
+      "PHARMACY_LATITUDE": "49.2812972",
+      "PHARMACY_LONGITUDE": "-123.006513"
+    },
+    {
+      "ADDRESS": "2484 Main St Westbank, BC V4T 2G2",
+      "EMS_ID": "E223756",
+      "GEO_POINT": "POINT(-119.6304601 49.8296895)",
+      "JOIN_DISTANCE": "144.07",
+      "PHARMACY": "PHARMASAVE #291",
+      "PHARMACY_LATITUDE": "49.8296895",
+      "PHARMACY_LONGITUDE": "-119.6304601"
+    },
+    {
+      "ADDRESS": "175A St Surrey, BC V3S 6S7",
+      "EMS_ID": "E209178",
+      "GEO_POINT": "POINT(-122.7371866 49.1115086)",
+      "JOIN_DISTANCE": "12.52",
+      "PHARMACY": "PHARMASAVE GATEWAY CROSSING",
+      "PHARMACY_LATITUDE": "49.1115086",
+      "PHARMACY_LONGITUDE": "-122.7371866"
+    },
+    {
+      "ADDRESS": "78 Ave Osoyoos, BC V0H 1V0",
+      "EMS_ID": "E286369",
+      "GEO_POINT": "POINT(-119.4688967 49.0336012)",
+      "JOIN_DISTANCE": "135.12",
+      "PHARMACY": "PHARMASAVE HEALTH CENTRE #011",
+      "PHARMACY_LATITUDE": "49.0336012",
+      "PHARMACY_LONGITUDE": "-119.4688967"
+    },
+    {
+      "ADDRESS": "3880 Grant McConachie Way Vanc. Int'l Airport, Domestic Terminal Richmond, BC V7B 0A5",
+      "EMS_ID": "E232246",
+      "GEO_POINT": "POINT(-123.1633333 49.1633334)",
+      "JOIN_DISTANCE": "2.69",
+      "PHARMACY": "PHARMASAVE HEALTH CENTRE #022",
+      "PHARMACY_LATITUDE": "49.1633334",
+      "PHARMACY_LONGITUDE": "-123.1633333"
+    },
+    {
+      "ADDRESS": "15168 Fraser Hwy Surrey, BC V3R 3P1",
+      "EMS_ID": "0310162",
+      "GEO_POINT": "POINT(-122.8023356 49.166262)",
+      "JOIN_DISTANCE": "13.18",
+      "PHARMACY": "PHARMASAVE HEALTH CENTRE #050",
+      "PHARMACY_LATITUDE": "49.166262",
+      "PHARMACY_LONGITUDE": "-122.8023356"
+    },
+    {
+      "ADDRESS": "1671 Broadway E Vancouver, BC V5N 1V9",
+      "EMS_ID": "E207418",
+      "GEO_POINT": "POINT(-123.0705063 49.2623915)",
+      "JOIN_DISTANCE": "8.09",
+      "PHARMACY": "PHARMASAVE HEALTH CENTRE #077",
+      "PHARMACY_LATITUDE": "49.2623915",
+      "PHARMACY_LONGITUDE": "-123.0705063"
+    },
+    {
+      "ADDRESS": "160 St Surrey, BC V3Z 0C8",
+      "EMS_ID": "0310162",
+      "GEO_POINT": "POINT(-122.7790205 49.099425)",
+      "JOIN_DISTANCE": "20.8",
+      "PHARMACY": "PHARMASAVE HEALTH CENTRE #099",
+      "PHARMACY_LATITUDE": "49.099425",
+      "PHARMACY_LONGITUDE": "-122.7790205"
+    },
+    {
+      "ADDRESS": "230 Menzies St. Victoria, BC V8V 2G7",
+      "EMS_ID": "E232246",
+      "GEO_POINT": "POINT(-123.3741351 48.4158506)",
+      "JOIN_DISTANCE": "87.21",
+      "PHARMACY": "PHARMASAVE JAMES BAY #130",
+      "PHARMACY_LATITUDE": "48.4158506",
+      "PHARMACY_LONGITUDE": "-123.3741351"
+    },
+    {
+      "ADDRESS": "56 Ave Langley, BC V3A 3Y8",
+      "EMS_ID": "M107004",
+      "GEO_POINT": "POINT(-124.845179 54.0537591)",
+      "JOIN_DISTANCE": "122.89",
+      "PHARMACY": "PHARMAWEST PHARMACY",
+      "PHARMACY_LATITUDE": "54.0537591",
+      "PHARMACY_LONGITUDE": "-124.845179"
+    },
+    {
+      "ADDRESS": "540 West Ave Kelowna, BC V1Y 4Z4",
+      "EMS_ID": "E286369",
+      "GEO_POINT": "POINT(-119.4901469 49.8651047)",
+      "JOIN_DISTANCE": "145.18",
+      "PHARMACY": "PRESCRIPTION HEALTH STUDIO",
+      "PHARMACY_LATITUDE": "49.8651047",
+      "PHARMACY_LONGITUDE": "-119.4901469"
+    },
+    {
+      "ADDRESS": "72 Ave Surrey, BC V3W 2M9",
+      "EMS_ID": "0310162",
+      "GEO_POINT": "POINT(-122.8305243 49.1336876)",
+      "JOIN_DISTANCE": "16.41",
+      "PHARMACY": "PROSPER PHARMACY NO. 3",
+      "PHARMACY_LATITUDE": "49.1336876",
+      "PHARMACY_LONGITUDE": "-122.8305243"
+    },
+    {
+      "ADDRESS": "7635 North Fraser Way Burnaby, BC V5J 0B8",
+      "EMS_ID": "E207418",
+      "GEO_POINT": "POINT(-122.9900841 49.1901073)",
+      "JOIN_DISTANCE": "2.82",
+      "PHARMACY": "PURE INTEGRATIVE PHARMACY #20",
+      "PHARMACY_LATITUDE": "49.1901073",
+      "PHARMACY_LONGITUDE": "-122.9900841"
+    },
+    {
+      "ADDRESS": "2732 Hastings St E Vancouver, BC V5K 1Z9",
+      "EMS_ID": "E207418",
+      "GEO_POINT": "POINT(-123.0485374 49.2810994)",
+      "JOIN_DISTANCE": "8.63",
+      "PHARMACY": "R.E.A.C.H. CENTRE PHARMACY",
+      "PHARMACY_LATITUDE": "49.2810994",
+      "PHARMACY_LONGITUDE": "-123.0485374"
+    },
+    {
+      "ADDRESS": "10030 Resthaven Dr Sidney, BC V8L 3G4",
+      "EMS_ID": "E232246",
+      "GEO_POINT": "POINT(-123.4030201 48.6543263)",
+      "JOIN_DISTANCE": "61.94",
+      "PHARMACY": "REMEDY'SRX #202",
+      "PHARMACY_LATITUDE": "48.6543263",
+      "PHARMACY_LONGITUDE": "-123.4030201"
+    },
+    {
+      "ADDRESS": "115 Hwy 33 W Kelowna, BC V1X 1X6",
+      "EMS_ID": "E286369",
+      "GEO_POINT": "POINT(-119.3874223 49.8889109)",
+      "JOIN_DISTANCE": "139.65",
+      "PHARMACY": "REVOLUTION PHARMACY",
+      "PHARMACY_LATITUDE": "49.8889109",
+      "PHARMACY_LONGITUDE": "-119.3874223"
+    },
+    {
+      "ADDRESS": "2241 Louie Dr Westbank, BC V4T 3K3",
+      "EMS_ID": "E223756",
+      "GEO_POINT": "POINT(-119.6162057 49.8374281)",
+      "JOIN_DISTANCE": "145.33",
+      "PHARMACY": "REXALL #7130",
+      "PHARMACY_LATITUDE": "49.8374281",
+      "PHARMACY_LONGITUDE": "-119.6162057"
+    },
+    {
+      "ADDRESS": "6200 McKay Ave Burnaby, BC V5H 4L7",
+      "EMS_ID": "E207418",
+      "GEO_POINT": "POINT(-123.0038301 49.2268858)",
+      "JOIN_DISTANCE": "1.85",
+      "PHARMACY": "REXALL #7163",
+      "PHARMACY_LATITUDE": "49.2268858",
+      "PHARMACY_LONGITUDE": "-123.0038301"
+    },
+    {
+      "ADDRESS": "1750 Dufferin Cres Nanaimo, BC V9S 0A4",
+      "EMS_ID": "E222778",
+      "GEO_POINT": "POINT(-123.9823 49.1843204)",
+      "JOIN_DISTANCE": "46.17",
+      "PHARMACY": "REXALL #7181",
+      "PHARMACY_LATITUDE": "49.1843204",
+      "PHARMACY_LONGITUDE": "-123.9823"
+    }
+  ]
+}

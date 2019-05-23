@@ -1,0 +1,17 @@
+.container {
+  height: calc(100vh - 58px);
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.header {
+  /* min-height: 182px; */
+}
+
+.tab {
+
+}
+
+.samplesTable {
+  width: 100%;
+}

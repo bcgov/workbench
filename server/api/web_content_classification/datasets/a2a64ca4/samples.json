@@ -1,0 +1,23 @@
+{
+  "id": "a2a64ca4",
+  "meta": {
+    "fields": [
+      {
+        "description": "Webpage hyperlink",
+        "format": "default",
+        "name": "url",
+        "type": "string"
+      },
+      {
+        "description": "A hashed version of the URL",
+        "format": "default",
+        "name": "hash",
+        "type": "string"
+      }
+    ],
+    "missingValues": [
+      ""
+    ]
+  },
+  "samples": []
+}

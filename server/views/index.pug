@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title= "SRE Workbench"
+    link(rel='stylesheet' href=cssURL)
+    link(rel='stylesheet', href="https://use.fontawesome.com/releases/v5.0.13/css/all.css", integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous")
+  body
+    #root.
+      Loading...
+    #dialog-layer
+    #popover-layer
+    script.
+      window.__SESSION__ = !{JSON.stringify(user)};
+      localStorage.setItem('discourse.auth', JSON.stringify({
+        apiKey: '749cca49b23ac634b5f3fe1ed4636b7fa49f950de4dc707763e511092018d0bc',
+      }));
+      localStorage.setItem('jupyter.auth', JSON.stringify({
+      email: !{JSON.stringify(user.email || '')},
+      }));
+    script(crossorigin, src=jsURL)
