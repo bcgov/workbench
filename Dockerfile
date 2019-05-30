@@ -1,4 +1,4 @@
-FROM keymetrics/pm2:latest-alpine
+FROM keymetrics/pm2:10-alpine
 
 # Setup directory structure
 RUN mkdir -p /usr/src/app
