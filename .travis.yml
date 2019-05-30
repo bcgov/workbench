@@ -25,7 +25,7 @@ matrix:
         - g++-4.8
     before_install:
     - |-
-      cd /home/travis/build/bcgov/OCWA/sae-workbench
+      cd /home/travis/build/bcgov/sae-workbench
       npm ci
     - npm audit
     before_script:
