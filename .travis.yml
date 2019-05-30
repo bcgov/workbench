@@ -27,7 +27,7 @@ matrix:
     - |-
       cd /home/travis/build/bcgov/sae-workbench
       npm ci
-    - npm audit
+    #- npm audit
     before_script:
     - |-
       cd /home/travis/build/bcgov/sae-workbench

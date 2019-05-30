@@ -13,3 +13,6 @@ coverage/
 config/*
 !config/default.json.example
 workbench/*
+.ash_history
+.config
+.npm
