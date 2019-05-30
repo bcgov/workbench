@@ -11,7 +11,7 @@ addons:
       secure: yoqO9/QRJlT4mcpgQ4RMSg6h97PRnql70EVCcPaBr6nGNaxSmea8K1AxdqFZcC5PMrj+i4oRFrIQIEmOPeJAzh+5wvygXhwsavXR2S0LcTcScXZQQ8ZWXw9exYl5ELt3Ee6BUF4TIGnR3iztp6VGm9mv992Pi7NqYwdIN9z1rVodb/rH3vlBRzxIH6p+eo4cs/rpUatFNDjRnCVvHxDWy2reC43r3Vf61jGR3FFALcah/PrIUDVemY9wqbdqA78HGB97o5UU6Jgwk2qmvUXTxJcyN+7dSi0bhr8SHEGN1TTr7TmOOxFIKy+fPs9krCF8Ll4CruAXu1YLaTRD6Ilxb4U5yUJgjANnsYbR7klD/DC4pwRx1L90cCVbgsNRzrsq+Qvn57bdSoyHGFCSWqQdkW6EG9xcqogMP6y9/DBcgb4SYIMNLjaoqSgunSmDFTFgidHBTcLN6e4mvM89FRDY64i+DINp9gginqHak/LxhNct6LTREx8bcoOA4J28eHY02Cwrtu2pful7uOonZD49XrGW+OfOAQY2c1b91hNJUK+tWPh0B/0CgWyKNize3WclV3pBedFDYzbzeni3TkqoN7Na22xQTl95mrV9vZ7VQpIft0Jlf+OFS+I8s3G2W/Wp/Rhk9tXfxcEa6yvDwxFMv3QsQrs7No3yTRNFw6U3QWs=
 matrix:
   include:
-  - name: Workbench
+  - name: Secure Analytics Environment Workbench
     stage: Build
     language: node_js
     node_js:
@@ -30,7 +30,7 @@ matrix:
     - npm audit
     before_script:
     - |-
-      cd /home/travis/build/bcgov/OCWA/sae-workbench
+      cd /home/travis/build/bcgov/sae-workbench
       cp config/default.json.example config/default.json
     - |-
       wget -q http://fastdl.mongodb.org/linux/mongodb-linux-x86_64-${MONGODB}.tgz
@@ -45,24 +45,24 @@ matrix:
       helm init --client-only
     - sudo pip install yamllint=="${YAMLLINT_VERSION}"
     - |-
-      cd /home/travis/build/bcgov/OCWA
+      cd /home/travis/build/bcgov/sae-workbench
       wget -q ${SONAR_URL}${SONAR_APP}-cli-${SONAR_VERSION}.zip
       unzip ${SONAR_APP}-cli-${SONAR_VERSION}.zip
       PATH=`pwd`/${SONAR_APP}-${SONAR_VERSION}/bin:$PATH
     script:
     - |-
-      cd /home/travis/build/bcgov/OCWA/sae-workbench
+      cd /home/travis/build/bcgov/sae-workbench
       npm test
       # nyc report --reporter=text-lcov | ./node_modules/.bin/coveralls'
     - |-
-      cd /home/travis/build/bcgov/OCWA/sae-workbench
+      cd /home/travis/build/bcgov/sae-workbench
       bash docker_quayio_push sae_workbench
     # - |-
     #   cd /home/travis/build/bcgov/OCWA
     #   PATH=`pwd`/${SONAR_APP}-${SONAR_VERSION}/bin:$PATH
     #   sonar-scanner -Dsonar.login=$SONAR_TOKEN -Dproject.settings=sonar-project.properties -Dsonar.projectKey=ocwa_forum_api -Dsonar.projectName="OCWA Forum API" -Dsonar.modules=forumApi
     before_deploy:
-    - cd /home/travis/build/bcgov/OCWA/sae-workbench
+    - cd /home/travis/build/bcgov/sae-workbench
     deploy:
       provider: script
       script: bash docker_push sae_workbench || travis_terminate 1
