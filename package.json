@@ -7,7 +7,7 @@
     "watch:test": "npm run test -- --watch",
     "cover": "nyc npm run test",
     "check-coverage": "nyc check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
-    "start": "cross-env BABEL_ENV=development BABEL_DISABLE_CACHE=1 NODE_ENV=development nodemon index.js",
+    "start:dev": "cross-env BABEL_ENV=development BABEL_DISABLE_CACHE=1 NODE_ENV=development nodemon index.js",
     "start:prod": "cross-env BABEL_ENV=production NODE_ENV=production node server/server.js",
     "start:staging": "cross-env BABEL_ENV=production NODE_ENV=production NODE_APP_INSTANCE=1 node server/server.js",
     "bs": "npm run clean && npm run build && npm run start:prod",
