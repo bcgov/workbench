@@ -56,7 +56,7 @@ matrix:
       # nyc report --reporter=text-lcov | ./node_modules/.bin/coveralls'
     - |-
       cd /home/travis/build/bcgov/sae-workbench
-      bash docker_quayio_push sae_workbench
+      bash docker_quayio_push sae-workbench
     # - |-
     #   cd /home/travis/build/bcgov/OCWA
     #   PATH=`pwd`/${SONAR_APP}-${SONAR_VERSION}/bin:$PATH
@@ -65,7 +65,7 @@ matrix:
     - cd /home/travis/build/bcgov/sae-workbench
     deploy:
       provider: script
-      script: bash docker_push sae_workbench || travis_terminate 1
+      script: bash docker_push sae-workbench || travis_terminate 1
       on:
         all_branches: true
         condition: "$TRAVIS_BRANCH =~ ^master|develop$ || -n $TRAVIS_TAG"
