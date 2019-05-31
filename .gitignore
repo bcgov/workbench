@@ -16,3 +16,4 @@ workbench/*
 .ash_history
 .config
 .npm
+LOCAL.md

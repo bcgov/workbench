@@ -37,7 +37,7 @@ matrix:
       tar xzf mongodb-linux-x86_64-${MONGODB}.tgz
       mkdir ${PWD}/mongodb-linux-x86_64-${MONGODB}/data
       ${PWD}/mongodb-linux-x86_64-${MONGODB}/bin/mongod --dbpath ${PWD}/mongodb-linux-x86_64-${MONGODB}/data --logpath ${PWD}/mongodb-linux-x86_64-${MONGODB}/mongodb.log --fork
-      ${PWD}/mongodb-linux-x86_64-${MONGODB}/bin/mongo forumDb --eval 'db.createUser({user:"wb_user", pwd:"wb_pass", roles:["readWrite"]});'
+      ${PWD}/mongodb-linux-x86_64-${MONGODB}/bin/mongo workbench_db --eval 'db.createUser({user:"wb_user", pwd:"wb_pass", roles:["readWrite"]});'
     - |-
       wget -q ${HELM_URL}/${HELM_TGZ}
       tar xzfv ${HELM_TGZ}

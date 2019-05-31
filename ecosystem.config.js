@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: 'ido/workbench',
+      name: 'sae-workbench',
       script: './server/server.js',
       env: {
         BABEL_ENV: 'development',
