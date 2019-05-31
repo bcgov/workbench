@@ -1,12 +1,16 @@
 language: node_js
 node_js:
-  - '5'
-  - '4'
+- '5'
+- '4'
 before_install:
-  - 'npm install -g npm@latest'
+- npm install -g npm@latest
 services:
-  - mongodb
+- mongodb
 before_script:
-  - sleep 15
+- sleep 15
 after_success:
-  - './node_modules/.bin/nyc report --reporter=text-lcov | ./node_modules/.bin/coveralls'
+- "./node_modules/.bin/nyc report --reporter=text-lcov | ./node_modules/.bin/coveralls"
+env:
+  matrix:
+  - secure: TamRjFiStmrHMHs5Q4SB6zvDx+8kTnR0PU1tKB2UamdbhANaWW7bfmQZb4EabptkUDyYeRREH88veLyqIXdU+4g5USetNnf7jw1FwYr4BkvghB6/HHXWhi4l6hBVwXjWNEvNYLYsHccVp6hABHxKlH9QYoV+166nH4gWDUy5FOhdTakphkcYzGsl2Y86nJrTGUECHmE6i+kMFAsC/dIczLKvQKRKcc18iScYXy4WZoNES2ymywx7xbcxtCLg0070syeK9o+nyWwj/HlllPxcuiSLjBbUZE31WRP7dNPG2zRSzBlv2wpA7hF8KYmH+sZ8AK1bOd8H9aLDhWiSKiXpOSdDM75zXVXYb4R5wIbHKAR5XtcQrQPtfqhDEcN9q/5MSQAsSn/9k/BpkDKV+zIlKdHD0/JZEZ6strJ6uAGXcCpIIu7yrMdCpR6BEX3eWxGbJ0ablPjzp6GgxSgjM1A3MuGYKVj3dOcINq2K3x5kSPX4RwDtjZXO4QPv3IbzBeKDvObbMI+0xC1cunGiBZRcsKmXXOwa/7OlMj0Eve//dV4djbOqOzonl//pcZHZmONpxIGmXwqtn5XLVCmiwZ8BCeI9iq1zLadQuZLTFW2miWexllYzFEJQCxUqrDnKk0P5wCY4lKahLddhiUtzj7iS2UzFbJWat1tP9vaODu8riqw=
+  - secure: fTwVbJBNSdOZIZuLjkPf9gLuuZb5FQZ9S0yDz6gxf/GtIsAmM5lQDfrcrqfHPwFDXN6LXeVp955WdlDKfIpVa5fUEK4hG8OyFA0bgmOmmBhUDtWxLfdAs8W/GHRrK1etuuBQ7lNXSBSGzY86hAxmoowwsHQVCoxNAm9+v4VDoROq8WV0NyyGtLvE5mWwErXKo1kon7GwWvMaXFWIBDs8WATO83oiO4yGU/GDt8fb2kiqjZgUYGBhpxOTW0gQPiVNWSirs7NiZznJY2h34WlnrnsbTnA7F+niaKZ0z8MG3D9yhM/esdInEbI/2stMP9aLfwibR3+EZ8WBKkbtjZN48yh+ZFVIFHqJX6F6tkpeufMUT4WsBNvP5KF7rozKMuCs7WunkJw9akJQCigt2XpPOnb2YJMMMPqDT1oUQlk4XxM4Hm2xNshLKQodOii/rbJBcbo7y2n0qgtDfjrQ6KV0i6gOE1EbS/W3ggUJLasqoLo5dS3iHhu9vL0YspYoz60am2RxpZAe/Okb3ZsUFFuzwpe4t5WT17BfXzyh/XIjmZtVc+Rd0jGXvimOWeOVxj8O4JeeD0VN/1Hy8CbzGu7gKyRemrQXYh4heQHrJk+wHNd/ryVLX/nwybI/aCvl2bJiqWdpFX5i8roDDDKyA1x8/7djDS82d+K/rsDdBPv9TZ0=
