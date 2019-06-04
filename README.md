@@ -1,4 +1,34 @@
-# SRE Webapp
+# SRE Workbench
+
+## Installation
+
+All installs require an instance of mongodb available.
+
+### Prerequisites
+
+- MongoDB 4.0 or newer
+- Docker 18.09.1 or newer
+
+### Bare Metal Install
+
+
+### Docker Install
+
+Run `docker build . -t sae-workbench` to build the docker container and the following commands to run it
+
+``` sh
+hostip=$(ifconfig en0 | awk '$1 == "inet" {print $2}')
+docker run -e LOG_LEVEL=info -e SESSION_SECRET="s3cr3t" -e SESSION_COOKIE_SECURE=true \
+   -e OIDC_ISSUER="https://oidc/auth/realms/myrealm" \
+   -e OIDC_CLIENT_ID=workbench -e OIDC_CLIENT_SECRET=s3c3rt \
+   -e OIDC_AUTH_URL="https://oidc/auth/realms/myrealm/protocol/openid-connect/auth" \
+   -e OIDC_TOKEN_URL="https://oidc/auth/realms/myrealm/protocol/openid-connect/token" \
+   -e OIDC_USERINFO_URL="https://oidc/auth/realms/myrealm/protocol/openid-connect/userinfo" \
+   -e OIDC_CALLBACK_URL="http://localhost/" \
+   -e OIDC_SCOPE="openid offline_access" \
+   --add-host=docker:$hostip -p LOCALPORT:8000 sae-workbench
+```
+
 
 This web application uses MERN boiler plate, for additional documentation see [mern.io](http://mern.io/).
 ## Quickstart

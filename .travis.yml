@@ -1,16 +1,168 @@
-language: node_js
-node_js:
-- '5'
-- '4'
-before_install:
-- npm install -g npm@latest
+dist: trusty
+sudo: required
+language: python
+
 services:
-- mongodb
-before_script:
-- sleep 15
-after_success:
-- "./node_modules/.bin/nyc report --reporter=text-lcov | ./node_modules/.bin/coveralls"
+- docker
+addons:
+  sonarcloud:
+    organization: ajc_bcgov
+    token:
+      secure: yoqO9/QRJlT4mcpgQ4RMSg6h97PRnql70EVCcPaBr6nGNaxSmea8K1AxdqFZcC5PMrj+i4oRFrIQIEmOPeJAzh+5wvygXhwsavXR2S0LcTcScXZQQ8ZWXw9exYl5ELt3Ee6BUF4TIGnR3iztp6VGm9mv992Pi7NqYwdIN9z1rVodb/rH3vlBRzxIH6p+eo4cs/rpUatFNDjRnCVvHxDWy2reC43r3Vf61jGR3FFALcah/PrIUDVemY9wqbdqA78HGB97o5UU6Jgwk2qmvUXTxJcyN+7dSi0bhr8SHEGN1TTr7TmOOxFIKy+fPs9krCF8Ll4CruAXu1YLaTRD6Ilxb4U5yUJgjANnsYbR7klD/DC4pwRx1L90cCVbgsNRzrsq+Qvn57bdSoyHGFCSWqQdkW6EG9xcqogMP6y9/DBcgb4SYIMNLjaoqSgunSmDFTFgidHBTcLN6e4mvM89FRDY64i+DINp9gginqHak/LxhNct6LTREx8bcoOA4J28eHY02Cwrtu2pful7uOonZD49XrGW+OfOAQY2c1b91hNJUK+tWPh0B/0CgWyKNize3WclV3pBedFDYzbzeni3TkqoN7Na22xQTl95mrV9vZ7VQpIft0Jlf+OFS+I8s3G2W/Wp/Rhk9tXfxcEa6yvDwxFMv3QsQrs7No3yTRNFw6U3QWs=
+matrix:
+  include:
+  - name: Secure Analytics Environment Workbench
+    stage: Build
+    language: node_js
+    node_js:
+    - lts/*
+    cache: npm
+    addons:
+      apt:
+        sources:
+        - ubuntu-toolchain-r-test
+        packages:
+        - g++-4.8
+    before_install:
+    - |-
+      cd /home/travis/build/bcgov/sae-workbench
+      npm ci
+    #- npm audit
+    before_script:
+    - |-
+      cd /home/travis/build/bcgov/sae-workbench
+      cp config/default.json.example config/default.json
+    - |-
+      wget -q http://fastdl.mongodb.org/linux/mongodb-linux-x86_64-${MONGODB}.tgz
+      tar xzf mongodb-linux-x86_64-${MONGODB}.tgz
+      mkdir ${PWD}/mongodb-linux-x86_64-${MONGODB}/data
+      ${PWD}/mongodb-linux-x86_64-${MONGODB}/bin/mongod --dbpath ${PWD}/mongodb-linux-x86_64-${MONGODB}/data --logpath ${PWD}/mongodb-linux-x86_64-${MONGODB}/mongodb.log --fork
+      ${PWD}/mongodb-linux-x86_64-${MONGODB}/bin/mongo workbench_db --eval 'db.createUser({user:"wb_user", pwd:"wb_pass", roles:["readWrite"]});'
+    - |-
+      wget -q ${HELM_URL}/${HELM_TGZ}
+      tar xzfv ${HELM_TGZ}
+      PATH=`pwd`/linux-amd64/:$PATH
+      helm init --client-only
+    - sudo pip install yamllint=="${YAMLLINT_VERSION}"
+    - |-
+      cd /home/travis/build/bcgov/sae-workbench
+      wget -q ${SONAR_URL}${SONAR_APP}-cli-${SONAR_VERSION}.zip
+      unzip ${SONAR_APP}-cli-${SONAR_VERSION}.zip
+      PATH=`pwd`/${SONAR_APP}-${SONAR_VERSION}/bin:$PATH
+    script:
+    - |-
+      cd /home/travis/build/bcgov/sae-workbench
+      npm test
+      # nyc report --reporter=text-lcov | ./node_modules/.bin/coveralls'
+    - |-
+      cd /home/travis/build/bcgov/sae-workbench
+      bash docker_quayio_push sae-workbench
+    # - |-
+    #   cd /home/travis/build/bcgov/OCWA
+    #   PATH=`pwd`/${SONAR_APP}-${SONAR_VERSION}/bin:$PATH
+    #   sonar-scanner -Dsonar.login=$SONAR_TOKEN -Dproject.settings=sonar-project.properties -Dsonar.projectKey=ocwa_forum_api -Dsonar.projectName="OCWA Forum API" -Dsonar.modules=forumApi
+    before_deploy:
+    - cd /home/travis/build/bcgov/sae-workbench
+    deploy:
+      provider: script
+      script: bash docker_push sae-workbench || travis_terminate 1
+      on:
+        all_branches: true
+        condition: "$TRAVIS_BRANCH =~ ^master|develop$ || -n $TRAVIS_TAG"
+
+  # - name: Integration Tests
+  #   stage: Tests
+  #   language: java
+  #   addons:
+  #     chrome: stable
+  #     hosts:
+  #     - auth.example.demo
+  #     - ocwa.example.demo
+  #     - ocwadl.example.demo
+  #   jdk: openjdk8
+  #   cache:
+  #     directories:
+  #     - "/tmp/traviscache"
+  #   before_install:
+  #   - |-
+  #     if [ ! -d "/tmp/traviscache" ]; then
+  #       mkdir -p /tmp/traviscache
+  #     fi
+  #   - |-
+  #     cd /tmp
+  #     sudo wget -q https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip
+  #   - |-
+  #     cd /usr/local/bin
+  #     sudo unzip -o /tmp/terraform_${TERRAFORM_VERSION}_linux_amd64.zip
+  #     sudo rm -rf /tmp/terraform_${TERRAFORM_VERSION}_linux_amd64.zip
+  #     sudo chmod +x terraform
+  #   install:
+  #   - |-
+  #     cd /home/travis/build/bcgov/OCWA/terraform
+  #     mkdir _tmp
+  #     cp terraform.tfvars.example terraform.tfvars
+  #     python2 scripts/prepare_images_variable.py
+  #   - terraform init
+  #   - terraform apply -var hostRootPath=`pwd`/_tmp -auto-approve
+  #   before_script:
+  #   - |-
+  #     if [ ! -d "/tmp/traviscache" ]; then
+  #       mkdir -p /tmp/traviscache
+  #     fi
+  #   - |-
+  #     if [ ! -f "/tmp/traviscache/Katalon_Studio_Linux_64-${KATALON_VERSION}.tar.gz" ]; then
+  #       cd /tmp/traviscache
+  #       sudo wget -q https://download.katalon.com/${KATALON_VERSION}/Katalon_Studio_Linux_64.tar.gz -O Katalon_Studio_Linux_64-${KATALON_VERSION}.tar.gz
+  #     fi
+  #   - |-
+  #     cd /usr/local/bin
+  #     sudo mkdir -p Katalon_Studio
+  #     sudo tar -xf /tmp/traviscache/Katalon_Studio_Linux_64-${KATALON_VERSION}.tar.gz -C Katalon_Studio
+  #     sudo chmod +x Katalon_Studio/katalon
+  #     sudo chmod -R 777 Katalon_Studio
+  #   - docker images --digests
+  #   - docker ps
+  #   script:
+  #   - |-
+  #     cd /usr/local/bin/Katalon_Studio
+  #     xvfb-run --server-args="-screen 0 1440x900x24" ./katalon -noSplash -runMode=console -projectPath="/home/travis/build/bcgov/OCWA/ui_tests/OCWA.prj" -retry=0 -testSuitePath="Test Suites/CucumberSuite" -executionProfile="Travis" -browserType="Chrome (headless)"
+  # - name: OCWA Master Helm Chart
+  #   stage: Tests
+  #   language: python
+  #   python:
+  #   - '3.6'
+  #   cache: pip
+  #   install:
+  #   - |-
+  #     cd /home/travis/build/bcgov/OCWA
+  #     wget -q ${HELM_URL}/${HELM_TGZ}
+  #     tar xzfv ${HELM_TGZ}
+  #     PATH=`pwd`/linux-amd64/:$PATH
+  #     helm init --client-only
+  #   - sudo pip install yamllint=="${YAMLLINT_VERSION}"
+  #   script:
+  #   - cd /home/travis/build/bcgov/OCWA
+  #   - helm lint helm/ocwa
 env:
-  matrix:
+  global:
+  - CXX=g++-4.8
+  - HELM_TGZ=helm-v2.4.1-linux-amd64.tar.gz
+  - HELM_URL=https://storage.googleapis.com/kubernetes-helm
+  - GH_URL=https://kubenow.github.io/helm-charts
+  - KATALON_VERSION=6.0.5
+  - MONGODB=4.1.1
+  - REPO_DIR=/home/travis/build/kubenow/helm-charts
+  - SONAR_APP=sonar-scanner
+  - SONAR_URL=https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/
+  - SONAR_VERSION=3.2.0.1227-linux
+  - TARGET_BR=gh-pages
+  - TERRAFORM_VERSION=0.11.11
+  - TUSD_VERSION=0.11.0
+  - YAMLLINT_VERSION=1.8.1
+  # Quay User
+  - secure: "l3SYBLfLP0NiCl42UGjYySfF1BDFGJUMTnloe+wRu2TAYjdebXb5SXa1Hqq7SE4kjideGeeWNpz9Drpq5OcYyTU0iOu7zRahJxkXbYYhI4q9eMBaa4niW73HRlqR3K218nCOPFfffCs0ahzIuGTduyTB+BRAEr8y2bbs2lsFYsr1muyiL5XxXs0/2QabP3kAsh0taNIHODjE7YL7pNuVfNOtuRF/Tjx8Ph3oJa9cWl8WtaOTgdYNvxkrjRitzlmePc3Pqz652/SDFDl+1ZTJJ1akm6RKAUQ7OKr61+6+XD2jBG1umz0BaFnnkAb8uVM0RoK48K3ny5vHczcicDDG3WQB3vqb2XWXPJS1vF1nBjOKKqXWHTH6niS25/SQLXFEctLlk/wx7LYOaqmnJe0a2qmB3C0nBpNZ0r/F758zEFvlTTLmDx9ITSpR3s7K/Vq/2g2xXYZJPT1t4PAxwlFY1ROBLflTdVsxy/FqwKRAt7mqVQLluKVUXNRdyFWmm/2ewp7pN4bqEtEc9dYJmJJmRnzxAvcCCqlXnMHmoMarD6VcuWiC1OeSklh0U5cZIoXrFOvC/lZ9RZj/mZU/LdPBTgx+ckFcwKNNSbWW2z7ETtpQdJzFFqJJ8Fh17VFz4KQ3x+WqDKigEDDA4VdXQnO7vTMBlMQDsxMVgg4m0trOkDk="
+  # Quay Pass
+  - secure: "OScTvSZs0tpWaZQMTFuFJzIQDQh5923GK+vLNABh8MVwRQcVQHnzArDAOSpCiO3S//nSdlLcYOjeKtJcX3zzKWhqoJRjEBrm7K+99vXwwrhynLO+Q/8k53bCWKSht1MOOXBXEAHZWAtmEdY7POzhmjgdm4mAUq2u0WJ2QsqhXDZ4CkGWAvR9PoGDgfbgXYH8V4g8zLWhszlDd6cw0tB7/FGix++tgwCmwfS9DV+ULd9Y7s8HkxuBcL5z6bqmdvLK5lOzuZHcmOafe2sVSLXw/GriHQOR25KzTNe1+sYOUAhmY7hvaEUijpzf78CaN/D5l1VwsUaJO85qgquNl4PF3EVknNspfd9YhZsI3d7hY08V9XyiLKNkBF5GZcIW78K8tfiSIWhfKLW8hXpmRYyPuhN2hlASNUO/lvGi+Q86Jow1PWWQxZ2crEUIrqCeAd+zB75Y7lgXT3Bgza5h9H1+FhI09d+BFdXNVu0nq4tkFQ6G1pCqhJjwGPyxSHcn9IHtW/hzNavntI9vEqOSvCJpiLTO5r2uDwv1ICPt0RlDtQ9yx2TxVxIsh3FXl4hAgdXP9WOWzlKY9QoTTfztsCMLVXAtGBJ+k+NSegJLHWIfK6K2gtayvaxpA4/eTXMWYnZD+dAB85M1xt2gFDvh1D4McMZGQQpl+Wy6iDzF/71JVQs="
+  # Docker
   - secure: TamRjFiStmrHMHs5Q4SB6zvDx+8kTnR0PU1tKB2UamdbhANaWW7bfmQZb4EabptkUDyYeRREH88veLyqIXdU+4g5USetNnf7jw1FwYr4BkvghB6/HHXWhi4l6hBVwXjWNEvNYLYsHccVp6hABHxKlH9QYoV+166nH4gWDUy5FOhdTakphkcYzGsl2Y86nJrTGUECHmE6i+kMFAsC/dIczLKvQKRKcc18iScYXy4WZoNES2ymywx7xbcxtCLg0070syeK9o+nyWwj/HlllPxcuiSLjBbUZE31WRP7dNPG2zRSzBlv2wpA7hF8KYmH+sZ8AK1bOd8H9aLDhWiSKiXpOSdDM75zXVXYb4R5wIbHKAR5XtcQrQPtfqhDEcN9q/5MSQAsSn/9k/BpkDKV+zIlKdHD0/JZEZ6strJ6uAGXcCpIIu7yrMdCpR6BEX3eWxGbJ0ablPjzp6GgxSgjM1A3MuGYKVj3dOcINq2K3x5kSPX4RwDtjZXO4QPv3IbzBeKDvObbMI+0xC1cunGiBZRcsKmXXOwa/7OlMj0Eve//dV4djbOqOzonl//pcZHZmONpxIGmXwqtn5XLVCmiwZ8BCeI9iq1zLadQuZLTFW2miWexllYzFEJQCxUqrDnKk0P5wCY4lKahLddhiUtzj7iS2UzFbJWat1tP9vaODu8riqw=
   - secure: fTwVbJBNSdOZIZuLjkPf9gLuuZb5FQZ9S0yDz6gxf/GtIsAmM5lQDfrcrqfHPwFDXN6LXeVp955WdlDKfIpVa5fUEK4hG8OyFA0bgmOmmBhUDtWxLfdAs8W/GHRrK1etuuBQ7lNXSBSGzY86hAxmoowwsHQVCoxNAm9+v4VDoROq8WV0NyyGtLvE5mWwErXKo1kon7GwWvMaXFWIBDs8WATO83oiO4yGU/GDt8fb2kiqjZgUYGBhpxOTW0gQPiVNWSirs7NiZznJY2h34WlnrnsbTnA7F+niaKZ0z8MG3D9yhM/esdInEbI/2stMP9aLfwibR3+EZ8WBKkbtjZN48yh+ZFVIFHqJX6F6tkpeufMUT4WsBNvP5KF7rozKMuCs7WunkJw9akJQCigt2XpPOnb2YJMMMPqDT1oUQlk4XxM4Hm2xNshLKQodOii/rbJBcbo7y2n0qgtDfjrQ6KV0i6gOE1EbS/W3ggUJLasqoLo5dS3iHhu9vL0YspYoz60am2RxpZAe/Okb3ZsUFFuzwpe4t5WT17BfXzyh/XIjmZtVc+Rd0jGXvimOWeOVxj8O4JeeD0VN/1Hy8CbzGu7gKyRemrQXYh4heQHrJk+wHNd/ryVLX/nwybI/aCvl2bJiqWdpFX5i8roDDDKyA1x8/7djDS82d+K/rsDdBPv9TZ0=

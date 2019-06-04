@@ -11,5 +11,9 @@ dist
 coverage/
 .nyc_output/
 config/*
-!config/default.json.template
+!config/default.json.example
 workbench/*
+.ash_history
+.config
+.npm
+LOCAL.md
