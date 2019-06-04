@@ -1,0 +1,40 @@
+image:
+  repository: bcgovimages/sae-workbench
+  tag: edge
+  pullPolicy: Always
+
+replicaCount: 2
+
+service:
+  type: ClusterIP
+  port: 80
+  sessionAffinity:
+    enabled: false
+    # timeout: 1800
+
+ingress:
+  enabled: false
+  annotations:
+    kubernetes.io/ingress.class: nginx
+  path: /
+  hosts:
+    - name: chart-example.local
+      service: sae-workbench
+      port: 80
+  tls: []
+
+logLevel: error
+
+cookieSecret: "s3c3r3t_c00k13"
+
+host: "serverHostedOnHere"
+
+auth:
+  issuer: "openid.auth.issuer"
+  clientID: "outputchecker"
+  clientSecret: "CLIENT_SECRET_HERE"
+  authorizationEndpoint: "openid.auth.endpoint"
+  tokenEndpoint: "openid.auth.tokenEndpoint"
+  userInfoURL: "openid.userinfo.url"
+  callbackURL: "chart-example.local/auth"
+  scope: "openid offline_access"
