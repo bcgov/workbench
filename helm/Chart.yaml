@@ -1,0 +1,14 @@
+apiVersion: v1
+appVersion: 0.1.0
+description: A Helm chart for sae-workbench on Kubernetes
+keywords:
+  - sae
+  - workbench
+  - Docker
+  - Kubernetes
+  - k8s
+maintainers:
+  - name: Joshua
+    email: joshua@general-metrics.com
+name: sae-workbench
+version: 0.1.0

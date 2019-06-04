@@ -17,3 +17,4 @@ workbench/*
 .config
 .npm
 LOCAL.md
+local.yaml
