@@ -16,12 +16,6 @@ const OpenIDConnectStrategy = require('passport-openidconnect');
 const helmet = require('helmet');
 const get = require('lodash/get');
 
-// Webpack Requirements
-const webpack = require('webpack');
-const webpackConfig = require('../webpack.dev');
-const webpackDevMiddleware = require('webpack-dev-middleware');
-const webpackHotMiddleware = require('webpack-hot-middleware');
-
 // Initialize the Express App
 const app = new Express();
 
@@ -34,6 +28,12 @@ const isProduction = process.env.NODE_ENV === 'production';
 // Run Webpack dev server in development mode
 
 if (process.env.NODE_ENV === 'development') {
+  // Webpack Requirements
+  const webpack = require('webpack');
+  const webpackConfig = require('../webpack.dev');
+  const webpackDevMiddleware = require('webpack-dev-middleware');
+  const webpackHotMiddleware = require('webpack-hot-middleware');
+
   const compiler = webpack(webpackConfig);
   const options = {
     noInfo: true,

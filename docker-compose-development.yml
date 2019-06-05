@@ -1,17 +1,16 @@
-web:
-  build: .
-  dockerfile: Dockerfile-development
-  # links:
-  #  - db
-  ports:
-   - "8000:8000"
-  volumes:
-   - .:/usr/src/app/
-   - /usr/src/app/node_modules
-  environment:
-   NODE_ENV: development
-   MONGO_URL: mongodb://db:27017/mern-starter
-# db:
-#   image: mongo:latest
-#   ports:
-#    - "27017:27017"
+version: '2'
+services:
+  web:
+    extends:
+      file: docker-compose-common.yml
+      service: web
+    build:
+      context: .
+      args:
+        - ENV=dev
+        - BASE_IMAGE=node:8-alpine
+        - NODE_ENV=dev
+    image: sre-web-dev
+    volumes:
+    - .:/usr/src/app/
+    - /usr/src/app/node_modules
