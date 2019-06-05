@@ -44,5 +44,5 @@ RUN apk add --no-cache --virtual .gyp \
     && rm -r $HOME/.node-gyp \
     && apk del .gyp
 
-EXPOSE 8000
+EXPOSE 9000
 CMD ["sh", "-c", "yarn start:$ENV"]
