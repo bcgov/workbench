@@ -7,5 +7,5 @@ services:
     build:
       context: .
       args:
-        - ENV=staging
-    image: sre-web-staging
+        - ENV=prod
+    image: sre-web
