@@ -45,4 +45,4 @@ RUN apk add --no-cache --virtual .gyp \
     && apk del .gyp
 
 EXPOSE 9000
-CMD ["sh", "-c", "yarn start:$ENV"]
+CMD ["sh", "-c", "./entrypoint.sh"]
