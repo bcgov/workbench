@@ -19,6 +19,11 @@ const get = require('lodash/get');
 // Initialize the Express App
 const app = new Express();
 
+
+const exit = () => process.exit();
+process.on('SIGINT', exit);
+process.on('SIGTERM', exit);
+
 const isProduction = process.env.NODE_ENV === 'production';
 // Run Webpack dev server in development mode
 
@@ -56,9 +61,6 @@ const serverConfig = require('./config');
 //   // feed some dummy data in DB. // dummyData();
 // });
 
-
-console.log("ISSUER", config.get('azure').issuer);
-
 const checkAuth = function(req, res, next) {
   if (!req.user || !req.isAuthenticated || !req.isAuthenticated()) {
     return res.redirect('/login');
@@ -93,7 +95,7 @@ app.use(bodyParser.urlencoded({ limit: '20mb', extended: false }));
 app.use(Express.static(path.resolve(__dirname, '../dist')));
 app.use('/assets', Express.static(path.resolve(__dirname, 'assets')));
 // app.use('/api', posts);
-
+/*
 app.use(
   '/user',
   proxy(config.get('azureUserInfo').host, {
@@ -103,6 +105,7 @@ app.use(
     },
   })
 );
+*/
 // Auth Middleware
 app.use(cookieParser(config.get('sessionSecret')));
 app.use(
@@ -124,15 +127,15 @@ app.use(
 passport.use(
   new OpenIDConnectStrategy(
     {
-      issuer: config.get('azure').issuer,
-      authorizationURL: config.get('azure').authorizationEndpoint,
-      tokenURL: config.get('azure').tokenEndpoint,
-      clientID: config.get('azure').clientID,
-      callbackURL: config.get('azure').callbackURL,
-      clientSecret: config.get('azure').clientSecret,
-      userInfoURL: config.get('azure').userInfoURL,
+      issuer: config.get('oidc').issuer,
+      authorizationURL: config.get('oidc').authorizationEndpoint,
+      tokenURL: config.get('oidc').tokenEndpoint,
+      clientID: config.get('oidc').clientID,
+      callbackURL: config.get('oidc').callbackURL,
+      clientSecret: config.get('oidc').clientSecret,
+      userInfoURL: config.get('oidc').userInfoURL,
       passReqToCallback: true,
-      scope: config.get('azure').scope,
+      scope: config.get('oidc').scope,
     },
     function(
       req,
@@ -161,7 +164,7 @@ passport.use(
       const user = {
         username: email,
         email,
-        groups: [],
+        groups: jwtClaims.groups,
         idToken: jwtClaims.idtok,
         accessToken: accessToken,
         expires: jwtClaims.exp,
@@ -246,7 +249,7 @@ app.get('/debug', checkAuth, (req, res) => {
 
 app.get('/logout', (req, res) => {
   req.logout();
-  res.redirect(config.get('azureUserInfo').logoutURL);
+  //res.redirect(config.get('azureUserInfo').logoutURL);
 });
 
 app.get('/callback', (req, res, next) => {
