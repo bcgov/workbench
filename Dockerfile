@@ -11,7 +11,7 @@ RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
 # Copy files
-COPY . .
+COPY --chown=node:node . .
 
 # Get production environment settings going
 ENV ENV="$ENV" \
@@ -43,6 +43,8 @@ RUN apk add --no-cache --virtual .gyp \
     && yarn cache clean \
     && rm -r $HOME/.node-gyp \
     && apk del .gyp
+
+USER node
 
 EXPOSE 9000
 CMD ["sh", "-c", "./entrypoint.sh"]
