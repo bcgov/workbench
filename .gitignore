@@ -18,3 +18,4 @@ workbench/*
 .npm
 LOCAL.md
 local.yaml
+*.env
