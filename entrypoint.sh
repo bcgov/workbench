@@ -18,6 +18,6 @@ printf '{
         "callbackURL": "'${OIDC_CALLBACK_URL}'",
         "scope": "'${OIDC_SCOPE}'"
     }
-}' >> ./config/default.json
+}' > ./config/default.json
 
 yarn start:prod
