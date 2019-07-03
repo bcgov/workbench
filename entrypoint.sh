@@ -6,7 +6,7 @@ printf '{
     "serverPort": 9000,
 
     "sessionSecret": "'${SESSION_SECRET}'",
-    "sessionCookieSecure": "'${SESSION_COOKIE_SECURE}'",
+    "sessionCookieSecure": '${SESSION_COOKIE_SECURE:-true}',
 
     "oidc": {
         "issuer": "'${OIDC_ISSUER}'",
