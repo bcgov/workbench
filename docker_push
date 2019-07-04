@@ -25,6 +25,7 @@ fi
 
 if [ $TRAVIS_BRANCH == "develop" ]; then
     docker tag $QUAYIO_BASE/$REPO $BCGOV_BASE/$REPO:edge
+    docker tag $QUAYIO_BASE/$REPO $BCGOV_BASE/$REPO:$TRAVIS_COMMIT
     echo "dockerfile tagged pushing now"
     docker push $BCGOV_BASE/$REPO:edge
     docker push $BCGOV_BASE/$REPO:$TRAVIS_COMMIT
