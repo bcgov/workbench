@@ -16,7 +16,7 @@ printf '{
         "tokenEndpoint": "'${OIDC_TOKEN_URL}'",
         "userInfoURL": "'${OIDC_USERINFO_URL}'",
         "callbackURL": "'${OIDC_CALLBACK_URL}'",
-        "scope": "'${OIDC_SCOPE}'"
+        "scope": "'"${OIDC_SCOPE}"'"
     }
 }' > ./config/default.json
 
