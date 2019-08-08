@@ -8,6 +8,8 @@ var postcssReporter = require('postcss-reporter');
 var cssnano = require('cssnano');
 var path = require('path');
 
+var basePath = "/";
+
 module.exports = {
   mode: 'production',
   devtool: 'hidden-source-map',
@@ -21,7 +23,7 @@ module.exports = {
   output: {
     path: __dirname + '/dist/client/',
     filename: '[name].[chunkhash].js',
-    publicPath: '',
+    publicPath: basePath,
   },
 
   resolve: {
@@ -79,7 +81,7 @@ module.exports = {
     }),
     new ExtractTextPlugin('app.[chunkhash].css', { allChunks: true }),
     new ManifestPlugin({
-      basePath: '/',
+      basePath: basePath,
     }),
     new ChunkManifestPlugin({
       filename: 'chunk-manifest.json',
