@@ -18,6 +18,13 @@ printf '{
         "userInfoURL": "'${OIDC_USERINFO_URL}'",
         "callbackURL": "'${OIDC_CALLBACK_URL}'",
         "scope": "'"${OIDC_SCOPE}"'"
+    },
+
+    "links": {
+        "ocwa": "'${LINK_TO_OCWA}'",
+        "ocwadl": "'${LINK_TO_OCWADL}'",
+        "projectsc: "'${LINK_TO_PROJECTSC}'",
+        "selfserve": "'${LINK_TO_SELFSERVE}'"
     }
 }' > ./config/default.json
 

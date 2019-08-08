@@ -10,7 +10,13 @@ const mapStateToProps = () => ({
       description: "Approve import requests and manage your export requests"
     },
     {
-      id: 'gitlab',
+      id: 'ocwadl',
+      name: 'OCWA',
+      icon: 'fas fa-exchange-alt',
+      description: "Approve exports requests and manage your import requests"
+    },
+    {
+      id: 'projectsc',
       name: 'Code Sharing',
       icon: 'fas fa-code',
       description: "Use git to share code among your team projects"

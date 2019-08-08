@@ -10,7 +10,11 @@ export interface StationItemProps {
   url: string;
 }
 
-const LinkItem: React.SFC<StationItemProps> = ({ data, url }) => (
+const LinkItem: React.SFC<StationItemProps> = ({ data, url }) => {
+  if (window.__LINKS__[data.id] == "") {
+    return false;
+  }
+  return (
     <a className={bs.card} style={{ width: 150 }} target="_blank" href={`${window.__LINKS__[data.id]}`} style={{padding:'20px'}}>
       <div className={cx(bs.cardBody, bs.pt0, bs.textCenter)}  >
         <span className="fa-stack fa-5x">
@@ -21,6 +25,6 @@ const LinkItem: React.SFC<StationItemProps> = ({ data, url }) => (
         <p className={cx(bs.cardText)}>{data.description}</p>
       </div>
     </a>
-);
+)};
 
 export default LinkItem;
