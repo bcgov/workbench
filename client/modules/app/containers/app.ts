@@ -7,7 +7,7 @@ import { fetchUser } from '../actions';
 
 const mapStateToProps = (state: Types.RootState) => ({
   user: state.app.user,
-  fetchStatus: state.app.fetchStatus,
+  fetchStatus: state.app.fetchStatus
 });
 
 export default withRouter(

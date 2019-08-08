@@ -6,16 +6,16 @@ html
     title= "SRE PROOF [DEMO]"
     link(
       rel='stylesheet'
-      href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css'
+      href="assets/css/bootstrap.min.css"
       integrity='sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb'
       crossorigin='anonymous'
     )
 
-    link(rel='stylesheet' href='/assets/css/font-awesome.css')
-  body.position-fixed.w100(style="height:100%;background: url(/assets/images/login-bg.jpg) no-repeat center center fixed; top: 0; right: 0; bottom: 0; left: 0;")
+    link(rel='stylesheet' href='assets/css/fontawesome-free-5.10.1-web/css/all.min.css')
+  body.position-fixed.w100(style="height:100%;background: url(assets/images/login-bg.jpg) no-repeat center center fixed; top: 0; right: 0; bottom: 0; left: 0;")
     #root.text-center.d-flex.align-items-center.justify-content-center(style="width: 100%;height: 100%; position: absolute; top: 0; right: 0; left: 0")
       .alert.alert-light.py-1.px-2(style="position: absolute; bottom: 20px; left: 20px;")
-        a(href="https://www.flickr.com/photos/bcgovphotos/38255666225/")
+        a(href="assets/images/bcgov.png")
           small
             | Photo by BC Gov't
       .card(style="width: 20rem")
@@ -23,4 +23,4 @@ html
           div
             i.fa.fa-lock.fa-3x.text-info
           p Please log in to continue
-          a.btn.btn-primary(href='/authenticate') Login
+          a.btn.btn-primary(href='authenticate') Login

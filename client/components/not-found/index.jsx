@@ -9,7 +9,7 @@ function NotFound() {
       className={cx(bs.dFlex, bs.alignItemsCenter, bs.justifyContentCenter)}
       style={{
         flex: 1,
-        background: `url(/assets/images/login-bg.jpg) no-repeat center center fixed`,
+        background: `url(assets/images/login-bg.jpg) no-repeat center center fixed`,
       }}
     >
       <div className={bs.card} style={{ width: '20rem' }}>

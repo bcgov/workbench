@@ -36,7 +36,7 @@ class Announcements extends Component {
           >
             <Link to={match.url} className={bs.navbarBrand}>
               <img
-                src="/assets/images/bc-gov-icon-logo.png"
+                src="assets/images/bc-gov-icon-logo.png"
                 width={45}
                 height={30}
                 className={bs.mr2}

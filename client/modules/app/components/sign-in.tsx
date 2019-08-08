@@ -18,7 +18,7 @@ const SignIn: React.SFC<SignInProps<any>> = ({ children, fetchStatus }) => {
           <div className={cx(bs.cardBody, bs.textCenter)}>
             <div>
               <img
-                src="/assets/images/bc-gov-icon-logo.png"
+                src="assets/images/bc-gov-icon-logo.png"
                 width={45}
                 height={30}
                 className={bs.mb2}
@@ -43,7 +43,7 @@ const SignIn: React.SFC<SignInProps<any>> = ({ children, fetchStatus }) => {
               <Icon solid name="exclamation-circle" size="2x" />
             </div>
             <p>Sign in failed</p>
-            <a href="/login" className={cx(bs.btn, bs.btnOutlineLight)}>
+            <a href="login" className={cx(bs.btn, bs.btnOutlineLight)}>
               Try logging in again
             </a>
           </div>

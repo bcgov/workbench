@@ -4,6 +4,7 @@ mkdir -p ./config
 printf '{
     "logEnvironment": "'${LOG_LEVEL}'",
     "serverPort": 9000,
+    "serverPath": "'${SERVER_PATH}'",
 
     "sessionSecret": "'${SESSION_SECRET}'",
     "sessionCookieSecure": '${SESSION_COOKIE_SECURE:-true}',

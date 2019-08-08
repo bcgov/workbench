@@ -60,87 +60,13 @@ class Sidebar extends React.Component<SidebarProps> {
           <div className={sectionStyles}>
             <header className={headerStyles}>
               <h5 className={bs.mb0}>
-                <Link to="/announcements">
+                
                   <Icon solid name="bullhorn" className={iconStyles} />{' '}
                   Announcements
-                </Link>
               </h5>
             </header>
             <div className={contentStyles}>
-              <ul className={bs.listUnstyled}>
-                <li className={bs.mb2}>
-                  <Link to="/announcements/123">
-                    <small className={cx(bs.textMuted, bs.dBlock)}>
-                      June 28th, 2018
-                    </small>
-                    Introducing Weka Support
-                  </Link>
-                </li>
-                <li className={bs.mb2}>
-                  <Link to="/announcements/123">
-                    <small className={cx(bs.textMuted, bs.dBlock)}>
-                      June 12th, 2018
-                    </small>
-                    Planned outage this weekend
-                  </Link>
-                </li>
-                <li className={bs.mb2}>
-                  <Link to="/announcements/123">
-                    <small className={cx(bs.textMuted, bs.dBlock)}>
-                      May 10th, 2018
-                    </small>
-                    Starter Workbenches are ready
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className={sectionStyles}>
-            <header className={headerStyles}>
-              <h5 className={bs.mb0}>
-                <Link to="/datasets/123/data-vendor-questions">
-                  <Icon solid name="question-circle" className={iconStyles} />{' '}
-                  Data Provider Q&A
-                </Link>
-              </h5>
-            </header>
-            <div className={contentStyles}>
-              <Link
-                to="/datasets/123/data-provider-questions/1"
-                className={cx(bs.dFlex, bs.alignItemsCenter, bs.mb3)}
-              >
-                <Icon
-                  solid
-                  name="check-circle"
-                  color="success"
-                  size="2x"
-                  className={bs.mr2}
-                />
-                <span style={{ flex: 1 }}>
-                  <small className={cx(bs.textMuted, bs.dBlock)}>
-                    Today at 12:31pm
-                  </small>
-                  Question about Hospital Visits data sources
-                </span>
-              </Link>
-              <Link
-                to="/datasets/123/data-provider-questions/1"
-                className={cx(bs.dFlex, bs.alignItemsCenter, bs.mb3)}
-              >
-                <Icon
-                  solid
-                  name="comment-dots"
-                  color="muted"
-                  size="2x"
-                  className={bs.mr2}
-                />
-                <span style={{ flex: 1 }}>
-                  <small className={cx(bs.textMuted, bs.dBlock)}>
-                    Today at 12:31pm
-                  </small>
-                  Question about Hospital Visits data sources
-                </span>
-              </Link>
+                <i>No new announcements</i>
             </div>
           </div>
           <footer className={cx(styles.footer, bs.px3, bs.py2, bs.textRight)}>

@@ -19,6 +19,7 @@ Run `docker build . -t sae-workbench` to build the docker container and the foll
 ``` sh
 hostip=$(ifconfig en0 | awk '$1 == "inet" {print $2}')
 docker run -e LOG_LEVEL=info -e SESSION_SECRET="s3cr3t" -e SESSION_COOKIE_SECURE=true \
+   -e SERVER_PATH="/" \
    -e OIDC_ISSUER="https://oidc/auth/realms/myrealm" \
    -e OIDC_CLIENT_ID=workbench -e OIDC_CLIENT_SECRET=s3c3rt \
    -e OIDC_AUTH_URL="https://oidc/auth/realms/myrealm/protocol/openid-connect/auth" \
@@ -51,18 +52,3 @@ This web application uses MERN boiler plate, for additional documentation see [m
 5. `npm run cover` - generates test coverage report
 
 6. `npm run lint` - runs linter to check for lint errors
-
-### Docker
-There are docker configurations for both development and production.
-
-To run docker for development,
-```
-docker-compose -f docker-compose-development.yml build
-docker-compose -f docker-compose-development.yml up
-```
-
-To run docker for production,
-```
-docker-compose build
-docker-compose up
-```
