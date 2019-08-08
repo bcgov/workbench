@@ -25,7 +25,7 @@ printf '{
     "links": {
         "ocwa": "'${LINK_TO_OCWA}'",
         "ocwadl": "'${LINK_TO_OCWADL}'",
-        "projectsc: "'${LINK_TO_PROJECTSC}'",
+        "projectsc": "'${LINK_TO_PROJECTSC}'",
         "selfserve": "'${LINK_TO_SELFSERVE}'"
     }
 }' > ./config/default.json
