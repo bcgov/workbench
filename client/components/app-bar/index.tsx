@@ -38,7 +38,7 @@ const AppBar: React.SFC<AppBarProps & RouteComponentProps<AppBarProps>> = ({
       </Link>
       <div className={bs.navbarCollapse}>
         <nav className={cx(bs.navbarNav, bs.mrAuto)}>
-          <NavBarLink icon="code" location={location} url="/quicklinks">
+          <NavBarLink icon="external-link-alt" location={location} url="/quicklinks">
             Quick Links
           </NavBarLink>
           {/* <NavBarLink icon="list-alt" url="/datasets" location={location}>
