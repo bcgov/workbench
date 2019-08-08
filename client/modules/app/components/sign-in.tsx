@@ -43,7 +43,7 @@ const SignIn: React.SFC<SignInProps<any>> = ({ children, fetchStatus }) => {
               <Icon solid name="exclamation-circle" size="2x" />
             </div>
             <p>Sign in failed</p>
-            <a href="login" className={cx(bs.btn, bs.btnOutlineLight)}>
+            <a href="authenticate" className={cx(bs.btn, bs.btnOutlineLight)}>
               Try logging in again
             </a>
           </div>

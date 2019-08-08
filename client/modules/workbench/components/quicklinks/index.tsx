@@ -25,5 +25,5 @@ QuicklinksProps & RouteComponentProps<QuicklinksProps>
       </div>
     </div>
   );
-
+  
 export default Quicklinks;
