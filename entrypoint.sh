@@ -11,6 +11,8 @@ printf '{
 
     "oidc": {
         "issuer": "'${OIDC_ISSUER}'",
+        "host": "'${OIDC_HOST}'",
+        "userInfoPath": "'${OIDC_USERINFO_PATH}'",
         "clientID": "'${OIDC_CLIENT_ID}'",
         "clientSecret": "'${OIDC_CLIENT_SECRET}'",
         "authorizationEndpoint": "'${OIDC_AUTH_URL}'",
