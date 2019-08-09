@@ -36,5 +36,14 @@ auth:
   authorizationEndpoint: "openid.auth.endpoint"
   tokenEndpoint: "openid.auth.tokenEndpoint"
   userInfoURL: "openid.userinfo.url"
+  host: "openid.url"
+  userInfoPath: "openid.userinfo.path"
+  userInfoURL: "openid.userinfo.url"
   callbackURL: "chart-example.local/auth"
   scope: "openid offline_access"
+
+links:
+  ocwa: ""
+  ocwadl: ""
+  projectsc: ""
+  selfserve: ""

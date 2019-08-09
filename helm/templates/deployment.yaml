@@ -33,6 +33,10 @@ spec:
                 secretKeyRef:
                   name: {{ template "sae-workbench.fullname" . }}-secrets
                   key: cookieSecret
+            - name: OIDC_HOST
+              value: {{ .Values.auth.host }}
+            - name: OIDC_USERINFO_PATH
+              value: {{ .Values.auth.userInfoPath }}
             - name: OIDC_ISSUER
               value: {{ .Values.auth.issuer }}
             - name: OIDC_CLIENT_ID
@@ -49,6 +53,16 @@ spec:
               value: {{ .Values.auth.callbackURL }}
             - name: OIDC_SCOPE
               value: {{ .Values.auth.scope }}
+            - name: SERVER_PATH
+              value: {{ .Values.serverPath }}
+            - name: LINK_TO_OCWA
+              value: {{ .Values.links.ocwa }}
+            - name: LINK_TO_OCWADL
+              value: {{ .Values.links.ocwadl }}
+            - name: LINK_TO_PROJECTSC
+              value: {{ .Values.links.projectsc }}
+            - name: LINK_TO_SELFSERVE
+              value: {{ .Values.links.selfserve }}
           ports:
             - name: http
               containerPort: 9000
