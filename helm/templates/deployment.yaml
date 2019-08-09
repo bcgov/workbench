@@ -33,6 +33,8 @@ spec:
                 secretKeyRef:
                   name: {{ template "sae-workbench.fullname" . }}-secrets
                   key: cookieSecret
+            - name: SERVER_PATH
+              value: {{ .Values.serverPath }}
             - name: OIDC_HOST
               value: {{ .Values.auth.host }}
             - name: OIDC_USERINFO_PATH
@@ -53,8 +55,6 @@ spec:
               value: {{ .Values.auth.callbackURL }}
             - name: OIDC_SCOPE
               value: {{ .Values.auth.scope }}
-            - name: SERVER_PATH
-              value: {{ .Values.serverPath }}
             - name: LINK_TO_OCWA
               value: {{ .Values.links.ocwa }}
             - name: LINK_TO_OCWADL

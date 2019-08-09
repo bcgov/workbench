@@ -42,6 +42,8 @@ auth:
   callbackURL: "chart-example.local/auth"
   scope: "openid offline_access"
 
+serverPath: "/"
+
 links:
   ocwa: ""
   ocwadl: ""
