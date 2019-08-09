@@ -19,7 +19,7 @@ module.exports = merge(common, {
   output: {
     path: outPath,
     filename: '[name].[chunkhash].js',
-    publicPath: '/',
+    publicPath: 'base/',
   },
 
   module: {
@@ -75,8 +75,7 @@ module.exports = merge(common, {
       chunkFilename: '[id].[hash].css',
     }),
     new ManifestPlugin({
-      basePath: '',
-      publicPath: '',
+      basePath: 'base/'
     }),
     new ChunkManifestPlugin({
       filename: 'chunk-manifest.json',
