@@ -323,6 +323,10 @@ router.get('*', checkAuth, (req, res, next) => {
   });
 });
 
+router.get("/", (req, res) => {
+  res.redirect(config.get('serverPath'))
+});
+
 app.use(config.get('serverPath'), router)
 
 // start app
