@@ -10,8 +10,6 @@ const common = require('./webpack.common');
 
 const outPath = path.resolve(__dirname, 'dist');
 
-var basePath = "";
-
 module.exports = merge(common, {
   mode: 'production',
   devtool: 'hidden-source-map',
@@ -21,7 +19,7 @@ module.exports = merge(common, {
   output: {
     path: outPath,
     filename: '[name].[chunkhash].js',
-    publicPath: basePath,
+    publicPath: ''
   },
 
   module: {
@@ -76,10 +74,7 @@ module.exports = merge(common, {
       filename: '[name].[hash].css',
       chunkFilename: '[id].[hash].css',
     }),
-    new ManifestPlugin({
-      basePath: basePath,
-      publicPath: ""
-    }),
+    new ManifestPlugin(),
     new ChunkManifestPlugin({
       filename: 'chunk-manifest.json',
       manifestVariable: 'webpackManifest',

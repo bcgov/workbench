@@ -306,10 +306,10 @@ router.get(config.get('serverPath'), (req, res) => {
 router.get('*', checkAuth, (req, res, next) => {
   const assetsManifest = isProduction ? require('../dist/manifest.json') : {};
   const cssURL = isProduction
-    ? assetsManifest['/main.css']
+    ? assetsManifest['main.css']
     : '/dist/client/app.css';
   const jsURL = isProduction
-    ? assetsManifest['/main.js']
+    ? assetsManifest['main.js']
     : '/dist/client/app.js';
 
   res.render('index', {
