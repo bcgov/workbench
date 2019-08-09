@@ -82,7 +82,7 @@ module.exports = {
     new ExtractTextPlugin('app.[chunkhash].css', { allChunks: true }),
     new ManifestPlugin({
       basePath: basePath,
-      publicPath: basePath
+      publicPath: ""
     }),
     new ChunkManifestPlugin({
       filename: 'chunk-manifest.json',
