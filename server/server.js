@@ -318,11 +318,12 @@ router.get('*', checkAuth, (req, res, next) => {
   });
 });
 
+app.use(config.get('serverPath'), router)
+
 app.get("/", (req, res) => {
   res.redirect(config.get('serverPath'))
 });
 
-app.use(config.get('serverPath'), router)
 
 // start app
 app.listen(config.get('serverPort'), error => {
