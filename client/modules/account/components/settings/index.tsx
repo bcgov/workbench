@@ -20,7 +20,7 @@ const Settings: React.SFC<SettingsProps> = ({ data }) => {
             <h1>Account Settings</h1>
           </header>
           <p>
-            View or edit your personal information and view security
+            View your personal information and view security
             information.
           </p>
         </div>
@@ -41,19 +41,6 @@ const Settings: React.SFC<SettingsProps> = ({ data }) => {
             <dd>{data.name}</dd>
             <dt>Email Address</dt>
             <dd>{data.email}</dd>
-            <dt>
-              Bio
-              <Button
-                size="sm"
-                style="link"
-                className={cx(bs.fontWeightBold, bs.ml3)}
-              >
-                <Icon solid name="edit" /> Edit
-              </Button>
-            </dt>
-            <dd>
-              <em className={bs.textMuted}>No bio added yet...</em>
-            </dd>
           </dl>
         </div>
       </div>
@@ -69,9 +56,6 @@ const Settings: React.SFC<SettingsProps> = ({ data }) => {
           <div className={cx(bs.alert, bs.alertInfo)}>
             <Icon solid name="user-clock" /> <LastSignIn />
           </div>
-          <p className={bs.fontWeightBold}>
-            If you suspect this was not you, please contact us immediately.
-          </p>
         </div>
       </div>
     </div>

@@ -11,7 +11,7 @@ function* fetchUser(action: AppActions) {
 
   try {
     const payload = yield call(api, {
-      url: '/user',
+      url: window.__SERVER_PATH__ + 'user',
       method: 'get',
     });
     yield call(delay, 3000);

@@ -63,7 +63,7 @@ const serverConfig = require('./config');
 
 const checkAuth = function(req, res, next) {
   if (!req.user || !req.isAuthenticated || !req.isAuthenticated()) {
-    return res.redirect('/login');
+    return res.redirect('authenticate');
   }
 
   next();
@@ -92,8 +92,8 @@ app.use(
 app.use(compression());
 app.use(bodyParser.json({ limit: '20mb' }));
 app.use(bodyParser.urlencoded({ limit: '20mb', extended: false }));
-app.use(Express.static(path.resolve(__dirname, '../dist')));
-app.use('/assets', Express.static(path.resolve(__dirname, 'assets')));
+app.use(cookieParser(config.get('sessionSecret')));
+
 // app.use('/api', posts);
 /*
 app.use(
@@ -107,7 +107,6 @@ app.use(
 );
 */
 // Auth Middleware
-app.use(cookieParser(config.get('sessionSecret')));
 app.use(
   session({
     secret: config.get('sessionSecret'),
@@ -189,17 +188,37 @@ passport.deserializeUser(function(user, done) {
   done(null, user);
 });
 
+router = Express.Router()
+
+router.use(Express.static(path.resolve(__dirname, '../dist')));
+
+router.use('/assets', Express.static(path.resolve(__dirname, 'assets')));
+
+router.use(
+  '/user',
+  proxy(config.get('oidc').host, {
+    https: true,
+    userResHeaderDecorator(headers, userReq, userRes, proxyReq, proxyRes) {
+      headers['Authorization'] = "Bearer: " + userReq.user.accessToken;
+      return headers;
+    },    
+    proxyReqPathResolver() {
+      return config.get('oidc').userInfoPath;
+    },
+  })
+);
+
 // Start a mock api that uses some hardcoded ids to point to files
-app.get('/api/', (req, res) => {
+router.get('/api/', (req, res) => {
   res.send('Nothing to see here...');
 });
 
-app.get('/api/projects/:projectId', (req, res) => {
+router.get('/api/projects/:projectId', (req, res) => {
   res.type('json');
   res.sendFile(__dirname + `/api/${req.params.projectId}/project.json`);
 });
 
-app.get('/api/projects/:projectId/datasets/:datasetId/samples', (req, res) => {
+router.get('/api/projects/:projectId/datasets/:datasetId/samples', (req, res) => {
   res.type('json');
   res.sendFile(
     __dirname +
@@ -209,7 +228,7 @@ app.get('/api/projects/:projectId/datasets/:datasetId/samples', (req, res) => {
   );
 });
 
-app.get('/api/datasets/:datasetId/schemas', (req, res) => {
+router.get('/api/datasets/:datasetId/schemas', (req, res) => {
   res.type('json');
   res.sendFile(
     __dirname + `/api/1/datasets/${req.params.datasetId}/schema.json`
@@ -217,42 +236,42 @@ app.get('/api/datasets/:datasetId/schemas', (req, res) => {
 });
 
 // Auth routes
-app.get('/authenticate', (req, res, next) => {
+router.get('/authenticate', (req, res, next) => {
   passport.authenticate('openidconnect', (err, user) => {
     if (err) {
       return next(err);
     }
 
     if (!req.user) {
-      return res.redirect('/login');
+      return res.redirect('login');
     }
 
     req.logIn(req.user, loginError => {
       if (loginError) {
         return next(loginError);
       }
-      return res.redirect('/');
+      return res.redirect(config.get('serverPath'));
     });
   })(req, res, next);
 });
 
-app.get('/login', (req, res) => {
+router.get('/login', (req, res) => {
   res.render('login');
 });
 
-app.get('/debug', checkAuth, (req, res) => {
+router.get('/debug', checkAuth, (req, res) => {
   const user = req.user || {};
   res.render('debug', {
     user,
   });
 });
 
-app.get('/logout', (req, res) => {
+router.get('/logout', (req, res) => {
   req.logout();
-  //res.redirect(config.get('azureUserInfo').logoutURL);
+  res.redirect(config.get('oidc').logoutURL)
 });
 
-app.get('/callback', (req, res, next) => {
+router.get('/callback', (req, res, next) => {
   passport.authenticate('openidconnect', err => {
     if (err) {
       return next(err);
@@ -262,14 +281,14 @@ app.get('/callback', (req, res, next) => {
       if (req.query.state) {
         console.log('no user', req);
       }
-      return res.redirect('/login');
+      return res.redirect('login');
     }
 
     req.logIn(req.user, loginError => {
       if (err) {
         return next(loginError);
       }
-      return res.redirect('/');
+      return res.redirect(config.get('serverPath'));
     });
   })(req, res, next);
 });
@@ -279,13 +298,13 @@ app.get('/callback', (req, res, next) => {
 // script.
 // console.log(!{stringify(variable)})
 // pug.renderFile('template.pug', {stringify: require('js-stringify')});
-app.get('*', checkAuth, (req, res, next) => {
+router.get('*', checkAuth, (req, res, next) => {
   const assetsManifest = isProduction ? require('../dist/manifest.json') : {};
   const cssURL = isProduction
-    ? assetsManifest['/main.css']
+    ? assetsManifest['main.css']
     : '/dist/client/app.css';
   const jsURL = isProduction
-    ? assetsManifest['/main.js']
+    ? assetsManifest['main.js']
     : '/dist/client/app.js';
 
   res.render('index', {
@@ -293,14 +312,23 @@ app.get('*', checkAuth, (req, res, next) => {
     cssURL: cssURL,
     jsURL: jsURL,
     env: process.env.NODE_ENV,
+    serverPath: config.get('serverPath'),
+    links: config.get("links"),
     user: req.user || {},
   });
 });
 
+app.use(config.get('serverPath'), router)
+
+app.get("/", (req, res) => {
+  res.redirect(config.get('serverPath'))
+});
+
+
 // start app
 app.listen(config.get('serverPort'), error => {
   if (!error) {
-    console.log(`SRE is running on port: ${config.get('serverPort')}...`); // eslint-disable-line
+    console.log(`SRE is running on port: ${config.get('serverPort')} at path ${config.get('serverPath')}...`); // eslint-disable-line
   }
 });
 

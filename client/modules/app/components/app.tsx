@@ -5,6 +5,7 @@ import { Redirect, Route, Switch } from 'react-router-dom';
 import Search from '@src/modules/search/containers/results';
 import Session from '@src/modules/session/containers/session';
 import Workbenches from '@src/modules/workbench/containers/workbenches';
+import Quicklinks from '@src/modules/workbench/containers/quicklinks';
 import Announcements from '@src/modules/announcements/components/announcements';
 import Datasets from '@src/modules/datasets/components/datasets';
 import Dataset from '@src/modules/datasets/components/dataset';
@@ -44,11 +45,12 @@ class App extends React.Component<AppProps> {
             <main className={styles.main}>
               <div className={styles.content}>
                 <Switch>
-                  <Redirect exact from="/" to="/workbench" />
+                  <Redirect exact from="/" to="/quicklinks" />
                   <Route exact path="/datasets" component={Datasets} />{' '}
                   <Route path="/datasets/:datasetId" component={Dataset} />
                   <Route path="/search" component={Search} />
                   <Route path="/workbench" component={Workbenches} />
+                  <Route path="/quicklinks" component={Quicklinks} />
                   <Route path="/discussions" component={Discussions} />
                   <Route path="/announcements" component={Announcements} />
                   <Route path="/help" component={Help} />

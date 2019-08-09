@@ -11,7 +11,8 @@ RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
 # Copy files
-COPY . .
+COPY package* ./
+COPY yarn* ./
 
 # Get production environment settings going
 ENV ENV="$ENV" \
@@ -24,9 +25,11 @@ RUN apk add --no-cache --virtual .gyp \
         python \
         make \
         g++ \
-    && yarn install \
-    && if [ "${ENV}" != "dev" ]; then \
-        echo "Test: $ENV" \
+    && yarn install
+
+COPY . .
+RUN if [ "${ENV}" != "dev" ]; then \
+        echo "Production: $ENV" \
         && yarn run build \
         # Removes dev dependencies
         && yarn install --production; \

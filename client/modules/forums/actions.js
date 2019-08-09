@@ -362,7 +362,7 @@ export const NEW_USER = createRequestActionTypes('NEW_USER');
 export const createUser = payload => ({
   type: NEW_USER_CREATE,
   payload: {
-    url: '/users',
+    url: 'users',
     data: {
       ...payload, // has username/password
       active: true,

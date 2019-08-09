@@ -2,20 +2,31 @@
 
   "logEnvironment": "",
 
-  "serverPort": 8000,
+  "serverPort": 9000,
+  "serverPath": "/",
 
-  "sessionSecret": "",
-  "sessionCookieSecure": "",
+  "sessionSecret": "s3cr3t",
+  "sessionCookieSecure": false,
 
-  "azure":{
-    "clientID": "",
-    "clientSecret": "",
-    "authorizationEndpoint": "",
-    "tokenEndpoint": "",
-    "issuer": "",
-    "userInfoURL": "",
-    "callbackURL": "",
-    "scope": ""
+  "oidc": {
+    "issuer": "https://auth.dev/issuer",
+    "clientID": "xx",
+    "clientSecret": "xxxx",
+    "authorizationEndpoint": "https://auth.dev/issuer/auth",
+    "tokenEndpoint": "https://auth.dev/issuer/token",
+    "host": "https://auth.dev",
+    "userInfoPath": "/issuer/userinfo",
+    "userInfoURL": "https://auth.dev/issuer/userinfo",
+    "logoutURL": "https://auth.dev/issuer/logout?redirect_uri=http://localhost:9000/",
+    "callbackURL": "https://example.com/callback",
+    "scope": "oidc"
+  },
+
+  "links": {
+    "ocwa": "https://ocwa.example.demo",
+    "ocwadl": "https://ocwadl.example.demo",
+    "projectsc": "https://projectsc.example.demo",
+    "selfserve": "https://projectsc.example.demo/v1/selfserve/main"
   },
 
   "azureGraph":{
@@ -41,7 +52,7 @@
   "who":{
     "subscriptionKey": "",
     "uri": "",
-    "port": ,
+    "port": 0,
     "proto": "",
     "path": ""
   }

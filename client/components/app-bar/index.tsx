@@ -29,40 +29,43 @@ const AppBar: React.SFC<AppBarProps & RouteComponentProps<AppBarProps>> = ({
     >
       <Link to={match.url} className={bs.navbarBrand}>
         <img
-          src="/assets/images/bc-gov-icon-logo.png"
+          src="assets/images/bc-gov-icon-logo.png"
           width={45}
           height={30}
           className={bs.mr2}
         />
-        HAS Project
+        DIP Workbench
       </Link>
       <div className={bs.navbarCollapse}>
         <nav className={cx(bs.navbarNav, bs.mrAuto)}>
-          <NavBarLink icon="code" location={location} url="/workbench">
-            Workbench
+          <NavBarLink icon="external-link-alt" location={location} url="/quicklinks">
+            Quick Links
           </NavBarLink>
-          <NavBarLink icon="list-alt" url="/datasets" location={location}>
+          {/* <NavBarLink icon="list-alt" url="/datasets" location={location}>
             Dataset Metadata
           </NavBarLink>
           <NavBarLink icon="comments" location={location} url="/discussions">
             Project Team Discussion
-          </NavBarLink>
+          </NavBarLink> */}
+          {/* <NavBarLink icon="comments" location={location} url="/codesharing">
+            Code Sharing
+          </NavBarLink> */}
         </nav>
         <div className={cx(bs.dFlex, bs.alignItemsCenter, bs.navbarNav)}>
-          <Notifications />
-          <SearchForm />
+          {/* <Notifications /> */}
+          {/* <SearchForm /> */}
           <div className={cx(bs.ml1, bs.dFlex, bs.alignItemsCenter)}>
-            <Link to="/help" className={cx(bs.navLink, bs.mr2)}>
+            {/* <Link to="/help" className={cx(bs.navLink, bs.mr2)}>
               <Icon name="question-circle" size="2x" />
-            </Link>
+            </Link> */}
             <Dropdown
               alignRight
               buttonElement={
                 <Avatar size="md" value={user.preferredUsername} />
               }
             >
-              <MenuItem url="/account">Account</MenuItem>
-              <MenuItem onClick={() => window.open('/logout', '_self')}>
+              <MenuItem url="account">Account</MenuItem>
+              <MenuItem onClick={() => window.open('logout', '_self')}>
                 Logout
               </MenuItem>
             </Dropdown>
