@@ -293,11 +293,6 @@ router.get('/callback', (req, res, next) => {
   })(req, res, next);
 });
 
-router.get(config.get('serverPath'), (req, res) => {
-  res.redirect(config.get('serverPath') + "/login")
-});
-
-
 // Redirect all other traffic over to the SPA
 // TODO: Use safer JSON stringify
 // script.
@@ -323,7 +318,7 @@ router.get('*', checkAuth, (req, res, next) => {
   });
 });
 
-router.get("/", (req, res) => {
+app.get("/", (req, res) => {
   res.redirect(config.get('serverPath'))
 });
 
