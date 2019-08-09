@@ -63,7 +63,7 @@ const serverConfig = require('./config');
 
 const checkAuth = function(req, res, next) {
   if (!req.user || !req.isAuthenticated || !req.isAuthenticated()) {
-    return res.redirect('login');
+    return res.redirect('authenticate');
   }
 
   next();
