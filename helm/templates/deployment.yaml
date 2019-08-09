@@ -51,6 +51,8 @@ spec:
               value: {{ .Values.auth.tokenEndpoint }}
             - name: OIDC_USERINFO_URL
               value: {{ .Values.auth.userInfoURL }}
+            - name: OIDC_LOGOUT_URL
+              value: {{ .Values.auth.logoutURL }}
             - name: OIDC_CALLBACK_URL
               value: {{ .Values.auth.callbackURL }}
             - name: OIDC_SCOPE

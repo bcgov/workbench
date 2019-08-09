@@ -19,6 +19,7 @@ printf '{
         "tokenEndpoint": "'${OIDC_TOKEN_URL}'",
         "userInfoURL": "'${OIDC_USERINFO_URL}'",
         "callbackURL": "'${OIDC_CALLBACK_URL}'",
+        "logoutURL": "'${OIDC_LOGOUT_URL}'",
         "scope": "'"${OIDC_SCOPE}"'"
     },
 

@@ -14,6 +14,8 @@
     "clientSecret": "xxxx",
     "authorizationEndpoint": "https://auth.dev/issuer/auth",
     "tokenEndpoint": "https://auth.dev/issuer/token",
+    "host": "https://auth.dev",
+    "userInfoPath": "/issuer/userinfo",
     "userInfoURL": "https://auth.dev/issuer/userinfo",
     "logoutURL": "https://auth.dev/issuer/logout?redirect_uri=http://localhost:9000/",
     "callbackURL": "https://example.com/callback",
@@ -22,7 +24,8 @@
 
   "links": {
     "ocwa": "https://ocwa.example.demo",
-    "gitlab": "https://projectsc.example.demo",
+    "ocwadl": "https://ocwadl.example.demo",
+    "projectsc": "https://projectsc.example.demo",
     "selfserve": "https://projectsc.example.demo/v1/selfserve/main"
   },
 
