@@ -10,7 +10,7 @@ const common = require('./webpack.common');
 
 const outPath = path.resolve(__dirname, 'dist');
 
-var basePath = "base/";
+var basePath = "";
 
 module.exports = merge(common, {
   mode: 'production',

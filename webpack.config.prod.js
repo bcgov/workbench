@@ -8,7 +8,7 @@ var postcssReporter = require('postcss-reporter');
 var cssnano = require('cssnano');
 var path = require('path');
 
-var basePath = "base/";
+var basePath = "";
 
 module.exports = {
   mode: 'production',
