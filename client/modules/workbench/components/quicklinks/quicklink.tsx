@@ -11,8 +11,8 @@ export interface StationsProps {
 }
 
 const Stations: React.SFC<StationsProps> = ({ data, url }) => (
-  <div className={cx(bs.card, bs.my3)} style={{border:0,padding:'20px'}}>
-    <div className={cx(bs.cardBody, bs.cardDeck)} >
+  <div className={bs.my3} style={{border:0,padding:'20px'}}>
+    <div className={bs.cardDeck} >
       {data.map(d => <QuicklinkItem key={d.id} data={d} url={url} />)}
     </div>
   </div>

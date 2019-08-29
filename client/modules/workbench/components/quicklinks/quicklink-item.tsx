@@ -17,7 +17,7 @@ const LinkItem: React.SFC<StationItemProps> = ({ data, url }) => {
   return (
     <a className={bs.card} style={{ width: 150 }} target="_blank" href={`${window.__LINKS__[data.id]}`} style={{padding:'20px'}}>
       <div className={cx(bs.cardBody, bs.pt0, bs.textCenter)}  >
-        <span className="fa-stack fa-5x">
+        <span className={cs( 'fa-stack', 'fa-5x', bs.mb2 )} style={{ fontSize: '5vw' }}>
           <i className="fas fa-circle fa-stack-2x" style={{color:'#003366'}}></i>
           <i className={`${data.icon} fa-stack-1x`} style={{color:'white'}}></i>
         </span>
